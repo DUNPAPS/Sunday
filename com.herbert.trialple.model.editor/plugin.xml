@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+ 
+<plugin>
+ 
+   <extension point="org.eclipse.ui.editors">
+         
+      <editor id="com.herbert.trialple.model.editor"
+            name="PhaseList"
+            icon="icons/PleditorModelFile.gif"
+            extensions="trialple"
+            class="com.herbert.trialple.model.editor.PhaseListEditor">
+      </editor>
+   </extension>
+   
+</plugin>
