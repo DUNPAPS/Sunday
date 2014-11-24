@@ -68,8 +68,16 @@ public class TrialpleAdapterFactory extends AdapterFactoryImpl {
 	protected TrialpleSwitch<Adapter> modelSwitch =
 		new TrialpleSwitch<Adapter>() {
 			@Override
+			public Adapter caseAnd(And object) {
+				return createAndAdapter();
+			}
+			@Override
 			public Adapter caseArguments(Arguments object) {
 				return createArgumentsAdapter();
+			}
+			@Override
+			public Adapter caseDefinitions(Definitions object) {
+				return createDefinitionsAdapter();
 			}
 			@Override
 			public Adapter caseDocumentRoot(DocumentRoot object) {
@@ -90,6 +98,10 @@ public class TrialpleAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseModules(Modules object) {
 				return createModulesAdapter();
+			}
+			@Override
+			public Adapter caseNot(Not object) {
+				return createNotAdapter();
 			}
 			@Override
 			public Adapter caseOption(Option object) {
@@ -116,6 +128,38 @@ public class TrialpleAdapterFactory extends AdapterFactoryImpl {
 				return createPrecedencesAdapter();
 			}
 			@Override
+			public Adapter caseSubModule(SubModule object) {
+				return createSubModuleAdapter();
+			}
+			@Override
+			public Adapter caseSubmoduleDef(SubmoduleDef object) {
+				return createSubmoduleDefAdapter();
+			}
+			@Override
+			public Adapter caseSubmoduleDefs(SubmoduleDefs object) {
+				return createSubmoduleDefsAdapter();
+			}
+			@Override
+			public Adapter caseSubModuleRef(SubModuleRef object) {
+				return createSubModuleRefAdapter();
+			}
+			@Override
+			public Adapter caseUnit(Unit object) {
+				return createUnitAdapter();
+			}
+			@Override
+			public Adapter caseUnitDef(UnitDef object) {
+				return createUnitDefAdapter();
+			}
+			@Override
+			public Adapter caseUnitModList(UnitModList object) {
+				return createUnitModListAdapter();
+			}
+			@Override
+			public Adapter caseUnitModule(UnitModule object) {
+				return createUnitModuleAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -136,6 +180,20 @@ public class TrialpleAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
+	 * Creates a new adapter for an object of class '{@link Trialple.And <em>And</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Trialple.And
+	 * @generated
+	 */
+	public Adapter createAndAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link Trialple.Arguments <em>Arguments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -146,6 +204,20 @@ public class TrialpleAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createArgumentsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Trialple.Definitions <em>Definitions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Trialple.Definitions
+	 * @generated
+	 */
+	public Adapter createDefinitionsAdapter() {
 		return null;
 	}
 
@@ -216,6 +288,20 @@ public class TrialpleAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createModulesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Trialple.Not <em>Not</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Trialple.Not
+	 * @generated
+	 */
+	public Adapter createNotAdapter() {
 		return null;
 	}
 
@@ -300,6 +386,118 @@ public class TrialpleAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPrecedencesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Trialple.SubModule <em>Sub Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Trialple.SubModule
+	 * @generated
+	 */
+	public Adapter createSubModuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Trialple.SubmoduleDef <em>Submodule Def</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Trialple.SubmoduleDef
+	 * @generated
+	 */
+	public Adapter createSubmoduleDefAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Trialple.SubmoduleDefs <em>Submodule Defs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Trialple.SubmoduleDefs
+	 * @generated
+	 */
+	public Adapter createSubmoduleDefsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Trialple.SubModuleRef <em>Sub Module Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Trialple.SubModuleRef
+	 * @generated
+	 */
+	public Adapter createSubModuleRefAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Trialple.Unit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Trialple.Unit
+	 * @generated
+	 */
+	public Adapter createUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Trialple.UnitDef <em>Unit Def</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Trialple.UnitDef
+	 * @generated
+	 */
+	public Adapter createUnitDefAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Trialple.UnitModList <em>Unit Mod List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Trialple.UnitModList
+	 * @generated
+	 */
+	public Adapter createUnitModListAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Trialple.UnitModule <em>Unit Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Trialple.UnitModule
+	 * @generated
+	 */
+	public Adapter createUnitModuleAdapter() {
 		return null;
 	}
 

@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link Trialple.Modules#getModule <em>Module</em>}</li>
+ *   <li>{@link Trialple.Modules#getSrcid <em>Srcid</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,5 +40,32 @@ public interface Modules extends EObject {
 	 * @generated
 	 */
 	EList<Module> getModule();
+
+	/**
+	 * Returns the value of the '<em><b>Srcid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Srcid</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Srcid</em>' attribute.
+	 * @see #setSrcid(String)
+	 * @see Trialple.TrialplePackage#getModules_Srcid()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
+	 *        extendedMetaData="kind='attribute' name='srcid' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	String getSrcid();
+
+	/**
+	 * Sets the value of the '{@link Trialple.Modules#getSrcid <em>Srcid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Srcid</em>' attribute.
+	 * @see #getSrcid()
+	 * @generated
+	 */
+	void setSrcid(String value);
 
 } // Modules

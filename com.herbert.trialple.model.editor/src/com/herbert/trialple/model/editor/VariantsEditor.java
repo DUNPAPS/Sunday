@@ -10,6 +10,11 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
+import src.com.herbert.trialple.model.outlineline.OutlineView;
+import Trialple.DocumentRoot;
+
+import com.herbert.trialple.model.resource.LoadResources;
+
 public class VariantsEditor extends Composite {
 
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
@@ -24,6 +29,8 @@ public class VariantsEditor extends Composite {
 	 */
 	public VariantsEditor(Composite parent, int style) {
 		super(parent, style);
+		
+		
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
 				toolkit.dispose();
@@ -34,8 +41,8 @@ public class VariantsEditor extends Composite {
 		setLayout(null);
 		
 		Group grpVariant = new Group(this, SWT.NONE);
-		grpVariant.setText("Variant");
-		grpVariant.setBounds(10, 10, 627, 480);
+		grpVariant.setText("ExecutionControl");
+		grpVariant.setBounds(10, 10, 602, 280);
 		toolkit.adapt(grpVariant);
 		toolkit.paintBordersFor(grpVariant);
 		
@@ -45,26 +52,78 @@ public class VariantsEditor extends Composite {
 		lblName.setText("Name");
 		
 		Label lblReport = new Label(grpVariant, SWT.NONE);
-		lblReport.setBounds(30, 101, 70, 20);
+		lblReport.setBounds(30, 101, 110, 20);
 		toolkit.adapt(lblReport, true, true);
-		lblReport.setText("Report");
+		lblReport.setText("Srcid [Perforce]");
 		
 		Label lblDescription = new Label(grpVariant, SWT.NONE);
 		lblDescription.setBounds(30, 146, 89, 20);
 		toolkit.adapt(lblDescription, true, true);
-		lblDescription.setText("Description");
+		lblDescription.setText("Version");
 		
 		text_Name = new Text(grpVariant, SWT.BORDER);
-		text_Name.setBounds(139, 52, 291, 26);
+		text_Name.setBounds(176, 52, 302, 26);
 		toolkit.adapt(text_Name, true, true);
 		
+		LoadResources loadResources = new LoadResources();
+		loadResources.loadResouces(OutlineView.getContentFile());
+		DocumentRoot rootObject = (DocumentRoot) loadResources.getRootObject();
+		text_Name.setText(rootObject.getExecutionControl().getName());
+		
 		text_Report = new Text(grpVariant, SWT.BORDER);
-		text_Report.setBounds(139, 101, 291, 26);
+		text_Report.setBounds(176, 101, 302, 26);
 		toolkit.adapt(text_Report, true, true);
+		text_Report.setText(rootObject.getExecutionControl().getSrcid());
+		
 		
 		textDescription = new Text(grpVariant, SWT.BORDER);
-		textDescription.setBounds(139, 146, 291, 26);
+		textDescription.setBounds(176, 146, 302, 26);
 		toolkit.adapt(textDescription, true, true);
+		textDescription.setText(rootObject.getExecutionControl().getVersion());
+
+		
+
+		
+		/*this is replicated*/
+//		Group grpVariant = new Group(this, SWT.NONE);
+//		grpVariant.setText("Variant");
+//		grpVariant.setBounds(10, 10, 552, 389);
+//		toolkit.adapt(grpVariant);
+//		toolkit.paintBordersFor(grpVariant);
+//		
+//		Label lblName = new Label(grpVariant, SWT.NONE);
+//		lblName.setBounds(30, 52, 70, 20);
+//		toolkit.adapt(lblName, true, true);
+//		lblName.setText("Name");
+//		
+//		Label lblReport = new Label(grpVariant, SWT.NONE);
+//		lblReport.setBounds(30, 101, 70, 20);
+//		toolkit.adapt(lblReport, true, true);
+//		lblReport.setText("Report");
+//		
+//		Label lblDescription = new Label(grpVariant, SWT.NONE);
+//		lblDescription.setBounds(30, 146, 89, 20);
+//		toolkit.adapt(lblDescription, true, true);
+//		lblDescription.setText("Description");
+//		
+//		text_Name = new Text(grpVariant, SWT.BORDER);
+//		text_Name.setBounds(139, 52, 291, 26);
+//		toolkit.adapt(text_Name, true, true);
+//		
+//		LoadResources loadResources = new LoadResources();
+//		loadResources.loadResouces(OutlineView.getContentFile());
+//		
+//		DocumentRoot rootObject = (DocumentRoot) loadResources.getRootObject();
+//		text_Name.setText(rootObject.getExecutionControl().getName());
+//		
+//		text_Report = new Text(grpVariant, SWT.BORDER);
+//		text_Report.setBounds(139, 101, 291, 26);
+//		toolkit.adapt(text_Report, true, true);
+//		
+//		textDescription = new Text(grpVariant, SWT.BORDER);
+//		textDescription.setBounds(139, 146, 291, 26);
+//		toolkit.adapt(textDescription, true, true);
+
 
 	}
 

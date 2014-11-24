@@ -5,6 +5,8 @@ package Trialple.impl;
 import Trialple.IfType;
 import Trialple.Phase;
 import Trialple.Phaselist;
+import Trialple.SubModule;
+import Trialple.SubModuleRef;
 import Trialple.TrialplePackage;
 
 import java.util.Collection;
@@ -32,6 +34,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link Trialple.impl.PhaselistImpl#getPhase <em>Phase</em>}</li>
  *   <li>{@link Trialple.impl.PhaselistImpl#getIf <em>If</em>}</li>
+ *   <li>{@link Trialple.impl.PhaselistImpl#getSubmodule <em>Submodule</em>}</li>
+ *   <li>{@link Trialple.impl.PhaselistImpl#getSubmoduleref <em>Submoduleref</em>}</li>
  *   <li>{@link Trialple.impl.PhaselistImpl#getSrcid <em>Srcid</em>}</li>
  * </ul>
  * </p>
@@ -58,6 +62,26 @@ public class PhaselistImpl extends MinimalEObjectImpl.Container implements Phase
 	 * @ordered
 	 */
 	protected EList<IfType> if_;
+
+	/**
+	 * The cached value of the '{@link #getSubmodule() <em>Submodule</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubmodule()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SubModule> submodule;
+
+	/**
+	 * The cached value of the '{@link #getSubmoduleref() <em>Submoduleref</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubmoduleref()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SubModuleRef> submoduleref;
 
 	/**
 	 * The default value of the '{@link #getSrcid() <em>Srcid</em>}' attribute.
@@ -127,6 +151,30 @@ public class PhaselistImpl extends MinimalEObjectImpl.Container implements Phase
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<SubModule> getSubmodule() {
+		if (submodule == null) {
+			submodule = new EObjectContainmentEList<SubModule>(SubModule.class, this, TrialplePackage.PHASELIST__SUBMODULE);
+		}
+		return submodule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<SubModuleRef> getSubmoduleref() {
+		if (submoduleref == null) {
+			submoduleref = new EObjectContainmentEList<SubModuleRef>(SubModuleRef.class, this, TrialplePackage.PHASELIST__SUBMODULEREF);
+		}
+		return submoduleref;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getSrcid() {
 		return srcid;
 	}
@@ -155,6 +203,10 @@ public class PhaselistImpl extends MinimalEObjectImpl.Container implements Phase
 				return ((InternalEList<?>)getPhase()).basicRemove(otherEnd, msgs);
 			case TrialplePackage.PHASELIST__IF:
 				return ((InternalEList<?>)getIf()).basicRemove(otherEnd, msgs);
+			case TrialplePackage.PHASELIST__SUBMODULE:
+				return ((InternalEList<?>)getSubmodule()).basicRemove(otherEnd, msgs);
+			case TrialplePackage.PHASELIST__SUBMODULEREF:
+				return ((InternalEList<?>)getSubmoduleref()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -171,6 +223,10 @@ public class PhaselistImpl extends MinimalEObjectImpl.Container implements Phase
 				return getPhase();
 			case TrialplePackage.PHASELIST__IF:
 				return getIf();
+			case TrialplePackage.PHASELIST__SUBMODULE:
+				return getSubmodule();
+			case TrialplePackage.PHASELIST__SUBMODULEREF:
+				return getSubmoduleref();
 			case TrialplePackage.PHASELIST__SRCID:
 				return getSrcid();
 		}
@@ -194,6 +250,14 @@ public class PhaselistImpl extends MinimalEObjectImpl.Container implements Phase
 				getIf().clear();
 				getIf().addAll((Collection<? extends IfType>)newValue);
 				return;
+			case TrialplePackage.PHASELIST__SUBMODULE:
+				getSubmodule().clear();
+				getSubmodule().addAll((Collection<? extends SubModule>)newValue);
+				return;
+			case TrialplePackage.PHASELIST__SUBMODULEREF:
+				getSubmoduleref().clear();
+				getSubmoduleref().addAll((Collection<? extends SubModuleRef>)newValue);
+				return;
 			case TrialplePackage.PHASELIST__SRCID:
 				setSrcid((String)newValue);
 				return;
@@ -215,6 +279,12 @@ public class PhaselistImpl extends MinimalEObjectImpl.Container implements Phase
 			case TrialplePackage.PHASELIST__IF:
 				getIf().clear();
 				return;
+			case TrialplePackage.PHASELIST__SUBMODULE:
+				getSubmodule().clear();
+				return;
+			case TrialplePackage.PHASELIST__SUBMODULEREF:
+				getSubmoduleref().clear();
+				return;
 			case TrialplePackage.PHASELIST__SRCID:
 				setSrcid(SRCID_EDEFAULT);
 				return;
@@ -234,6 +304,10 @@ public class PhaselistImpl extends MinimalEObjectImpl.Container implements Phase
 				return phase != null && !phase.isEmpty();
 			case TrialplePackage.PHASELIST__IF:
 				return if_ != null && !if_.isEmpty();
+			case TrialplePackage.PHASELIST__SUBMODULE:
+				return submodule != null && !submodule.isEmpty();
+			case TrialplePackage.PHASELIST__SUBMODULEREF:
+				return submoduleref != null && !submoduleref.isEmpty();
 			case TrialplePackage.PHASELIST__SRCID:
 				return SRCID_EDEFAULT == null ? srcid != null : !SRCID_EDEFAULT.equals(srcid);
 		}

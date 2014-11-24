@@ -3,7 +3,9 @@
 package Trialple.impl;
 
 import Trialple.IfType;
+import Trialple.OptList;
 import Trialple.Phase;
+import Trialple.SubModuleRef;
 import Trialple.TrialplePackage;
 
 import java.util.Collection;
@@ -30,6 +32,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link Trialple.impl.IfTypeImpl#getPhase <em>Phase</em>}</li>
+ *   <li>{@link Trialple.impl.IfTypeImpl#getOptions <em>Options</em>}</li>
+ *   <li>{@link Trialple.impl.IfTypeImpl#getSubmoduleref <em>Submoduleref</em>}</li>
  *   <li>{@link Trialple.impl.IfTypeImpl#getTest <em>Test</em>}</li>
  * </ul>
  * </p>
@@ -46,6 +50,26 @@ public class IfTypeImpl extends MinimalEObjectImpl.Container implements IfType {
 	 * @ordered
 	 */
 	protected EList<Phase> phase;
+
+	/**
+	 * The cached value of the '{@link #getOptions() <em>Options</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOptions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<OptList> options;
+
+	/**
+	 * The cached value of the '{@link #getSubmoduleref() <em>Submoduleref</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubmoduleref()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SubModuleRef> submoduleref;
 
 	/**
 	 * The default value of the '{@link #getTest() <em>Test</em>}' attribute.
@@ -103,6 +127,30 @@ public class IfTypeImpl extends MinimalEObjectImpl.Container implements IfType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<OptList> getOptions() {
+		if (options == null) {
+			options = new EObjectContainmentEList<OptList>(OptList.class, this, TrialplePackage.IF_TYPE__OPTIONS);
+		}
+		return options;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<SubModuleRef> getSubmoduleref() {
+		if (submoduleref == null) {
+			submoduleref = new EObjectContainmentEList<SubModuleRef>(SubModuleRef.class, this, TrialplePackage.IF_TYPE__SUBMODULEREF);
+		}
+		return submoduleref;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getTest() {
 		return test;
 	}
@@ -129,6 +177,10 @@ public class IfTypeImpl extends MinimalEObjectImpl.Container implements IfType {
 		switch (featureID) {
 			case TrialplePackage.IF_TYPE__PHASE:
 				return ((InternalEList<?>)getPhase()).basicRemove(otherEnd, msgs);
+			case TrialplePackage.IF_TYPE__OPTIONS:
+				return ((InternalEList<?>)getOptions()).basicRemove(otherEnd, msgs);
+			case TrialplePackage.IF_TYPE__SUBMODULEREF:
+				return ((InternalEList<?>)getSubmoduleref()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -143,6 +195,10 @@ public class IfTypeImpl extends MinimalEObjectImpl.Container implements IfType {
 		switch (featureID) {
 			case TrialplePackage.IF_TYPE__PHASE:
 				return getPhase();
+			case TrialplePackage.IF_TYPE__OPTIONS:
+				return getOptions();
+			case TrialplePackage.IF_TYPE__SUBMODULEREF:
+				return getSubmoduleref();
 			case TrialplePackage.IF_TYPE__TEST:
 				return getTest();
 		}
@@ -162,6 +218,14 @@ public class IfTypeImpl extends MinimalEObjectImpl.Container implements IfType {
 				getPhase().clear();
 				getPhase().addAll((Collection<? extends Phase>)newValue);
 				return;
+			case TrialplePackage.IF_TYPE__OPTIONS:
+				getOptions().clear();
+				getOptions().addAll((Collection<? extends OptList>)newValue);
+				return;
+			case TrialplePackage.IF_TYPE__SUBMODULEREF:
+				getSubmoduleref().clear();
+				getSubmoduleref().addAll((Collection<? extends SubModuleRef>)newValue);
+				return;
 			case TrialplePackage.IF_TYPE__TEST:
 				setTest((String)newValue);
 				return;
@@ -180,6 +244,12 @@ public class IfTypeImpl extends MinimalEObjectImpl.Container implements IfType {
 			case TrialplePackage.IF_TYPE__PHASE:
 				getPhase().clear();
 				return;
+			case TrialplePackage.IF_TYPE__OPTIONS:
+				getOptions().clear();
+				return;
+			case TrialplePackage.IF_TYPE__SUBMODULEREF:
+				getSubmoduleref().clear();
+				return;
 			case TrialplePackage.IF_TYPE__TEST:
 				setTest(TEST_EDEFAULT);
 				return;
@@ -197,6 +267,10 @@ public class IfTypeImpl extends MinimalEObjectImpl.Container implements IfType {
 		switch (featureID) {
 			case TrialplePackage.IF_TYPE__PHASE:
 				return phase != null && !phase.isEmpty();
+			case TrialplePackage.IF_TYPE__OPTIONS:
+				return options != null && !options.isEmpty();
+			case TrialplePackage.IF_TYPE__SUBMODULEREF:
+				return submoduleref != null && !submoduleref.isEmpty();
 			case TrialplePackage.IF_TYPE__TEST:
 				return TEST_EDEFAULT == null ? test != null : !TEST_EDEFAULT.equals(test);
 		}

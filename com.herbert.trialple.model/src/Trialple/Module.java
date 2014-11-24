@@ -110,55 +110,85 @@ public interface Module extends EObject {
 	void setOptions(OptList value);
 
 	/**
-	 * Returns the value of the '<em><b>Postevent</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Postevent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Postevent</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Postevent</em>' attribute list.
+	 * @return the value of the '<em>Postevent</em>' attribute.
+	 * @see #setPostevent(String)
 	 * @see Trialple.TrialplePackage#getModule_Postevent()
-	 * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='postevent' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	EList<String> getPostevent();
+	String getPostevent();
 
 	/**
-	 * Returns the value of the '<em><b>Revokemodule</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Sets the value of the '{@link Trialple.Module#getPostevent <em>Postevent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Postevent</em>' attribute.
+	 * @see #getPostevent()
+	 * @generated
+	 */
+	void setPostevent(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Revokemodule</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Revokemodule</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Revokemodule</em>' attribute list.
+	 * @return the value of the '<em>Revokemodule</em>' attribute.
+	 * @see #setRevokemodule(String)
 	 * @see Trialple.TrialplePackage#getModule_Revokemodule()
-	 * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.String" upper="3"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='revokemodule' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	EList<String> getRevokemodule();
+	String getRevokemodule();
 
 	/**
-	 * Returns the value of the '<em><b>Password</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Sets the value of the '{@link Trialple.Module#getRevokemodule <em>Revokemodule</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Revokemodule</em>' attribute.
+	 * @see #getRevokemodule()
+	 * @generated
+	 */
+	void setRevokemodule(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Password</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Password</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Password</em>' attribute list.
+	 * @return the value of the '<em>Password</em>' attribute.
+	 * @see #setPassword(String)
 	 * @see Trialple.TrialplePackage#getModule_Password()
-	 * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.String" upper="3"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='password' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	EList<String> getPassword();
+	String getPassword();
+
+	/**
+	 * Sets the value of the '{@link Trialple.Module#getPassword <em>Password</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Password</em>' attribute.
+	 * @see #getPassword()
+	 * @generated
+	 */
+	void setPassword(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Precedences</b></em>' containment reference list.

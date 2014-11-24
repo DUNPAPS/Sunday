@@ -2,6 +2,8 @@
  */
 package Trialple.impl;
 
+import Trialple.And;
+import Trialple.Not;
 import Trialple.OptList;
 import Trialple.Option;
 import Trialple.Or;
@@ -30,6 +32,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link Trialple.impl.OptListImpl#getOption <em>Option</em>}</li>
  *   <li>{@link Trialple.impl.OptListImpl#getOr <em>Or</em>}</li>
+ *   <li>{@link Trialple.impl.OptListImpl#getNot <em>Not</em>}</li>
+ *   <li>{@link Trialple.impl.OptListImpl#getAnd <em>And</em>}</li>
  * </ul>
  * </p>
  *
@@ -55,6 +59,26 @@ public class OptListImpl extends MinimalEObjectImpl.Container implements OptList
 	 * @ordered
 	 */
 	protected EList<Or> or;
+
+	/**
+	 * The cached value of the '{@link #getNot() <em>Not</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNot()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Not> not;
+
+	/**
+	 * The cached value of the '{@link #getAnd() <em>And</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnd()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<And> and;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,6 +128,30 @@ public class OptListImpl extends MinimalEObjectImpl.Container implements OptList
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Not> getNot() {
+		if (not == null) {
+			not = new EObjectContainmentEList<Not>(Not.class, this, TrialplePackage.OPT_LIST__NOT);
+		}
+		return not;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<And> getAnd() {
+		if (and == null) {
+			and = new EObjectContainmentEList<And>(And.class, this, TrialplePackage.OPT_LIST__AND);
+		}
+		return and;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -111,6 +159,10 @@ public class OptListImpl extends MinimalEObjectImpl.Container implements OptList
 				return ((InternalEList<?>)getOption()).basicRemove(otherEnd, msgs);
 			case TrialplePackage.OPT_LIST__OR:
 				return ((InternalEList<?>)getOr()).basicRemove(otherEnd, msgs);
+			case TrialplePackage.OPT_LIST__NOT:
+				return ((InternalEList<?>)getNot()).basicRemove(otherEnd, msgs);
+			case TrialplePackage.OPT_LIST__AND:
+				return ((InternalEList<?>)getAnd()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -127,6 +179,10 @@ public class OptListImpl extends MinimalEObjectImpl.Container implements OptList
 				return getOption();
 			case TrialplePackage.OPT_LIST__OR:
 				return getOr();
+			case TrialplePackage.OPT_LIST__NOT:
+				return getNot();
+			case TrialplePackage.OPT_LIST__AND:
+				return getAnd();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -148,6 +204,14 @@ public class OptListImpl extends MinimalEObjectImpl.Container implements OptList
 				getOr().clear();
 				getOr().addAll((Collection<? extends Or>)newValue);
 				return;
+			case TrialplePackage.OPT_LIST__NOT:
+				getNot().clear();
+				getNot().addAll((Collection<? extends Not>)newValue);
+				return;
+			case TrialplePackage.OPT_LIST__AND:
+				getAnd().clear();
+				getAnd().addAll((Collection<? extends And>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -166,6 +230,12 @@ public class OptListImpl extends MinimalEObjectImpl.Container implements OptList
 			case TrialplePackage.OPT_LIST__OR:
 				getOr().clear();
 				return;
+			case TrialplePackage.OPT_LIST__NOT:
+				getNot().clear();
+				return;
+			case TrialplePackage.OPT_LIST__AND:
+				getAnd().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -182,6 +252,10 @@ public class OptListImpl extends MinimalEObjectImpl.Container implements OptList
 				return option != null && !option.isEmpty();
 			case TrialplePackage.OPT_LIST__OR:
 				return or != null && !or.isEmpty();
+			case TrialplePackage.OPT_LIST__NOT:
+				return not != null && !not.isEmpty();
+			case TrialplePackage.OPT_LIST__AND:
+				return and != null && !and.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

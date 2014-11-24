@@ -2,6 +2,7 @@
  */
 package Trialple;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -12,8 +13,9 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Trialple.And#getBooleanExp1 <em>Boolean Exp1</em>}</li>
- *   <li>{@link Trialple.And#getBooleanExp2 <em>Boolean Exp2</em>}</li>
+ *   <li>{@link Trialple.And#getOption <em>Option</em>}</li>
+ *   <li>{@link Trialple.And#getOr <em>Or</em>}</li>
+ *   <li>{@link Trialple.And#getNot <em>Not</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,57 +25,54 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface And extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Boolean Exp1</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Option</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.Option}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Boolean Exp1</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Option</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Boolean Exp1</em>' containment reference.
-	 * @see #setBooleanExp1(BooleanExp)
-	 * @see Trialple.TrialplePackage#getAnd_BooleanExp1()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='booleanExp1' namespace='##targetNamespace'"
+	 * @return the value of the '<em>Option</em>' containment reference list.
+	 * @see Trialple.TrialplePackage#getAnd_Option()
+	 * @model containment="true" upper="10"
+	 *        extendedMetaData="kind='element' name='option' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	BooleanExp getBooleanExp1();
+	EList<Option> getOption();
 
 	/**
-	 * Sets the value of the '{@link Trialple.And#getBooleanExp1 <em>Boolean Exp1</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Boolean Exp1</em>' containment reference.
-	 * @see #getBooleanExp1()
-	 * @generated
-	 */
-	void setBooleanExp1(BooleanExp value);
-
-	/**
-	 * Returns the value of the '<em><b>Boolean Exp2</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Or</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.Or}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Boolean Exp2</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Or</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Boolean Exp2</em>' containment reference.
-	 * @see #setBooleanExp2(BooleanExp)
-	 * @see Trialple.TrialplePackage#getAnd_BooleanExp2()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='booleanExp2' namespace='##targetNamespace'"
+	 * @return the value of the '<em>Or</em>' containment reference list.
+	 * @see Trialple.TrialplePackage#getAnd_Or()
+	 * @model containment="true" upper="10"
+	 *        extendedMetaData="kind='element' name='or' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	BooleanExp getBooleanExp2();
+	EList<Or> getOr();
 
 	/**
-	 * Sets the value of the '{@link Trialple.And#getBooleanExp2 <em>Boolean Exp2</em>}' containment reference.
+	 * Returns the value of the '<em><b>Not</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.Not}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Not</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Boolean Exp2</em>' containment reference.
-	 * @see #getBooleanExp2()
+	 * @return the value of the '<em>Not</em>' containment reference list.
+	 * @see Trialple.TrialplePackage#getAnd_Not()
+	 * @model containment="true" upper="10"
+	 *        extendedMetaData="kind='element' name='not' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	void setBooleanExp2(BooleanExp value);
+	EList<Not> getNot();
 
 } // And

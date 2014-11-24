@@ -1,4 +1,4 @@
-package com.herbert.trialple.model.outline;
+package src.com.herbert.trialple.model.outlineline;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -28,6 +28,7 @@ import com.herbert.trialple.model.xmlElement.TreeParent;
 
 public class OutlineView extends ContentOutlinePage implements
 		IContentOutlinePage {
+	private final static String CONTENT_FILE = "C:/Users/D063076/Desktop/new_trial_phl .xml";
 	private TreeViewer tree;
 	private Document doc;
 
@@ -45,6 +46,7 @@ public class OutlineView extends ContentOutlinePage implements
 		tree.setContentProvider(new PhaseListContentProvider());
 		tree.setLabelProvider(new PhaseListLabelProvider());
 		tree.setInput(getInitialInput());
+		tree.refresh();
 		this.tree.addSelectionChangedListener(this);
 		this.getSite().setSelectionProvider(this.tree);
 
@@ -99,7 +101,7 @@ public class OutlineView extends ContentOutlinePage implements
 	@Override
 	public void removeSelectionChangedListener(
 			ISelectionChangedListener listener) {
-		// TODO Auto-generated method stub
+		this.tree.removeSelectionChangedListener(listener);
 	}
 
 	@Override
@@ -112,11 +114,10 @@ public class OutlineView extends ContentOutlinePage implements
 	public TreeParent getInitialInput() {
 		TreeParent root = new TreeParent("");
 		try {
-			/* Convert the editor.getIEditorInput() and getElementsByTagName */
-			String xmlString = readFile("C:/Users/dmuasya/Desktop/com.herbert.trialple.model.editor/printout.xml");
-			System.out.println("print out"+xmlString);
+			String xmlString = readFile(getContentFile());
 			doc = DocumentBuilderFactory.newInstance().newDocumentBuilder()
 					.parse(new InputSource(new StringReader(xmlString)));
+			
 			NodeList nodelist = doc.getChildNodes();
 			addSubTree(root, nodelist.item(0));
 
@@ -138,13 +139,14 @@ public class OutlineView extends ContentOutlinePage implements
 		int length = childList.getLength();
 		for (int i = 0; i < length; i++) {
 			if (childList.item(i).getNodeType() != Node.TEXT_NODE) {
+				//Ignore comments and other here
 				addSubTree(child, childList.item(i));
 			}
 		}
 	}
 
 	@SuppressWarnings("resource")
-	private String readFile(String file) throws IOException {
+	public static String readFile(String file) throws IOException {
 		String line = null;
 		StringBuilder stringBuilder = new StringBuilder();
 		String ls = System.getProperty("line.separator");
@@ -157,4 +159,9 @@ public class OutlineView extends ContentOutlinePage implements
 
 		return stringBuilder.toString();
 	}
+
+	public static String getContentFile() {
+		return CONTENT_FILE;
+	}
+	
 }

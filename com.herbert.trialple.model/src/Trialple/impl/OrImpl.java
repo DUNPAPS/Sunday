@@ -2,6 +2,8 @@
  */
 package Trialple.impl;
 
+import Trialple.And;
+import Trialple.Not;
 import Trialple.Option;
 import Trialple.Or;
 import Trialple.TrialplePackage;
@@ -22,6 +24,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link Trialple.impl.OrImpl#getOption <em>Option</em>}</li>
+ *   <li>{@link Trialple.impl.OrImpl#getAnd <em>And</em>}</li>
+ *   <li>{@link Trialple.impl.OrImpl#getNot <em>Not</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,6 +41,25 @@ public class OrImpl extends MinimalEObjectImpl.Container implements Or {
 	 * @ordered
 	 */
 	protected EList<Option> option;
+
+	/**
+	 * The cached value of the '{@link #getAnd() <em>And</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnd()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<And> and;
+	/**
+	 * The cached value of the '{@link #getNot() <em>Not</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNot()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Not> not;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,11 +97,39 @@ public class OrImpl extends MinimalEObjectImpl.Container implements Or {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<And> getAnd() {
+		if (and == null) {
+			and = new EObjectContainmentEList<And>(And.class, this, TrialplePackage.OR__AND);
+		}
+		return and;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Not> getNot() {
+		if (not == null) {
+			not = new EObjectContainmentEList<Not>(Not.class, this, TrialplePackage.OR__NOT);
+		}
+		return not;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case TrialplePackage.OR__OPTION:
 				return ((InternalEList<?>)getOption()).basicRemove(otherEnd, msgs);
+			case TrialplePackage.OR__AND:
+				return ((InternalEList<?>)getAnd()).basicRemove(otherEnd, msgs);
+			case TrialplePackage.OR__NOT:
+				return ((InternalEList<?>)getNot()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -93,6 +144,10 @@ public class OrImpl extends MinimalEObjectImpl.Container implements Or {
 		switch (featureID) {
 			case TrialplePackage.OR__OPTION:
 				return getOption();
+			case TrialplePackage.OR__AND:
+				return getAnd();
+			case TrialplePackage.OR__NOT:
+				return getNot();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,6 +165,14 @@ public class OrImpl extends MinimalEObjectImpl.Container implements Or {
 				getOption().clear();
 				getOption().addAll((Collection<? extends Option>)newValue);
 				return;
+			case TrialplePackage.OR__AND:
+				getAnd().clear();
+				getAnd().addAll((Collection<? extends And>)newValue);
+				return;
+			case TrialplePackage.OR__NOT:
+				getNot().clear();
+				getNot().addAll((Collection<? extends Not>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -125,6 +188,12 @@ public class OrImpl extends MinimalEObjectImpl.Container implements Or {
 			case TrialplePackage.OR__OPTION:
 				getOption().clear();
 				return;
+			case TrialplePackage.OR__AND:
+				getAnd().clear();
+				return;
+			case TrialplePackage.OR__NOT:
+				getNot().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -139,6 +208,10 @@ public class OrImpl extends MinimalEObjectImpl.Container implements Or {
 		switch (featureID) {
 			case TrialplePackage.OR__OPTION:
 				return option != null && !option.isEmpty();
+			case TrialplePackage.OR__AND:
+				return and != null && !and.isEmpty();
+			case TrialplePackage.OR__NOT:
+				return not != null && !not.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

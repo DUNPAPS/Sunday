@@ -60,6 +60,61 @@ public interface TrialplePackage extends EPackage {
 	TrialplePackage eINSTANCE = Trialple.impl.TrialplePackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link Trialple.impl.AndImpl <em>And</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.AndImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getAnd()
+	 * @generated
+	 */
+	int AND = 0;
+
+	/**
+	 * The feature id for the '<em><b>Option</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND__OPTION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Or</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND__OR = 1;
+
+	/**
+	 * The feature id for the '<em><b>Not</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND__NOT = 2;
+
+	/**
+	 * The number of structural features of the '<em>And</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>And</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AND_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link Trialple.impl.ArgumentsImpl <em>Arguments</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,7 +122,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getArguments()
 	 * @generated
 	 */
-	int ARGUMENTS = 0;
+	int ARGUMENTS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Arg</b></em>' attribute list.
@@ -97,6 +152,43 @@ public interface TrialplePackage extends EPackage {
 	int ARGUMENTS_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link Trialple.impl.DefinitionsImpl <em>Definitions</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.DefinitionsImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getDefinitions()
+	 * @generated
+	 */
+	int DEFINITIONS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Def</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFINITIONS__DEF = 0;
+
+	/**
+	 * The number of structural features of the '<em>Definitions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFINITIONS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Definitions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFINITIONS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link Trialple.impl.DocumentRootImpl <em>Document Root</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -104,7 +196,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getDocumentRoot()
 	 * @generated
 	 */
-	int DOCUMENT_ROOT = 1;
+	int DOCUMENT_ROOT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
@@ -168,10 +260,10 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getExecutionControl()
 	 * @generated
 	 */
-	int EXECUTION_CONTROL = 2;
+	int EXECUTION_CONTROL = 4;
 
 	/**
-	 * The feature id for the '<em><b>Modules</b></em>' containment reference.
+	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -180,13 +272,40 @@ public interface TrialplePackage extends EPackage {
 	int EXECUTION_CONTROL__MODULES = 0;
 
 	/**
+	 * The feature id for the '<em><b>Submoduledefs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTION_CONTROL__SUBMODULEDEFS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Submoduledef</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTION_CONTROL__SUBMODULEDEF = 2;
+
+	/**
+	 * The feature id for the '<em><b>Unit Definition</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTION_CONTROL__UNIT_DEFINITION = 3;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_CONTROL__NAME = 1;
+	int EXECUTION_CONTROL__NAME = 4;
 
 	/**
 	 * The feature id for the '<em><b>Srcid</b></em>' attribute.
@@ -195,7 +314,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_CONTROL__SRCID = 2;
+	int EXECUTION_CONTROL__SRCID = 5;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -204,7 +323,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_CONTROL__VERSION = 3;
+	int EXECUTION_CONTROL__VERSION = 6;
 
 	/**
 	 * The number of structural features of the '<em>Execution Control</em>' class.
@@ -213,7 +332,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_CONTROL_FEATURE_COUNT = 4;
+	int EXECUTION_CONTROL_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Execution Control</em>' class.
@@ -232,7 +351,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getIfType()
 	 * @generated
 	 */
-	int IF_TYPE = 3;
+	int IF_TYPE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Phase</b></em>' containment reference list.
@@ -244,13 +363,31 @@ public interface TrialplePackage extends EPackage {
 	int IF_TYPE__PHASE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Options</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF_TYPE__OPTIONS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Submoduleref</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF_TYPE__SUBMODULEREF = 2;
+
+	/**
 	 * The feature id for the '<em><b>Test</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IF_TYPE__TEST = 1;
+	int IF_TYPE__TEST = 3;
 
 	/**
 	 * The number of structural features of the '<em>If Type</em>' class.
@@ -259,7 +396,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IF_TYPE_FEATURE_COUNT = 2;
+	int IF_TYPE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>If Type</em>' class.
@@ -278,7 +415,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getModule()
 	 * @generated
 	 */
-	int MODULE = 4;
+	int MODULE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute list.
@@ -299,7 +436,7 @@ public interface TrialplePackage extends EPackage {
 	int MODULE__OPTIONS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Postevent</b></em>' attribute list.
+	 * The feature id for the '<em><b>Postevent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -308,7 +445,7 @@ public interface TrialplePackage extends EPackage {
 	int MODULE__POSTEVENT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Revokemodule</b></em>' attribute list.
+	 * The feature id for the '<em><b>Revokemodule</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -317,7 +454,7 @@ public interface TrialplePackage extends EPackage {
 	int MODULE__REVOKEMODULE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Password</b></em>' attribute list.
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -450,7 +587,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getModules()
 	 * @generated
 	 */
-	int MODULES = 5;
+	int MODULES = 7;
 
 	/**
 	 * The feature id for the '<em><b>Module</b></em>' containment reference list.
@@ -462,13 +599,22 @@ public interface TrialplePackage extends EPackage {
 	int MODULES__MODULE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Srcid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULES__SRCID = 1;
+
+	/**
 	 * The number of structural features of the '<em>Modules</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULES_FEATURE_COUNT = 1;
+	int MODULES_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Modules</em>' class.
@@ -480,6 +626,52 @@ public interface TrialplePackage extends EPackage {
 	int MODULES_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link Trialple.impl.NotImpl <em>Not</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.NotImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getNot()
+	 * @generated
+	 */
+	int NOT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Option</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOT__OPTION = 0;
+
+	/**
+	 * The feature id for the '<em><b>And</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOT__AND = 1;
+
+	/**
+	 * The number of structural features of the '<em>Not</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Not</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link Trialple.impl.OptionImpl <em>Option</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -487,7 +679,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getOption()
 	 * @generated
 	 */
-	int OPTION = 6;
+	int OPTION = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -533,7 +725,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getOptList()
 	 * @generated
 	 */
-	int OPT_LIST = 7;
+	int OPT_LIST = 10;
 
 	/**
 	 * The feature id for the '<em><b>Option</b></em>' containment reference list.
@@ -554,13 +746,31 @@ public interface TrialplePackage extends EPackage {
 	int OPT_LIST__OR = 1;
 
 	/**
+	 * The feature id for the '<em><b>Not</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPT_LIST__NOT = 2;
+
+	/**
+	 * The feature id for the '<em><b>And</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPT_LIST__AND = 3;
+
+	/**
 	 * The number of structural features of the '<em>Opt List</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPT_LIST_FEATURE_COUNT = 2;
+	int OPT_LIST_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Opt List</em>' class.
@@ -579,7 +789,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getOr()
 	 * @generated
 	 */
-	int OR = 8;
+	int OR = 11;
 
 	/**
 	 * The feature id for the '<em><b>Option</b></em>' containment reference list.
@@ -591,13 +801,31 @@ public interface TrialplePackage extends EPackage {
 	int OR__OPTION = 0;
 
 	/**
+	 * The feature id for the '<em><b>And</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR__AND = 1;
+
+	/**
+	 * The feature id for the '<em><b>Not</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OR__NOT = 2;
+
+	/**
 	 * The number of structural features of the '<em>Or</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OR_FEATURE_COUNT = 1;
+	int OR_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Or</em>' class.
@@ -616,7 +844,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getPhase()
 	 * @generated
 	 */
-	int PHASE = 9;
+	int PHASE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Options</b></em>' containment reference.
@@ -655,13 +883,58 @@ public interface TrialplePackage extends EPackage {
 	int PHASE__USAGE = 3;
 
 	/**
+	 * The feature id for the '<em><b>If</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHASE__IF = 4;
+
+	/**
+	 * The feature id for the '<em><b>Autorepeat</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHASE__AUTOREPEAT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Buffersync</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHASE__BUFFERSYNC = 6;
+
+	/**
+	 * The feature id for the '<em><b>Checkuvers</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHASE__CHECKUVERS = 7;
+
+	/**
 	 * The feature id for the '<em><b>Connect</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHASE__CONNECT = 4;
+	int PHASE__CONNECT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Continue On Oq Errors</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHASE__CONTINUE_ON_OQ_ERRORS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Elgfile</b></em>' attribute.
@@ -670,7 +943,16 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHASE__ELGFILE = 5;
+	int PHASE__ELGFILE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Ignorable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHASE__IGNORABLE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Logfile</b></em>' attribute.
@@ -679,7 +961,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHASE__LOGFILE = 6;
+	int PHASE__LOGFILE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -688,7 +970,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHASE__NAME = 7;
+	int PHASE__NAME = 13;
 
 	/**
 	 * The feature id for the '<em><b>Password</b></em>' attribute.
@@ -697,7 +979,16 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHASE__PASSWORD = 8;
+	int PHASE__PASSWORD = 14;
+
+	/**
+	 * The feature id for the '<em><b>Unlockonerror</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHASE__UNLOCKONERROR = 15;
 
 	/**
 	 * The number of structural features of the '<em>Phase</em>' class.
@@ -706,7 +997,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHASE_FEATURE_COUNT = 9;
+	int PHASE_FEATURE_COUNT = 16;
 
 	/**
 	 * The number of operations of the '<em>Phase</em>' class.
@@ -725,7 +1016,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getPhaselist()
 	 * @generated
 	 */
-	int PHASELIST = 10;
+	int PHASELIST = 13;
 
 	/**
 	 * The feature id for the '<em><b>Phase</b></em>' containment reference list.
@@ -746,13 +1037,31 @@ public interface TrialplePackage extends EPackage {
 	int PHASELIST__IF = 1;
 
 	/**
+	 * The feature id for the '<em><b>Submodule</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHASELIST__SUBMODULE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Submoduleref</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHASELIST__SUBMODULEREF = 3;
+
+	/**
 	 * The feature id for the '<em><b>Srcid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHASELIST__SRCID = 2;
+	int PHASELIST__SRCID = 4;
 
 	/**
 	 * The number of structural features of the '<em>Phaselist</em>' class.
@@ -761,7 +1070,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHASELIST_FEATURE_COUNT = 3;
+	int PHASELIST_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Phaselist</em>' class.
@@ -780,7 +1089,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getPrecedences()
 	 * @generated
 	 */
-	int PRECEDENCES = 11;
+	int PRECEDENCES = 14;
 
 	/**
 	 * The feature id for the '<em><b>Precedence</b></em>' attribute list.
@@ -810,6 +1119,473 @@ public interface TrialplePackage extends EPackage {
 	int PRECEDENCES_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link Trialple.impl.SubModuleImpl <em>Sub Module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.SubModuleImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getSubModule()
+	 * @generated
+	 */
+	int SUB_MODULE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Options</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_MODULE__OPTIONS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Phaselist</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_MODULE__PHASELIST = 1;
+
+	/**
+	 * The feature id for the '<em><b>Execparallel</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_MODULE__EXECPARALLEL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_MODULE__PASSWORD = 3;
+
+	/**
+	 * The number of structural features of the '<em>Sub Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_MODULE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Sub Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_MODULE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link Trialple.impl.SubmoduleDefImpl <em>Submodule Def</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.SubmoduleDefImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getSubmoduleDef()
+	 * @generated
+	 */
+	int SUBMODULE_DEF = 16;
+
+	/**
+	 * The feature id for the '<em><b>Defs</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMODULE_DEF__DEFS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Phaselist</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMODULE_DEF__PHASELIST = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMODULE_DEF__NAME = 2;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMODULE_DEF__PASSWORD = 3;
+
+	/**
+	 * The number of structural features of the '<em>Submodule Def</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMODULE_DEF_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Submodule Def</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMODULE_DEF_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link Trialple.impl.SubmoduleDefsImpl <em>Submodule Defs</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.SubmoduleDefsImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getSubmoduleDefs()
+	 * @generated
+	 */
+	int SUBMODULE_DEFS = 17;
+
+	/**
+	 * The feature id for the '<em><b>Submoduledef</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMODULE_DEFS__SUBMODULEDEF = 0;
+
+	/**
+	 * The feature id for the '<em><b>If</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMODULE_DEFS__IF = 1;
+
+	/**
+	 * The feature id for the '<em><b>Srcid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMODULE_DEFS__SRCID = 2;
+
+	/**
+	 * The number of structural features of the '<em>Submodule Defs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMODULE_DEFS_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Submodule Defs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMODULE_DEFS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link Trialple.impl.SubModuleRefImpl <em>Sub Module Ref</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.SubModuleRefImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getSubModuleRef()
+	 * @generated
+	 */
+	int SUB_MODULE_REF = 18;
+
+	/**
+	 * The feature id for the '<em><b>Options</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_MODULE_REF__OPTIONS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Defs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_MODULE_REF__DEFS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_MODULE_REF__NAME = 2;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_MODULE_REF__PASSWORD = 3;
+
+	/**
+	 * The feature id for the '<em><b>Refname</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_MODULE_REF__REFNAME = 4;
+
+	/**
+	 * The number of structural features of the '<em>Sub Module Ref</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_MODULE_REF_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Sub Module Ref</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_MODULE_REF_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link Trialple.impl.UnitImpl <em>Unit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.UnitImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getUnit()
+	 * @generated
+	 */
+	int UNIT = 19;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__TITLE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Unitmodules</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__UNITMODULES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__ID = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__NAME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__TYPE = 4;
+
+	/**
+	 * The number of structural features of the '<em>Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link Trialple.impl.UnitDefImpl <em>Unit Def</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.UnitDefImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getUnitDef()
+	 * @generated
+	 */
+	int UNIT_DEF = 20;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_DEF__UNIT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_DEF__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Srcid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_DEF__SRCID = 2;
+
+	/**
+	 * The number of structural features of the '<em>Unit Def</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_DEF_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Unit Def</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_DEF_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link Trialple.impl.UnitModListImpl <em>Unit Mod List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.UnitModListImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getUnitModList()
+	 * @generated
+	 */
+	int UNIT_MOD_LIST = 21;
+
+	/**
+	 * The feature id for the '<em><b>Unitmodule</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_MOD_LIST__UNITMODULE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Unit Mod List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_MOD_LIST_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Unit Mod List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_MOD_LIST_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link Trialple.impl.UnitModuleImpl <em>Unit Module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.UnitModuleImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getUnitModule()
+	 * @generated
+	 */
+	int UNIT_MODULE = 22;
+
+	/**
+	 * The feature id for the '<em><b>Options</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_MODULE__OPTIONS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_MODULE__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Unit Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_MODULE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Unit Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_MODULE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link Trialple.ModuleType <em>Module Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -817,7 +1593,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getModuleType()
 	 * @generated
 	 */
-	int MODULE_TYPE = 12;
+	int MODULE_TYPE = 23;
 
 	/**
 	 * The meta object id for the '<em>Module Type Object</em>' data type.
@@ -827,8 +1603,51 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getModuleTypeObject()
 	 * @generated
 	 */
-	int MODULE_TYPE_OBJECT = 13;
+	int MODULE_TYPE_OBJECT = 24;
 
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.And <em>And</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>And</em>'.
+	 * @see Trialple.And
+	 * @generated
+	 */
+	EClass getAnd();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.And#getOption <em>Option</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Option</em>'.
+	 * @see Trialple.And#getOption()
+	 * @see #getAnd()
+	 * @generated
+	 */
+	EReference getAnd_Option();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.And#getOr <em>Or</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Or</em>'.
+	 * @see Trialple.And#getOr()
+	 * @see #getAnd()
+	 * @generated
+	 */
+	EReference getAnd_Or();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.And#getNot <em>Not</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Not</em>'.
+	 * @see Trialple.And#getNot()
+	 * @see #getAnd()
+	 * @generated
+	 */
+	EReference getAnd_Not();
 
 	/**
 	 * Returns the meta object for class '{@link Trialple.Arguments <em>Arguments</em>}'.
@@ -850,6 +1669,27 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getArguments_Arg();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.Definitions <em>Definitions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Definitions</em>'.
+	 * @see Trialple.Definitions
+	 * @generated
+	 */
+	EClass getDefinitions();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link Trialple.Definitions#getDef <em>Def</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Def</em>'.
+	 * @see Trialple.Definitions#getDef()
+	 * @see #getDefinitions()
+	 * @generated
+	 */
+	EAttribute getDefinitions_Def();
 
 	/**
 	 * Returns the meta object for class '{@link Trialple.DocumentRoot <em>Document Root</em>}'.
@@ -916,15 +1756,48 @@ public interface TrialplePackage extends EPackage {
 	EClass getExecutionControl();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link Trialple.ExecutionControl#getModules <em>Modules</em>}'.
+	 * Returns the meta object for the containment reference list '{@link Trialple.ExecutionControl#getModules <em>Modules</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Modules</em>'.
+	 * @return the meta object for the containment reference list '<em>Modules</em>'.
 	 * @see Trialple.ExecutionControl#getModules()
 	 * @see #getExecutionControl()
 	 * @generated
 	 */
 	EReference getExecutionControl_Modules();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.ExecutionControl#getSubmoduledefs <em>Submoduledefs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Submoduledefs</em>'.
+	 * @see Trialple.ExecutionControl#getSubmoduledefs()
+	 * @see #getExecutionControl()
+	 * @generated
+	 */
+	EReference getExecutionControl_Submoduledefs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.ExecutionControl#getSubmoduledef <em>Submoduledef</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Submoduledef</em>'.
+	 * @see Trialple.ExecutionControl#getSubmoduledef()
+	 * @see #getExecutionControl()
+	 * @generated
+	 */
+	EReference getExecutionControl_Submoduledef();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.ExecutionControl#getUnitDefinition <em>Unit Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Unit Definition</em>'.
+	 * @see Trialple.ExecutionControl#getUnitDefinition()
+	 * @see #getExecutionControl()
+	 * @generated
+	 */
+	EReference getExecutionControl_UnitDefinition();
 
 	/**
 	 * Returns the meta object for the attribute '{@link Trialple.ExecutionControl#getName <em>Name</em>}'.
@@ -981,6 +1854,28 @@ public interface TrialplePackage extends EPackage {
 	EReference getIfType_Phase();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.IfType#getOptions <em>Options</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Options</em>'.
+	 * @see Trialple.IfType#getOptions()
+	 * @see #getIfType()
+	 * @generated
+	 */
+	EReference getIfType_Options();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.IfType#getSubmoduleref <em>Submoduleref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Submoduleref</em>'.
+	 * @see Trialple.IfType#getSubmoduleref()
+	 * @see #getIfType()
+	 * @generated
+	 */
+	EReference getIfType_Submoduleref();
+
+	/**
 	 * Returns the meta object for the attribute '{@link Trialple.IfType#getTest <em>Test</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1035,10 +1930,10 @@ public interface TrialplePackage extends EPackage {
 	EReference getModule_Options();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link Trialple.Module#getPostevent <em>Postevent</em>}'.
+	 * Returns the meta object for the attribute '{@link Trialple.Module#getPostevent <em>Postevent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Postevent</em>'.
+	 * @return the meta object for the attribute '<em>Postevent</em>'.
 	 * @see Trialple.Module#getPostevent()
 	 * @see #getModule()
 	 * @generated
@@ -1046,10 +1941,10 @@ public interface TrialplePackage extends EPackage {
 	EAttribute getModule_Postevent();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link Trialple.Module#getRevokemodule <em>Revokemodule</em>}'.
+	 * Returns the meta object for the attribute '{@link Trialple.Module#getRevokemodule <em>Revokemodule</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Revokemodule</em>'.
+	 * @return the meta object for the attribute '<em>Revokemodule</em>'.
 	 * @see Trialple.Module#getRevokemodule()
 	 * @see #getModule()
 	 * @generated
@@ -1057,10 +1952,10 @@ public interface TrialplePackage extends EPackage {
 	EAttribute getModule_Revokemodule();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link Trialple.Module#getPassword <em>Password</em>}'.
+	 * Returns the meta object for the attribute '{@link Trialple.Module#getPassword <em>Password</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Password</em>'.
+	 * @return the meta object for the attribute '<em>Password</em>'.
 	 * @see Trialple.Module#getPassword()
 	 * @see #getModule()
 	 * @generated
@@ -1199,6 +2094,49 @@ public interface TrialplePackage extends EPackage {
 	EReference getModules_Module();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Modules#getSrcid <em>Srcid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Srcid</em>'.
+	 * @see Trialple.Modules#getSrcid()
+	 * @see #getModules()
+	 * @generated
+	 */
+	EAttribute getModules_Srcid();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.Not <em>Not</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Not</em>'.
+	 * @see Trialple.Not
+	 * @generated
+	 */
+	EClass getNot();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.Not#getOption <em>Option</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Option</em>'.
+	 * @see Trialple.Not#getOption()
+	 * @see #getNot()
+	 * @generated
+	 */
+	EReference getNot_Option();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.Not#getAnd <em>And</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>And</em>'.
+	 * @see Trialple.Not#getAnd()
+	 * @see #getNot()
+	 * @generated
+	 */
+	EReference getNot_And();
+
+	/**
 	 * Returns the meta object for class '{@link Trialple.Option <em>Option</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1263,6 +2201,28 @@ public interface TrialplePackage extends EPackage {
 	EReference getOptList_Or();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.OptList#getNot <em>Not</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Not</em>'.
+	 * @see Trialple.OptList#getNot()
+	 * @see #getOptList()
+	 * @generated
+	 */
+	EReference getOptList_Not();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.OptList#getAnd <em>And</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>And</em>'.
+	 * @see Trialple.OptList#getAnd()
+	 * @see #getOptList()
+	 * @generated
+	 */
+	EReference getOptList_And();
+
+	/**
 	 * Returns the meta object for class '{@link Trialple.Or <em>Or</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1282,6 +2242,28 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOr_Option();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.Or#getAnd <em>And</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>And</em>'.
+	 * @see Trialple.Or#getAnd()
+	 * @see #getOr()
+	 * @generated
+	 */
+	EReference getOr_And();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.Or#getNot <em>Not</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Not</em>'.
+	 * @see Trialple.Or#getNot()
+	 * @see #getOr()
+	 * @generated
+	 */
+	EReference getOr_Not();
 
 	/**
 	 * Returns the meta object for class '{@link Trialple.Phase <em>Phase</em>}'.
@@ -1327,6 +2309,50 @@ public interface TrialplePackage extends EPackage {
 	EAttribute getPhase_Usage();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.Phase#getIf <em>If</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>If</em>'.
+	 * @see Trialple.Phase#getIf()
+	 * @see #getPhase()
+	 * @generated
+	 */
+	EReference getPhase_If();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Phase#getAutorepeat <em>Autorepeat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Autorepeat</em>'.
+	 * @see Trialple.Phase#getAutorepeat()
+	 * @see #getPhase()
+	 * @generated
+	 */
+	EAttribute getPhase_Autorepeat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Phase#isBuffersync <em>Buffersync</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Buffersync</em>'.
+	 * @see Trialple.Phase#isBuffersync()
+	 * @see #getPhase()
+	 * @generated
+	 */
+	EAttribute getPhase_Buffersync();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Phase#isCheckuvers <em>Checkuvers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Checkuvers</em>'.
+	 * @see Trialple.Phase#isCheckuvers()
+	 * @see #getPhase()
+	 * @generated
+	 */
+	EAttribute getPhase_Checkuvers();
+
+	/**
 	 * Returns the meta object for the attribute '{@link Trialple.Phase#getConnect <em>Connect</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1338,6 +2364,17 @@ public interface TrialplePackage extends EPackage {
 	EAttribute getPhase_Connect();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Phase#isContinueOnOqErrors <em>Continue On Oq Errors</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Continue On Oq Errors</em>'.
+	 * @see Trialple.Phase#isContinueOnOqErrors()
+	 * @see #getPhase()
+	 * @generated
+	 */
+	EAttribute getPhase_ContinueOnOqErrors();
+
+	/**
 	 * Returns the meta object for the attribute '{@link Trialple.Phase#getElgfile <em>Elgfile</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1347,6 +2384,17 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPhase_Elgfile();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Phase#isIgnorable <em>Ignorable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ignorable</em>'.
+	 * @see Trialple.Phase#isIgnorable()
+	 * @see #getPhase()
+	 * @generated
+	 */
+	EAttribute getPhase_Ignorable();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link Trialple.Phase#getOptions <em>Options</em>}'.
@@ -1393,6 +2441,17 @@ public interface TrialplePackage extends EPackage {
 	EAttribute getPhase_Password();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Phase#isUnlockonerror <em>Unlockonerror</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unlockonerror</em>'.
+	 * @see Trialple.Phase#isUnlockonerror()
+	 * @see #getPhase()
+	 * @generated
+	 */
+	EAttribute getPhase_Unlockonerror();
+
+	/**
 	 * Returns the meta object for class '{@link Trialple.Phaselist <em>Phaselist</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1425,6 +2484,28 @@ public interface TrialplePackage extends EPackage {
 	EReference getPhaselist_If();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.Phaselist#getSubmodule <em>Submodule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Submodule</em>'.
+	 * @see Trialple.Phaselist#getSubmodule()
+	 * @see #getPhaselist()
+	 * @generated
+	 */
+	EReference getPhaselist_Submodule();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.Phaselist#getSubmoduleref <em>Submoduleref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Submoduleref</em>'.
+	 * @see Trialple.Phaselist#getSubmoduleref()
+	 * @see #getPhaselist()
+	 * @generated
+	 */
+	EReference getPhaselist_Submoduleref();
+
+	/**
 	 * Returns the meta object for the attribute '{@link Trialple.Phaselist#getSrcid <em>Srcid</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1455,6 +2536,383 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPrecedences_Precedence();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.SubModule <em>Sub Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sub Module</em>'.
+	 * @see Trialple.SubModule
+	 * @generated
+	 */
+	EClass getSubModule();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.SubModule#getOptions <em>Options</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Options</em>'.
+	 * @see Trialple.SubModule#getOptions()
+	 * @see #getSubModule()
+	 * @generated
+	 */
+	EReference getSubModule_Options();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.SubModule#getPhaselist <em>Phaselist</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Phaselist</em>'.
+	 * @see Trialple.SubModule#getPhaselist()
+	 * @see #getSubModule()
+	 * @generated
+	 */
+	EReference getSubModule_Phaselist();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.SubModule#isExecparallel <em>Execparallel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Execparallel</em>'.
+	 * @see Trialple.SubModule#isExecparallel()
+	 * @see #getSubModule()
+	 * @generated
+	 */
+	EAttribute getSubModule_Execparallel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.SubModule#getPassword <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password</em>'.
+	 * @see Trialple.SubModule#getPassword()
+	 * @see #getSubModule()
+	 * @generated
+	 */
+	EAttribute getSubModule_Password();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.SubmoduleDef <em>Submodule Def</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Submodule Def</em>'.
+	 * @see Trialple.SubmoduleDef
+	 * @generated
+	 */
+	EClass getSubmoduleDef();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link Trialple.SubmoduleDef#getDefs <em>Defs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Defs</em>'.
+	 * @see Trialple.SubmoduleDef#getDefs()
+	 * @see #getSubmoduleDef()
+	 * @generated
+	 */
+	EReference getSubmoduleDef_Defs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.SubmoduleDef#getPhaselist <em>Phaselist</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Phaselist</em>'.
+	 * @see Trialple.SubmoduleDef#getPhaselist()
+	 * @see #getSubmoduleDef()
+	 * @generated
+	 */
+	EReference getSubmoduleDef_Phaselist();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.SubmoduleDef#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see Trialple.SubmoduleDef#getName()
+	 * @see #getSubmoduleDef()
+	 * @generated
+	 */
+	EAttribute getSubmoduleDef_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.SubmoduleDef#getPassword <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password</em>'.
+	 * @see Trialple.SubmoduleDef#getPassword()
+	 * @see #getSubmoduleDef()
+	 * @generated
+	 */
+	EAttribute getSubmoduleDef_Password();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.SubmoduleDefs <em>Submodule Defs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Submodule Defs</em>'.
+	 * @see Trialple.SubmoduleDefs
+	 * @generated
+	 */
+	EClass getSubmoduleDefs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.SubmoduleDefs#getSubmoduledef <em>Submoduledef</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Submoduledef</em>'.
+	 * @see Trialple.SubmoduleDefs#getSubmoduledef()
+	 * @see #getSubmoduleDefs()
+	 * @generated
+	 */
+	EReference getSubmoduleDefs_Submoduledef();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.SubmoduleDefs#getIf <em>If</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>If</em>'.
+	 * @see Trialple.SubmoduleDefs#getIf()
+	 * @see #getSubmoduleDefs()
+	 * @generated
+	 */
+	EReference getSubmoduleDefs_If();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.SubmoduleDefs#getSrcid <em>Srcid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Srcid</em>'.
+	 * @see Trialple.SubmoduleDefs#getSrcid()
+	 * @see #getSubmoduleDefs()
+	 * @generated
+	 */
+	EAttribute getSubmoduleDefs_Srcid();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.SubModuleRef <em>Sub Module Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sub Module Ref</em>'.
+	 * @see Trialple.SubModuleRef
+	 * @generated
+	 */
+	EClass getSubModuleRef();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.SubModuleRef#getOptions <em>Options</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Options</em>'.
+	 * @see Trialple.SubModuleRef#getOptions()
+	 * @see #getSubModuleRef()
+	 * @generated
+	 */
+	EReference getSubModuleRef_Options();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.SubModuleRef#getDefs <em>Defs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Defs</em>'.
+	 * @see Trialple.SubModuleRef#getDefs()
+	 * @see #getSubModuleRef()
+	 * @generated
+	 */
+	EReference getSubModuleRef_Defs();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.SubModuleRef#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see Trialple.SubModuleRef#getName()
+	 * @see #getSubModuleRef()
+	 * @generated
+	 */
+	EAttribute getSubModuleRef_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.SubModuleRef#getPassword <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password</em>'.
+	 * @see Trialple.SubModuleRef#getPassword()
+	 * @see #getSubModuleRef()
+	 * @generated
+	 */
+	EAttribute getSubModuleRef_Password();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.SubModuleRef#getRefname <em>Refname</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Refname</em>'.
+	 * @see Trialple.SubModuleRef#getRefname()
+	 * @see #getSubModuleRef()
+	 * @generated
+	 */
+	EAttribute getSubModuleRef_Refname();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.Unit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Unit</em>'.
+	 * @see Trialple.Unit
+	 * @generated
+	 */
+	EClass getUnit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Unit#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title</em>'.
+	 * @see Trialple.Unit#getTitle()
+	 * @see #getUnit()
+	 * @generated
+	 */
+	EAttribute getUnit_Title();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link Trialple.Unit#getUnitmodules <em>Unitmodules</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Unitmodules</em>'.
+	 * @see Trialple.Unit#getUnitmodules()
+	 * @see #getUnit()
+	 * @generated
+	 */
+	EReference getUnit_Unitmodules();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Unit#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see Trialple.Unit#getId()
+	 * @see #getUnit()
+	 * @generated
+	 */
+	EAttribute getUnit_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Unit#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see Trialple.Unit#getName()
+	 * @see #getUnit()
+	 * @generated
+	 */
+	EAttribute getUnit_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Unit#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see Trialple.Unit#getType()
+	 * @see #getUnit()
+	 * @generated
+	 */
+	EAttribute getUnit_Type();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.UnitDef <em>Unit Def</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Unit Def</em>'.
+	 * @see Trialple.UnitDef
+	 * @generated
+	 */
+	EClass getUnitDef();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.UnitDef#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Unit</em>'.
+	 * @see Trialple.UnitDef#getUnit()
+	 * @see #getUnitDef()
+	 * @generated
+	 */
+	EReference getUnitDef_Unit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.UnitDef#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see Trialple.UnitDef#getName()
+	 * @see #getUnitDef()
+	 * @generated
+	 */
+	EAttribute getUnitDef_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.UnitDef#getSrcid <em>Srcid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Srcid</em>'.
+	 * @see Trialple.UnitDef#getSrcid()
+	 * @see #getUnitDef()
+	 * @generated
+	 */
+	EAttribute getUnitDef_Srcid();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.UnitModList <em>Unit Mod List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Unit Mod List</em>'.
+	 * @see Trialple.UnitModList
+	 * @generated
+	 */
+	EClass getUnitModList();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.UnitModList#getUnitmodule <em>Unitmodule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Unitmodule</em>'.
+	 * @see Trialple.UnitModList#getUnitmodule()
+	 * @see #getUnitModList()
+	 * @generated
+	 */
+	EReference getUnitModList_Unitmodule();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.UnitModule <em>Unit Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Unit Module</em>'.
+	 * @see Trialple.UnitModule
+	 * @generated
+	 */
+	EClass getUnitModule();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.UnitModule#getOptions <em>Options</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Options</em>'.
+	 * @see Trialple.UnitModule#getOptions()
+	 * @see #getUnitModule()
+	 * @generated
+	 */
+	EReference getUnitModule_Options();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.UnitModule#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see Trialple.UnitModule#getName()
+	 * @see #getUnitModule()
+	 * @generated
+	 */
+	EAttribute getUnitModule_Name();
 
 	/**
 	 * Returns the meta object for enum '{@link Trialple.ModuleType <em>Module Type</em>}'.
@@ -1502,6 +2960,40 @@ public interface TrialplePackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link Trialple.impl.AndImpl <em>And</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.AndImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getAnd()
+		 * @generated
+		 */
+		EClass AND = eINSTANCE.getAnd();
+
+		/**
+		 * The meta object literal for the '<em><b>Option</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference AND__OPTION = eINSTANCE.getAnd_Option();
+
+		/**
+		 * The meta object literal for the '<em><b>Or</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference AND__OR = eINSTANCE.getAnd_Or();
+
+		/**
+		 * The meta object literal for the '<em><b>Not</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference AND__NOT = eINSTANCE.getAnd_Not();
+
+		/**
 		 * The meta object literal for the '{@link Trialple.impl.ArgumentsImpl <em>Arguments</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1518,6 +3010,24 @@ public interface TrialplePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ARGUMENTS__ARG = eINSTANCE.getArguments_Arg();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.DefinitionsImpl <em>Definitions</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.DefinitionsImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getDefinitions()
+		 * @generated
+		 */
+		EClass DEFINITIONS = eINSTANCE.getDefinitions();
+
+		/**
+		 * The meta object literal for the '<em><b>Def</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEFINITIONS__DEF = eINSTANCE.getDefinitions_Def();
 
 		/**
 		 * The meta object literal for the '{@link Trialple.impl.DocumentRootImpl <em>Document Root</em>}' class.
@@ -1572,12 +3082,36 @@ public interface TrialplePackage extends EPackage {
 		EClass EXECUTION_CONTROL = eINSTANCE.getExecutionControl();
 
 		/**
-		 * The meta object literal for the '<em><b>Modules</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Modules</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference EXECUTION_CONTROL__MODULES = eINSTANCE.getExecutionControl_Modules();
+
+		/**
+		 * The meta object literal for the '<em><b>Submoduledefs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTION_CONTROL__SUBMODULEDEFS = eINSTANCE.getExecutionControl_Submoduledefs();
+
+		/**
+		 * The meta object literal for the '<em><b>Submoduledef</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTION_CONTROL__SUBMODULEDEF = eINSTANCE.getExecutionControl_Submoduledef();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit Definition</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTION_CONTROL__UNIT_DEFINITION = eINSTANCE.getExecutionControl_UnitDefinition();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1622,6 +3156,22 @@ public interface TrialplePackage extends EPackage {
 		EReference IF_TYPE__PHASE = eINSTANCE.getIfType_Phase();
 
 		/**
+		 * The meta object literal for the '<em><b>Options</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IF_TYPE__OPTIONS = eINSTANCE.getIfType_Options();
+
+		/**
+		 * The meta object literal for the '<em><b>Submoduleref</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IF_TYPE__SUBMODULEREF = eINSTANCE.getIfType_Submoduleref();
+
+		/**
 		 * The meta object literal for the '<em><b>Test</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1664,7 +3214,7 @@ public interface TrialplePackage extends EPackage {
 		EReference MODULE__OPTIONS = eINSTANCE.getModule_Options();
 
 		/**
-		 * The meta object literal for the '<em><b>Postevent</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Postevent</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1672,7 +3222,7 @@ public interface TrialplePackage extends EPackage {
 		EAttribute MODULE__POSTEVENT = eINSTANCE.getModule_Postevent();
 
 		/**
-		 * The meta object literal for the '<em><b>Revokemodule</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Revokemodule</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1680,7 +3230,7 @@ public interface TrialplePackage extends EPackage {
 		EAttribute MODULE__REVOKEMODULE = eINSTANCE.getModule_Revokemodule();
 
 		/**
-		 * The meta object literal for the '<em><b>Password</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1786,6 +3336,40 @@ public interface TrialplePackage extends EPackage {
 		EReference MODULES__MODULE = eINSTANCE.getModules_Module();
 
 		/**
+		 * The meta object literal for the '<em><b>Srcid</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULES__SRCID = eINSTANCE.getModules_Srcid();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.NotImpl <em>Not</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.NotImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getNot()
+		 * @generated
+		 */
+		EClass NOT = eINSTANCE.getNot();
+
+		/**
+		 * The meta object literal for the '<em><b>Option</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NOT__OPTION = eINSTANCE.getNot_Option();
+
+		/**
+		 * The meta object literal for the '<em><b>And</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NOT__AND = eINSTANCE.getNot_And();
+
+		/**
 		 * The meta object literal for the '{@link Trialple.impl.OptionImpl <em>Option</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1838,6 +3422,22 @@ public interface TrialplePackage extends EPackage {
 		EReference OPT_LIST__OR = eINSTANCE.getOptList_Or();
 
 		/**
+		 * The meta object literal for the '<em><b>Not</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPT_LIST__NOT = eINSTANCE.getOptList_Not();
+
+		/**
+		 * The meta object literal for the '<em><b>And</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPT_LIST__AND = eINSTANCE.getOptList_And();
+
+		/**
 		 * The meta object literal for the '{@link Trialple.impl.OrImpl <em>Or</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1854,6 +3454,22 @@ public interface TrialplePackage extends EPackage {
 		 * @generated
 		 */
 		EReference OR__OPTION = eINSTANCE.getOr_Option();
+
+		/**
+		 * The meta object literal for the '<em><b>And</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OR__AND = eINSTANCE.getOr_And();
+
+		/**
+		 * The meta object literal for the '<em><b>Not</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OR__NOT = eINSTANCE.getOr_Not();
 
 		/**
 		 * The meta object literal for the '{@link Trialple.impl.PhaseImpl <em>Phase</em>}' class.
@@ -1890,6 +3506,38 @@ public interface TrialplePackage extends EPackage {
 		EAttribute PHASE__USAGE = eINSTANCE.getPhase_Usage();
 
 		/**
+		 * The meta object literal for the '<em><b>If</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PHASE__IF = eINSTANCE.getPhase_If();
+
+		/**
+		 * The meta object literal for the '<em><b>Autorepeat</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PHASE__AUTOREPEAT = eINSTANCE.getPhase_Autorepeat();
+
+		/**
+		 * The meta object literal for the '<em><b>Buffersync</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PHASE__BUFFERSYNC = eINSTANCE.getPhase_Buffersync();
+
+		/**
+		 * The meta object literal for the '<em><b>Checkuvers</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PHASE__CHECKUVERS = eINSTANCE.getPhase_Checkuvers();
+
+		/**
 		 * The meta object literal for the '<em><b>Connect</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1898,12 +3546,28 @@ public interface TrialplePackage extends EPackage {
 		EAttribute PHASE__CONNECT = eINSTANCE.getPhase_Connect();
 
 		/**
+		 * The meta object literal for the '<em><b>Continue On Oq Errors</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PHASE__CONTINUE_ON_OQ_ERRORS = eINSTANCE.getPhase_ContinueOnOqErrors();
+
+		/**
 		 * The meta object literal for the '<em><b>Elgfile</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute PHASE__ELGFILE = eINSTANCE.getPhase_Elgfile();
+
+		/**
+		 * The meta object literal for the '<em><b>Ignorable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PHASE__IGNORABLE = eINSTANCE.getPhase_Ignorable();
 
 		/**
 		 * The meta object literal for the '<em><b>Options</b></em>' containment reference feature.
@@ -1938,6 +3602,14 @@ public interface TrialplePackage extends EPackage {
 		EAttribute PHASE__PASSWORD = eINSTANCE.getPhase_Password();
 
 		/**
+		 * The meta object literal for the '<em><b>Unlockonerror</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PHASE__UNLOCKONERROR = eINSTANCE.getPhase_Unlockonerror();
+
+		/**
 		 * The meta object literal for the '{@link Trialple.impl.PhaselistImpl <em>Phaselist</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1964,6 +3636,22 @@ public interface TrialplePackage extends EPackage {
 		EReference PHASELIST__IF = eINSTANCE.getPhaselist_If();
 
 		/**
+		 * The meta object literal for the '<em><b>Submodule</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PHASELIST__SUBMODULE = eINSTANCE.getPhaselist_Submodule();
+
+		/**
+		 * The meta object literal for the '<em><b>Submoduleref</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PHASELIST__SUBMODULEREF = eINSTANCE.getPhaselist_Submoduleref();
+
+		/**
 		 * The meta object literal for the '<em><b>Srcid</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1988,6 +3676,302 @@ public interface TrialplePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PRECEDENCES__PRECEDENCE = eINSTANCE.getPrecedences_Precedence();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.SubModuleImpl <em>Sub Module</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.SubModuleImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getSubModule()
+		 * @generated
+		 */
+		EClass SUB_MODULE = eINSTANCE.getSubModule();
+
+		/**
+		 * The meta object literal for the '<em><b>Options</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUB_MODULE__OPTIONS = eINSTANCE.getSubModule_Options();
+
+		/**
+		 * The meta object literal for the '<em><b>Phaselist</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUB_MODULE__PHASELIST = eINSTANCE.getSubModule_Phaselist();
+
+		/**
+		 * The meta object literal for the '<em><b>Execparallel</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUB_MODULE__EXECPARALLEL = eINSTANCE.getSubModule_Execparallel();
+
+		/**
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUB_MODULE__PASSWORD = eINSTANCE.getSubModule_Password();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.SubmoduleDefImpl <em>Submodule Def</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.SubmoduleDefImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getSubmoduleDef()
+		 * @generated
+		 */
+		EClass SUBMODULE_DEF = eINSTANCE.getSubmoduleDef();
+
+		/**
+		 * The meta object literal for the '<em><b>Defs</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUBMODULE_DEF__DEFS = eINSTANCE.getSubmoduleDef_Defs();
+
+		/**
+		 * The meta object literal for the '<em><b>Phaselist</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUBMODULE_DEF__PHASELIST = eINSTANCE.getSubmoduleDef_Phaselist();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUBMODULE_DEF__NAME = eINSTANCE.getSubmoduleDef_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUBMODULE_DEF__PASSWORD = eINSTANCE.getSubmoduleDef_Password();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.SubmoduleDefsImpl <em>Submodule Defs</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.SubmoduleDefsImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getSubmoduleDefs()
+		 * @generated
+		 */
+		EClass SUBMODULE_DEFS = eINSTANCE.getSubmoduleDefs();
+
+		/**
+		 * The meta object literal for the '<em><b>Submoduledef</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUBMODULE_DEFS__SUBMODULEDEF = eINSTANCE.getSubmoduleDefs_Submoduledef();
+
+		/**
+		 * The meta object literal for the '<em><b>If</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUBMODULE_DEFS__IF = eINSTANCE.getSubmoduleDefs_If();
+
+		/**
+		 * The meta object literal for the '<em><b>Srcid</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUBMODULE_DEFS__SRCID = eINSTANCE.getSubmoduleDefs_Srcid();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.SubModuleRefImpl <em>Sub Module Ref</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.SubModuleRefImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getSubModuleRef()
+		 * @generated
+		 */
+		EClass SUB_MODULE_REF = eINSTANCE.getSubModuleRef();
+
+		/**
+		 * The meta object literal for the '<em><b>Options</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUB_MODULE_REF__OPTIONS = eINSTANCE.getSubModuleRef_Options();
+
+		/**
+		 * The meta object literal for the '<em><b>Defs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUB_MODULE_REF__DEFS = eINSTANCE.getSubModuleRef_Defs();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUB_MODULE_REF__NAME = eINSTANCE.getSubModuleRef_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUB_MODULE_REF__PASSWORD = eINSTANCE.getSubModuleRef_Password();
+
+		/**
+		 * The meta object literal for the '<em><b>Refname</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUB_MODULE_REF__REFNAME = eINSTANCE.getSubModuleRef_Refname();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.UnitImpl <em>Unit</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.UnitImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getUnit()
+		 * @generated
+		 */
+		EClass UNIT = eINSTANCE.getUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT__TITLE = eINSTANCE.getUnit_Title();
+
+		/**
+		 * The meta object literal for the '<em><b>Unitmodules</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT__UNITMODULES = eINSTANCE.getUnit_Unitmodules();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT__ID = eINSTANCE.getUnit_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT__NAME = eINSTANCE.getUnit_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT__TYPE = eINSTANCE.getUnit_Type();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.UnitDefImpl <em>Unit Def</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.UnitDefImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getUnitDef()
+		 * @generated
+		 */
+		EClass UNIT_DEF = eINSTANCE.getUnitDef();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT_DEF__UNIT = eINSTANCE.getUnitDef_Unit();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_DEF__NAME = eINSTANCE.getUnitDef_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Srcid</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_DEF__SRCID = eINSTANCE.getUnitDef_Srcid();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.UnitModListImpl <em>Unit Mod List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.UnitModListImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getUnitModList()
+		 * @generated
+		 */
+		EClass UNIT_MOD_LIST = eINSTANCE.getUnitModList();
+
+		/**
+		 * The meta object literal for the '<em><b>Unitmodule</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT_MOD_LIST__UNITMODULE = eINSTANCE.getUnitModList_Unitmodule();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.UnitModuleImpl <em>Unit Module</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.UnitModuleImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getUnitModule()
+		 * @generated
+		 */
+		EClass UNIT_MODULE = eINSTANCE.getUnitModule();
+
+		/**
+		 * The meta object literal for the '<em><b>Options</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT_MODULE__OPTIONS = eINSTANCE.getUnitModule_Options();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT_MODULE__NAME = eINSTANCE.getUnitModule_Name();
 
 		/**
 		 * The meta object literal for the '{@link Trialple.ModuleType <em>Module Type</em>}' enum.

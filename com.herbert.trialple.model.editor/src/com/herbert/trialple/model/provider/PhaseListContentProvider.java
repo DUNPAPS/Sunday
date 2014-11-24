@@ -1,5 +1,6 @@
 package com.herbert.trialple.model.provider;
 
+
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 
@@ -94,7 +95,7 @@ public class PhaseListContentProvider implements ITreeContentProvider {
 
 	@Override
 	public void dispose() {
-
+	 
 	}
 	
 	

@@ -2,6 +2,7 @@
  */
 package Trialple;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,6 +14,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link Trialple.ExecutionControl#getModules <em>Modules</em>}</li>
+ *   <li>{@link Trialple.ExecutionControl#getSubmoduledefs <em>Submoduledefs</em>}</li>
+ *   <li>{@link Trialple.ExecutionControl#getSubmoduledef <em>Submoduledef</em>}</li>
+ *   <li>{@link Trialple.ExecutionControl#getUnitDefinition <em>Unit Definition</em>}</li>
  *   <li>{@link Trialple.ExecutionControl#getName <em>Name</em>}</li>
  *   <li>{@link Trialple.ExecutionControl#getSrcid <em>Srcid</em>}</li>
  *   <li>{@link Trialple.ExecutionControl#getVersion <em>Version</em>}</li>
@@ -25,31 +29,72 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ExecutionControl extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Modules</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Modules</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.Modules}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Modules</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Modules</em>' containment reference.
-	 * @see #setModules(Modules)
+	 * @return the value of the '<em>Modules</em>' containment reference list.
 	 * @see Trialple.TrialplePackage#getExecutionControl_Modules()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='Modules' namespace='##targetNamespace'"
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='modules' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	Modules getModules();
+	EList<Modules> getModules();
 
 	/**
-	 * Sets the value of the '{@link Trialple.ExecutionControl#getModules <em>Modules</em>}' containment reference.
+	 * Returns the value of the '<em><b>Submoduledefs</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.SubmoduleDefs}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Submoduledefs</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Modules</em>' containment reference.
-	 * @see #getModules()
+	 * @return the value of the '<em>Submoduledefs</em>' containment reference list.
+	 * @see Trialple.TrialplePackage#getExecutionControl_Submoduledefs()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='submoduledefs' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	void setModules(Modules value);
+	EList<SubmoduleDefs> getSubmoduledefs();
+
+	/**
+	 * Returns the value of the '<em><b>Submoduledef</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.SubmoduleDef}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Submoduledef</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Submoduledef</em>' containment reference list.
+	 * @see Trialple.TrialplePackage#getExecutionControl_Submoduledef()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='submoduledef' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<SubmoduleDef> getSubmoduledef();
+
+	/**
+	 * Returns the value of the '<em><b>Unit Definition</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.UnitDef}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Unit Definition</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Unit Definition</em>' containment reference list.
+	 * @see Trialple.TrialplePackage#getExecutionControl_UnitDefinition()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='UnitDefinition' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<UnitDef> getUnitDefinition();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

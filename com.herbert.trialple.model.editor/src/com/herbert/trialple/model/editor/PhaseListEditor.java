@@ -1,12 +1,16 @@
 package com.herbert.trialple.model.editor;
 
+
 import org.eclipse.core.runtime.IProgressMonitor;
+
+
 import org.eclipse.swt.SWT;
 import org.eclipse.ui.part.MultiPageEditorPart;
 import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 
-import com.herbert.trialple.model.outline.OutlineView;
+import src.com.herbert.trialple.model.outlineline.OutlineView;
+
 
 public class PhaseListEditor extends MultiPageEditorPart {
 
@@ -46,7 +50,7 @@ public class PhaseListEditor extends MultiPageEditorPart {
 				getContainer(), SWT.NONE);
 
 		int index = addPage(variantsEditor);
-		setPageText(index, "Variants");
+		setPageText(index, "Document Root");
 	}
 
 	@Override

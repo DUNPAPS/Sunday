@@ -76,34 +76,64 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	protected OptList options;
 
 	/**
-	 * The cached value of the '{@link #getPostevent() <em>Postevent</em>}' attribute list.
+	 * The default value of the '{@link #getPostevent() <em>Postevent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPostevent()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> postevent;
+	protected static final String POSTEVENT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getRevokemodule() <em>Revokemodule</em>}' attribute list.
+	 * The cached value of the '{@link #getPostevent() <em>Postevent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPostevent()
+	 * @generated
+	 * @ordered
+	 */
+	protected String postevent = POSTEVENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRevokemodule() <em>Revokemodule</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRevokemodule()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> revokemodule;
+	protected static final String REVOKEMODULE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getPassword() <em>Password</em>}' attribute list.
+	 * The cached value of the '{@link #getRevokemodule() <em>Revokemodule</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRevokemodule()
+	 * @generated
+	 * @ordered
+	 */
+	protected String revokemodule = REVOKEMODULE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPassword() <em>Password</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPassword()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> password;
+	protected static final String PASSWORD_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPassword() <em>Password</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPassword()
+	 * @generated
+	 * @ordered
+	 */
+	protected String password = PASSWORD_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getPrecedences() <em>Precedences</em>}' containment reference list.
@@ -436,10 +466,7 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getPostevent() {
-		if (postevent == null) {
-			postevent = new EDataTypeEList<String>(String.class, this, TrialplePackage.MODULE__POSTEVENT);
-		}
+	public String getPostevent() {
 		return postevent;
 	}
 
@@ -448,10 +475,19 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getRevokemodule() {
-		if (revokemodule == null) {
-			revokemodule = new EDataTypeEList<String>(String.class, this, TrialplePackage.MODULE__REVOKEMODULE);
-		}
+	public void setPostevent(String newPostevent) {
+		String oldPostevent = postevent;
+		postevent = newPostevent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TrialplePackage.MODULE__POSTEVENT, oldPostevent, postevent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getRevokemodule() {
 		return revokemodule;
 	}
 
@@ -460,11 +496,32 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getPassword() {
-		if (password == null) {
-			password = new EDataTypeEList<String>(String.class, this, TrialplePackage.MODULE__PASSWORD);
-		}
+	public void setRevokemodule(String newRevokemodule) {
+		String oldRevokemodule = revokemodule;
+		revokemodule = newRevokemodule;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TrialplePackage.MODULE__REVOKEMODULE, oldRevokemodule, revokemodule));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPassword() {
 		return password;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPassword(String newPassword) {
+		String oldPassword = password;
+		password = newPassword;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TrialplePackage.MODULE__PASSWORD, oldPassword, password));
 	}
 
 	/**
@@ -772,16 +829,13 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				setOptions((OptList)newValue);
 				return;
 			case TrialplePackage.MODULE__POSTEVENT:
-				getPostevent().clear();
-				getPostevent().addAll((Collection<? extends String>)newValue);
+				setPostevent((String)newValue);
 				return;
 			case TrialplePackage.MODULE__REVOKEMODULE:
-				getRevokemodule().clear();
-				getRevokemodule().addAll((Collection<? extends String>)newValue);
+				setRevokemodule((String)newValue);
 				return;
 			case TrialplePackage.MODULE__PASSWORD:
-				getPassword().clear();
-				getPassword().addAll((Collection<? extends String>)newValue);
+				setPassword((String)newValue);
 				return;
 			case TrialplePackage.MODULE__PRECEDENCES:
 				getPrecedences().clear();
@@ -836,13 +890,13 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				setOptions((OptList)null);
 				return;
 			case TrialplePackage.MODULE__POSTEVENT:
-				getPostevent().clear();
+				setPostevent(POSTEVENT_EDEFAULT);
 				return;
 			case TrialplePackage.MODULE__REVOKEMODULE:
-				getRevokemodule().clear();
+				setRevokemodule(REVOKEMODULE_EDEFAULT);
 				return;
 			case TrialplePackage.MODULE__PASSWORD:
-				getPassword().clear();
+				setPassword(PASSWORD_EDEFAULT);
 				return;
 			case TrialplePackage.MODULE__PRECEDENCES:
 				getPrecedences().clear();
@@ -894,11 +948,11 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 			case TrialplePackage.MODULE__OPTIONS:
 				return options != null;
 			case TrialplePackage.MODULE__POSTEVENT:
-				return postevent != null && !postevent.isEmpty();
+				return POSTEVENT_EDEFAULT == null ? postevent != null : !POSTEVENT_EDEFAULT.equals(postevent);
 			case TrialplePackage.MODULE__REVOKEMODULE:
-				return revokemodule != null && !revokemodule.isEmpty();
+				return REVOKEMODULE_EDEFAULT == null ? revokemodule != null : !REVOKEMODULE_EDEFAULT.equals(revokemodule);
 			case TrialplePackage.MODULE__PASSWORD:
-				return password != null && !password.isEmpty();
+				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
 			case TrialplePackage.MODULE__PRECEDENCES:
 				return precedences != null && !precedences.isEmpty();
 			case TrialplePackage.MODULE__PHASELIST:

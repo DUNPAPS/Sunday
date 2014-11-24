@@ -15,6 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link Trialple.IfType#getPhase <em>Phase</em>}</li>
+ *   <li>{@link Trialple.IfType#getOptions <em>Options</em>}</li>
+ *   <li>{@link Trialple.IfType#getSubmoduleref <em>Submoduleref</em>}</li>
  *   <li>{@link Trialple.IfType#getTest <em>Test</em>}</li>
  * </ul>
  * </p>
@@ -40,6 +42,40 @@ public interface IfType extends EObject {
 	 * @generated
 	 */
 	EList<Phase> getPhase();
+
+	/**
+	 * Returns the value of the '<em><b>Options</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.OptList}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Options</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Options</em>' containment reference list.
+	 * @see Trialple.TrialplePackage#getIfType_Options()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='options' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<OptList> getOptions();
+
+	/**
+	 * Returns the value of the '<em><b>Submoduleref</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.SubModuleRef}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Submoduleref</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Submoduleref</em>' containment reference list.
+	 * @see Trialple.TrialplePackage#getIfType_Submoduleref()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='submoduleref' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<SubModuleRef> getSubmoduleref();
 
 	/**
 	 * Returns the value of the '<em><b>Test</b></em>' attribute.

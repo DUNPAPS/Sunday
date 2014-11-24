@@ -2,6 +2,7 @@
  */
 package Trialple;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -12,7 +13,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Trialple.Not#getBooleanExp <em>Boolean Exp</em>}</li>
+ *   <li>{@link Trialple.Not#getOption <em>Option</em>}</li>
+ *   <li>{@link Trialple.Not#getAnd <em>And</em>}</li>
  * </ul>
  * </p>
  *
@@ -22,30 +24,37 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Not extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Boolean Exp</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Option</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.Option}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Boolean Exp</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Option</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Boolean Exp</em>' containment reference.
-	 * @see #setBooleanExp(BooleanExp)
-	 * @see Trialple.TrialplePackage#getNot_BooleanExp()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='booleanExp' namespace='##targetNamespace'"
+	 * @return the value of the '<em>Option</em>' containment reference list.
+	 * @see Trialple.TrialplePackage#getNot_Option()
+	 * @model containment="true" upper="10"
+	 *        extendedMetaData="kind='element' name='option' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	BooleanExp getBooleanExp();
+	EList<Option> getOption();
 
 	/**
-	 * Sets the value of the '{@link Trialple.Not#getBooleanExp <em>Boolean Exp</em>}' containment reference.
+	 * Returns the value of the '<em><b>And</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.And}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>And</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Boolean Exp</em>' containment reference.
-	 * @see #getBooleanExp()
+	 * @return the value of the '<em>And</em>' containment reference list.
+	 * @see Trialple.TrialplePackage#getNot_And()
+	 * @model containment="true" upper="10"
+	 *        extendedMetaData="kind='element' name='and' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	void setBooleanExp(BooleanExp value);
+	EList<And> getAnd();
 
 } // Not

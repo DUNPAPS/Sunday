@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link Trialple.Phaselist#getPhase <em>Phase</em>}</li>
  *   <li>{@link Trialple.Phaselist#getIf <em>If</em>}</li>
+ *   <li>{@link Trialple.Phaselist#getSubmodule <em>Submodule</em>}</li>
+ *   <li>{@link Trialple.Phaselist#getSubmoduleref <em>Submoduleref</em>}</li>
  *   <li>{@link Trialple.Phaselist#getSrcid <em>Srcid</em>}</li>
  * </ul>
  * </p>
@@ -58,6 +60,40 @@ public interface Phaselist extends EObject {
 	 * @generated
 	 */
 	EList<IfType> getIf();
+
+	/**
+	 * Returns the value of the '<em><b>Submodule</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.SubModule}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Submodule</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Submodule</em>' containment reference list.
+	 * @see Trialple.TrialplePackage#getPhaselist_Submodule()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='submodule' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<SubModule> getSubmodule();
+
+	/**
+	 * Returns the value of the '<em><b>Submoduleref</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.SubModuleRef}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Submoduleref</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Submoduleref</em>' containment reference list.
+	 * @see Trialple.TrialplePackage#getPhaselist_Submoduleref()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='submoduleref' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<SubModuleRef> getSubmoduleref();
 
 	/**
 	 * Returns the value of the '<em><b>Srcid</b></em>' attribute.

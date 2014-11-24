@@ -22,6 +22,15 @@ public interface TrialpleFactory extends EFactory {
 	TrialpleFactory eINSTANCE = Trialple.impl.TrialpleFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>And</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>And</em>'.
+	 * @generated
+	 */
+	And createAnd();
+
+	/**
 	 * Returns a new object of class '<em>Arguments</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -29,6 +38,15 @@ public interface TrialpleFactory extends EFactory {
 	 * @generated
 	 */
 	Arguments createArguments();
+
+	/**
+	 * Returns a new object of class '<em>Definitions</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Definitions</em>'.
+	 * @generated
+	 */
+	Definitions createDefinitions();
 
 	/**
 	 * Returns a new object of class '<em>Document Root</em>'.
@@ -74,6 +92,15 @@ public interface TrialpleFactory extends EFactory {
 	 * @generated
 	 */
 	Modules createModules();
+
+	/**
+	 * Returns a new object of class '<em>Not</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Not</em>'.
+	 * @generated
+	 */
+	Not createNot();
 
 	/**
 	 * Returns a new object of class '<em>Option</em>'.
@@ -128,6 +155,78 @@ public interface TrialpleFactory extends EFactory {
 	 * @generated
 	 */
 	Precedences createPrecedences();
+
+	/**
+	 * Returns a new object of class '<em>Sub Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sub Module</em>'.
+	 * @generated
+	 */
+	SubModule createSubModule();
+
+	/**
+	 * Returns a new object of class '<em>Submodule Def</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Submodule Def</em>'.
+	 * @generated
+	 */
+	SubmoduleDef createSubmoduleDef();
+
+	/**
+	 * Returns a new object of class '<em>Submodule Defs</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Submodule Defs</em>'.
+	 * @generated
+	 */
+	SubmoduleDefs createSubmoduleDefs();
+
+	/**
+	 * Returns a new object of class '<em>Sub Module Ref</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sub Module Ref</em>'.
+	 * @generated
+	 */
+	SubModuleRef createSubModuleRef();
+
+	/**
+	 * Returns a new object of class '<em>Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unit</em>'.
+	 * @generated
+	 */
+	Unit createUnit();
+
+	/**
+	 * Returns a new object of class '<em>Unit Def</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unit Def</em>'.
+	 * @generated
+	 */
+	UnitDef createUnitDef();
+
+	/**
+	 * Returns a new object of class '<em>Unit Mod List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unit Mod List</em>'.
+	 * @generated
+	 */
+	UnitModList createUnitModList();
+
+	/**
+	 * Returns a new object of class '<em>Unit Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unit Module</em>'.
+	 * @generated
+	 */
+	UnitModule createUnitModule();
 
 	/**
 	 * Returns the package supported by this factory.
