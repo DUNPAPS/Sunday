@@ -10,9 +10,9 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
-import src.com.herbert.trialple.model.outlineline.OutlineView;
 import Trialple.DocumentRoot;
 
+import com.herbert.trialple.model.outline.OutlineView;
 import com.herbert.trialple.model.resource.LoadResources;
 
 public class VariantsEditor extends Composite {

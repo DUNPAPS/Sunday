@@ -1,4 +1,4 @@
-package src.com.herbert.trialple.model.outlineline;
+package com.herbert.trialple.model.outline;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

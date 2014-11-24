@@ -9,7 +9,7 @@ import org.eclipse.ui.part.MultiPageEditorPart;
 import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 
-import src.com.herbert.trialple.model.outlineline.OutlineView;
+import com.herbert.trialple.model.outline.OutlineView;
 
 
 public class PhaseListEditor extends MultiPageEditorPart {

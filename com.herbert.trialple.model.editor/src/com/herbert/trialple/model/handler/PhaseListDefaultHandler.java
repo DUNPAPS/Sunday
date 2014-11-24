@@ -1,4 +1,4 @@
-package src.com.herbert.trialple.model.handlerdler;
+package com.herbert.trialple.model.handler;
 
 import java.util.jar.Attributes;
 

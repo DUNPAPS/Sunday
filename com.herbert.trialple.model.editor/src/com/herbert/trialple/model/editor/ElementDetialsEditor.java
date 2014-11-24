@@ -14,12 +14,12 @@ import org.eclipse.swt.widgets.List;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
-import src.com.herbert.trialple.model.outlineline.OutlineView;
 import Trialple.DocumentRoot;
 import Trialple.ExecutionControl;
 import Trialple.Module;
 import Trialple.Modules;
 
+import com.herbert.trialple.model.outline.OutlineView;
 import com.herbert.trialple.model.resource.LoadResources;
 public class ElementDetialsEditor extends Composite {
 
