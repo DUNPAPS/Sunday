@@ -114,8 +114,10 @@ public class OutlineView extends ContentOutlinePage implements
 	public TreeParent getInitialInput() {
 		TreeParent root = new TreeParent("");
 		try {
+			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		    factory.setIgnoringComments(true);
 			String xmlString = readFile(getContentFile());
-			doc = DocumentBuilderFactory.newInstance().newDocumentBuilder()
+			doc = factory.newDocumentBuilder()
 					.parse(new InputSource(new StringReader(xmlString)));
 			
 			NodeList nodelist = doc.getChildNodes();
@@ -139,7 +141,6 @@ public class OutlineView extends ContentOutlinePage implements
 		int length = childList.getLength();
 		for (int i = 0; i < length; i++) {
 			if (childList.item(i).getNodeType() != Node.TEXT_NODE) {
-				//Ignore comments and other here
 				addSubTree(child, childList.item(i));
 			}
 		}
