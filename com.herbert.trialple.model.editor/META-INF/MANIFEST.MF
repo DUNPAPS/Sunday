@@ -20,5 +20,6 @@ Bundle-ActivationPolicy: lazy
 Import-Package: Trialple,
  Trialple.util,
  org.eclipse.jface.text,
+ org.eclipse.ui.forms,
  org.eclipse.ui.forms.editor,
  org.eclipse.ui.forms.widgets

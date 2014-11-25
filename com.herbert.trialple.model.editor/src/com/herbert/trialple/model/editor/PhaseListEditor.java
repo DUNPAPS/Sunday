@@ -1,72 +1,78 @@
 package com.herbert.trialple.model.editor;
 
-
 import org.eclipse.core.runtime.IProgressMonitor;
-
-
-import org.eclipse.swt.SWT;
-import org.eclipse.ui.part.MultiPageEditorPart;
-import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 
 import com.herbert.trialple.model.outline.OutlineView;
 
+public class PhaseListEditor extends FormEditor {
 
-public class PhaseListEditor extends MultiPageEditorPart {
-
-	public static final String ID = "com.herbert.trialple.model.editor.test"; //$NON-NLS-1$
+	public static final int ElementDetials = 0;
+	public static final int Variants_PAGE = 1;
 
 	public PhaseListEditor() {
 	}
 
+	void createPage0() {
+		ElementDetials elementDetials = new ElementDetials(this, "ID",
+				" Element Detials ");
+		try {
+			addPage(ElementDetials, elementDetials);
+		} catch (PartInitException e) {
+			e.printStackTrace();
+		}
+		setPageText(ElementDetials, " Element Detials ");
+	}
+
+	void createPage1() {
+		Variants variants = new Variants(this, "ID", " Variants ");
+		try {
+			addPage(Variants_PAGE, variants);
+		} catch (PartInitException e) {
+			e.printStackTrace();
+		}
+		setPageText(Variants_PAGE, " Variants ");
+	}
+
 	@Override
-	protected void createPages() {
+	public void setActivePage(int pageIndex) {
+		super.setActivePage(Variants_PAGE);
+	}
+
+	@Override
+	protected void pageChange(final int newPageIndex) {
+		super.pageChange(newPageIndex);
+	}
+
+	@Override
+	public boolean isDirty() {
+		return false;
+	}
+
+	@Override
+	protected void addPages() {
 		createPage0();
 		createPage1();
-
 	}
+
 	@Override
-	protected void setActivePage(int pageIndex) {
+	public void doSave(IProgressMonitor monitor) {
 		// TODO Auto-generated method stub
-		super.setActivePage(0);
-	}
-	
-	/**
-	 * Elementt Details Editor
-	 */
-	private void createPage0() {
-		ElementDetialsEditor elementDetialsEditor = new ElementDetialsEditor(
-				getContainer(), SWT.NONE);
 
-		int index = addPage(elementDetialsEditor);
-		setPageText(index, "Element Details");
 	}
 
-	/**
-	 * VariantsEditor
-	 */
-	private void createPage1() {
-		VariantsEditor variantsEditor = new VariantsEditor(
-				getContainer(), SWT.NONE);
+	@Override
+	public void doSaveAs() {
+		// TODO Auto-generated method stub
 
-		int index = addPage(variantsEditor);
-		setPageText(index, "Document Root");
 	}
 
 	@Override
 	public boolean isSaveAsAllowed() {
 		// TODO Auto-generated method stub
 		return false;
-	}
-
-	@Override
-	public void doSave(IProgressMonitor monitor) {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void doSaveAs() {
-		// TODO Auto-generated method stub
 	}
 
 	@Override

@@ -5,24 +5,24 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
-public class TrialpleIconLoader extends AbstractUIPlugin {
+public class IconLoader extends AbstractUIPlugin {
 
 	public static final String ICON_ELEMENT = "element_obj.gif"; //$NON-NLS-1$
 
 	// The shared instance.
-	private static TrialpleIconLoader plugin;
+	private static IconLoader plugin;
 
 	/**
 	 * The constructor.
 	 */
-	public TrialpleIconLoader() {
-		TrialpleIconLoader.plugin = this;
+	public IconLoader() {
+		IconLoader.plugin = this;
 	}
 
 	/**
 	 * Returns the shared instance.
 	 */
-	public TrialpleIconLoader getDefault() {
+	public IconLoader getDefault() {
 		return plugin;
 	}
 
