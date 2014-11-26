@@ -39,7 +39,8 @@ import com.herbert.trialple.model.xmlElement.TreeParent;
 
 public class OutlineView extends ContentOutlinePage implements
 		IContentOutlinePage {
-	private final static String CONTENT_FILE = "C:/Users/dmuasya/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
+	//private final static String CONTENT_FILE = "C:/Users/dmuasya/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
+	private final static String CONTENT_FILE = "C:/Users/D063076/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
 	private static String builder;
 	private TreeViewer tree;
 	private Document doc;

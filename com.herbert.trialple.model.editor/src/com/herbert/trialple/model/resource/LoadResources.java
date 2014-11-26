@@ -23,10 +23,6 @@ import Trialple.util.TrialpleResourceFactoryImpl;
 public class LoadResources {
 	
 	private static EObject rootObject;
-	//private static EList<?> moduleList;
-	private static EObject moduleObject;
-	
-	
 
 
 	public LoadResources(){
@@ -44,10 +40,14 @@ public class LoadResources {
 		final URI platformResourceURI = URI.createFileURI(resources);
 		Resource resource = resourceSet.getResource(platformResourceURI, true);
 		rootObject = getRootObject(resource);
-		moduleObject = getModuleObject();
 	}
 	
-	
+	/**
+	 * The method loads returns the root object of the read XML file needed to populate the 
+	 * fields in the UI
+	 * @param resource
+	 * @return documentRoot
+	 */
 	protected static EObject getRootObject(Resource resource) {
 		EList<EObject> contents = resource.getContents();
 		if (contents.size() == 0) {
@@ -78,32 +78,25 @@ public class LoadResources {
 		
 	}
 	
-	protected  EObject getModuleObjects(Resource resource){
-		EList<EObject> contents = resource.getContents();
-		if (contents.size() == 0) {
-			return null;
-		}
-		EObject moduleObjects = contents.get(0);
-		if(moduleObjects !=null){
-			for(EObject element : moduleObjects.eContents()){
-				if(element instanceof Module){
-					return element;
-				}
-			}
-			
-		}
-		if (moduleObjects instanceof Module) {
-			return moduleObjects;
-		}
-		return null;
-	}
+//	protected  EObject getModuleObjects(Resource resource){
+//		EList<EObject> contents = resource.getContents();
+//		if (contents.size() == 0) {
+//			return null;
+//		}
+//		EObject moduleObjects = contents.get(0);
+//		if(moduleObjects !=null){
+//			for(EObject element : moduleObjects.eContents()){
+//				if(element instanceof Module){
+//					return element;
+//				}
+//			}
+//			
+//		}
+//		if (moduleObjects instanceof Module) {
+//			return moduleObjects;
+//		}
+//		return null;
+//	}
 
-	public  EObject getModuleObject() {
-		return moduleObject;
-	}
-
-	public static void setModuleObject(EObject moduleObject) {
-		LoadResources.moduleObject = moduleObject;
-	}
 	
 }

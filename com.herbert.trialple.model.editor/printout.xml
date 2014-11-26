@@ -159,6 +159,10 @@
       <!--  pwd: 8075  -->
       <precedences>
         <precedence>PREP_EXTRACT</precedence>
+        <precedence>PREP_EXT</precedence> <!-- delete 4 -->
+        <precedence>PREP_EXTRArtttrCT</precedence>
+        <precedence>PREP_EXTRrtzzeACT</precedence>
+        <precedence>PREP_EXTtzuwuuRACT</precedence>
       </precedences>
       
 <phaselist srcid="$Id: //bc/dev/src/upg/SAPup/SAPupPRPPreCheck.xml#18 $">
