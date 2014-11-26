@@ -12,4 +12,19 @@
             class="com.herbert.trialple.model.editor.PhaseListEditor">
       </editor>
    </extension>
+   
+    <extension point="org.eclipse.ui.newWizards">
+        <category
+            id="phaselist"
+            name="PhaseList XML Loader">
+        </category>
+        <wizard
+            category="phaselist"
+            class="com.herbert.trialple.model.wizard.PhaseListWizard"
+            icon="icons/PleditorModelFile.gif"
+            id="PhaseListAppWizard"
+            name="Pleditor XML Wizard">
+        </wizard>
+    </extension>
+    
 </plugin>

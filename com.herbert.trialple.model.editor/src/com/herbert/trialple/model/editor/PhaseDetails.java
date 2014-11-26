@@ -22,7 +22,7 @@ import Trialple.Phase;
 import Trialple.Phaselist;
 
 import com.herbert.trialple.model.outline.OutlineView;
-import com.herbert.trialple.model.resource.LoadResources;
+import com.herbert.trialple.model.resources.LoadResources;
 
 public class PhaseDetails extends FormPage {
 	private Text text_Name;

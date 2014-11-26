@@ -1,7 +1,6 @@
 package com.herbert.trialple.model.outline;
 
 import java.io.BufferedReader;
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
@@ -35,12 +34,12 @@ import com.herbert.trialple.model.handler.PhaseListDefaultHandler;
 import com.herbert.trialple.model.provider.PhaseListContentProvider;
 import com.herbert.trialple.model.provider.PhaseListLabelProvider;
 import com.herbert.trialple.model.provider.XMLParser;
-import com.herbert.trialple.model.xmlElement.TreeParent;
+import com.herbert.trialple.model.xml.tree.TreeParent;
 
 public class OutlineView extends ContentOutlinePage implements
 		IContentOutlinePage {
-	//private final static String CONTENT_FILE = "C:/Users/dmuasya/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
-	private final static String CONTENT_FILE = "C:/Users/D063076/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
+	private final static String CONTENT_FILE = "C:/Users/dmuasya/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
+//	private final static String CONTENT_FILE = "C:/Users/D063076/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
 	private static String builder;
 	private TreeViewer tree;
 	private Document doc;

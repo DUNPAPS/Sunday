@@ -21,7 +21,7 @@ import Trialple.Modules;
 import Trialple.Precedences;
 
 import com.herbert.trialple.model.outline.OutlineView;
-import com.herbert.trialple.model.resource.LoadResources;
+import com.herbert.trialple.model.resources.LoadResources;
 
 import org.eclipse.swt.widgets.List;
 

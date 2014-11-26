@@ -1,6 +1,6 @@
 /**
  */
-package com.herbert.trialple.model.resource;
+package com.herbert.trialple.model.resources;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;

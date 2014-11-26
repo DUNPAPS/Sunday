@@ -3,7 +3,7 @@ package com.herbert.trialple.model.provider;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.graphics.Image;
 
-import com.herbert.trialple.model.xmlElement.TreeChild;
+import com.herbert.trialple.model.xml.tree.TreeChild;
 import com.sap.adt.ecatt.editor.internal.icons.IconLoader;
 
 public class PhaseListLabelProvider extends LabelProvider {

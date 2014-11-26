@@ -4,7 +4,7 @@ package com.herbert.trialple.model.provider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 
-import com.herbert.trialple.model.xmlElement.TreeParent;
+import com.herbert.trialple.model.xml.tree.TreeParent;
 
 
 public class PhaseListContentProvider implements ITreeContentProvider {

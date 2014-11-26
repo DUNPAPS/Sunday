@@ -1,4 +1,4 @@
-package com.herbert.trialple.model.xmlElement;
+package com.herbert.trialple.model.xml.tree;
 
 import java.util.ArrayList;
 

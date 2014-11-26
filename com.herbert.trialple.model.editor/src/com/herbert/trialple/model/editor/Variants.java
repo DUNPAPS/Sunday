@@ -17,7 +17,7 @@ import org.eclipse.swt.widgets.Label;
 import Trialple.DocumentRoot;
 
 import com.herbert.trialple.model.outline.OutlineView;
-import com.herbert.trialple.model.resource.LoadResources;
+import com.herbert.trialple.model.resources.LoadResources;
 
 public class Variants extends FormPage {
 	private Text name;

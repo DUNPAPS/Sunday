@@ -1,4 +1,4 @@
-package com.herbert.trialple.model.xmlElement;
+package com.herbert.trialple.model.xml.tree;
 
 
 public class TreeChild {
