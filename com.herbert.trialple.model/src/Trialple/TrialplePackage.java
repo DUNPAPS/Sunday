@@ -418,7 +418,7 @@ public interface TrialplePackage extends EPackage {
 	int MODULE = 6;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute list.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1908,10 +1908,10 @@ public interface TrialplePackage extends EPackage {
 	EReference getModule_Phaselist();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link Trialple.Module#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link Trialple.Module#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see Trialple.Module#getDescription()
 	 * @see #getModule()
 	 * @generated
@@ -3198,7 +3198,7 @@ public interface TrialplePackage extends EPackage {
 		EReference MODULE__PHASELIST = eINSTANCE.getModule_Phaselist();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

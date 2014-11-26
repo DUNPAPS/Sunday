@@ -66,21 +66,31 @@ public interface Module extends EObject {
 	void setPhaselist(Phaselist value);
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Description</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute list.
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
 	 * @see Trialple.TrialplePackage#getModule_Description()
-	 * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='description' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	EList<String> getDescription();
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link Trialple.Module#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Options</b></em>' containment reference.

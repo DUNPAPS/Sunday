@@ -8,21 +8,14 @@ import Trialple.OptList;
 import Trialple.Phaselist;
 import Trialple.Precedences;
 import Trialple.TrialplePackage;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -56,14 +49,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute list.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getOptions() <em>Options</em>}' containment reference.
@@ -411,11 +414,20 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getDescription() {
-		if (description == null) {
-			description = new EDataTypeEList<String>(String.class, this, TrialplePackage.MODULE__DESCRIPTION);
-		}
+	public String getDescription() {
 		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TrialplePackage.MODULE__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -822,8 +834,7 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case TrialplePackage.MODULE__DESCRIPTION:
-				getDescription().clear();
-				getDescription().addAll((Collection<? extends String>)newValue);
+				setDescription((String)newValue);
 				return;
 			case TrialplePackage.MODULE__OPTIONS:
 				setOptions((OptList)newValue);
@@ -884,7 +895,7 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case TrialplePackage.MODULE__DESCRIPTION:
-				getDescription().clear();
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case TrialplePackage.MODULE__OPTIONS:
 				setOptions((OptList)null);
@@ -944,7 +955,7 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case TrialplePackage.MODULE__DESCRIPTION:
-				return description != null && !description.isEmpty();
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case TrialplePackage.MODULE__OPTIONS:
 				return options != null;
 			case TrialplePackage.MODULE__POSTEVENT:

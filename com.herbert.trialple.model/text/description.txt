@@ -40,7 +40,7 @@ Package Trialple <platform:/resource/com.herbert.trialple.model/model/trialple.x
     Attribute test : String<<1..1>>
 
   Class Module
-    Attribute description : String<<0..*>>
+    Attribute description : String
     Reference options : OptList<<1..1>>
     Attribute postevent : String
     Attribute revokemodule : String

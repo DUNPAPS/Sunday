@@ -20,6 +20,8 @@ import org.eclipse.emf.common.util.EList;
 public interface ModuleValidator {
 	boolean validate();
 
+	boolean validateDescription(String value);
+
 	boolean validateDescription(EList<String> value);
 	boolean validateOptions(OptList value);
 	boolean validatePostevent(String value);
