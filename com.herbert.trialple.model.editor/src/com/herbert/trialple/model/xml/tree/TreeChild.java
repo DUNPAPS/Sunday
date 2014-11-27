@@ -1,10 +1,14 @@
 package com.herbert.trialple.model.xml.tree;
 
-
 public class TreeChild {
 	private String name;
 	private TreeParent parent;
 
+	/**
+	 * 
+	 * @param name
+	 */
+ 
 	public TreeChild(String name) {
 		this.name = name;
 	}
