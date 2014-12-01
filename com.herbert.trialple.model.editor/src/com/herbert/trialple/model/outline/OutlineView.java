@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.Iterator;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -23,9 +24,13 @@ import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.part.IPageSite;
 import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
+import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.w3c.dom.Text;
 import org.xml.sax.InputSource;
 import org.xml.sax.helpers.LocatorImpl;
 
@@ -36,10 +41,13 @@ import com.herbert.trialple.model.provider.PhaseListLabelProvider;
 import com.herbert.trialple.model.provider.XMLParser;
 import com.herbert.trialple.model.xml.tree.TreeParent;
 
+import static org.w3c.dom.Node.TEXT_NODE;
+
 public class OutlineView extends ContentOutlinePage implements
 		IContentOutlinePage {
 	private final static String CONTENT_FILE = "C:/Users/dmuasya/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
-//	private final static String CONTENT_FILE = "C:/Users/D063076/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
+	// private final static String CONTENT_FILE =
+	// "C:/Users/D063076/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
 	private static String builder;
 	private TreeViewer tree;
 	private Document doc;
@@ -110,8 +118,10 @@ public class OutlineView extends ContentOutlinePage implements
 		treeMenuManager.menuAboutToShow(menuMgr);
 		Menu menu = menuMgr.createContextMenu(this.tree.getControl());
 		this.tree.getControl().setMenu(menu);
-		getSite().registerContextMenu("Please add ID to your outline", menuMgr, this.tree);
+		getSite().registerContextMenu("Please add ID to your outline", menuMgr,
+				this.tree);
 	}
+
 	@Override
 	public void createControl(Composite parent) {
 		super.createControl(parent);
@@ -195,11 +205,11 @@ public class OutlineView extends ContentOutlinePage implements
 					new InputSource(new StringReader(xmlString)));
 
 			NodeList nodelist = doc.getChildNodes();
-			addSubTree(root, nodelist.item(0));
+			return addSubTree(root, nodelist.item(0));
 
 		} catch (Exception e) {
 		}
-		return root;
+		return null;
 	}
 
 	/**
@@ -207,8 +217,15 @@ public class OutlineView extends ContentOutlinePage implements
 	 * @param root
 	 * @param node
 	 */
-	private void addSubTree(TreeParent root, Node node) {
-		TreeParent child = new TreeParent(node.getNodeName());
+	private TreeParent addSubTree(TreeParent root, Node node) {
+		String name = null;
+		Element e = (Element) node;
+		name = e.getAttribute("name");
+		
+		if (name.equals("")) {
+			name = node.getNodeName();
+		}
+		TreeParent child = new TreeParent(name);
 		root.addChild(child);
 		NodeList childList = node.getChildNodes();
 		int length = childList.getLength();
@@ -217,6 +234,8 @@ public class OutlineView extends ContentOutlinePage implements
 				addSubTree(child, childList.item(i));
 			}
 		}
+
+		return child;
 	}
 
 	@SuppressWarnings("resource")
