@@ -219,31 +219,26 @@ public class OutlineView extends ContentOutlinePage implements
 	 */
 	private TreeParent addSubTree(TreeParent root, Node node) {
 		String ChildName = null;
-		if (node.getNodeName().equals("modules")) {
+		if (node.getNodeName().equals("modules")||node.getNodeName().equals("phaselist")) {
+			
+			ChildName = node.getNodeName();
+			System.out.println( "my anme"+ChildName);
 			NodeList childList = node.getChildNodes();
 			int length = childList.getLength();
 			for (int i = 0; i < length; i++) {
 				Element e = (Element) childList.item(i);
+				String attributeName = e.getAttribute("name");
 
-				if (e.getAttribute("name").equals("")) {
-					System.out.println(childList.item(i).getNodeName());
-					childList.item(i).getParentNode()
+				if (attributeName.equals("")) {
+					System.out.println(childList.item(i).getNodeName()+"my anme");
+					node.getParentNode()
 							.removeChild(childList.item(i));
 				} else {
-					Element el = (Element) childList.item(i);
-					String attributeName = el.getAttribute("name");
-					if (!attributeName.equals("")) {
-						ChildName = el.getAttribute("name");
-					}
-
+						ChildName = e.getAttribute("name");
+					
+				
 				}
 			}
-		}
-
-		if (node.getNodeName().equals("modules")
-				|| node.getNodeName().equals("phaselist")) {
-			ChildName = node.getNodeName();
-
 		}
 
 		TreeParent child = new TreeParent(ChildName);
