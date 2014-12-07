@@ -219,30 +219,28 @@ public class OutlineView extends ContentOutlinePage implements
 	private TreeParent addSubTree(TreeParent root, Node node) {
 		String ChildName = null;
 		TreeParent child = null;
-		NodeList childList = node.getChildNodes();
-		int length = childList.getLength();
-		for (int i = 0; i < length; i++) {
-			if (childList.item(i).getNodeType() != Node.TEXT_NODE) {
-				String nodeName = childList.item(i).getNodeName();
-				Element e = (Element) childList.item(i);
-				String attributeName = e.getAttribute("name");
 
-				if (nodeName.equals("modules") || nodeName.equals("phaselist")) {
-					ChildName = node.getNodeName();
-				} else {
-					if (!attributeName.equals(" ")) {
-						ChildName = attributeName;
-					} else {
-						doc.removeChild(childList.item(i));
-					}
-				}
-
-				child = new TreeParent(ChildName);
-				root.addChild(child);
-				addSubTree(child, childList.item(i));
-			}
+		if (node.getNodeName().equals("modules")
+				|| node.getNodeName().equals("phaselist")) {
+			System.out.println("modules");
+			ChildName = node.getNodeName();
 		}
 
+		NodeList childList = node.getChildNodes();
+		for (int x = 0, size = childList.getLength(); x < size; x++) {
+			if (childList.item(x).getNodeType() != Node.TEXT_NODE) {
+				System.out.println("others");
+				Attr attr = (Attr) childList.item(x).getAttributes()
+						.getNamedItem("name");
+				String attribute = attr.getValue();
+				ChildName = attribute;
+				System.out.println("ChildName" + ChildName);
+			}
+
+			child = new TreeParent(ChildName);
+			root.addChild(child);
+			addSubTree(child, childList.item(x));
+		}
 		return child;
 	}
 
