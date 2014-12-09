@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.herbert.trialple.model/src" modelPluginID="com.herbert.trialple.model"
+    modelName="Trialple" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.xsd.ecore.importer" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>trialple.xsd</foreignModel>
+  <genPackages prefix="Trialple" resource="XML" disposableProviderFactory="true" ecorePackage="Trialple.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Trialple.ecore#//ModuleType">
+      <genEnumLiterals ecoreEnumLiteral="Trialple.ecore#//ModuleType/prepare"/>
+      <genEnumLiterals ecoreEnumLiteral="Trialple.ecore#//ModuleType/upgrade"/>
+      <genEnumLiterals ecoreEnumLiteral="Trialple.ecore#//ModuleType/revoke"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="Trialple.ecore#//ModuleTypeObject"/>
+    <genClasses ecoreClass="Trialple.ecore#//And">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//And/option"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//And/or"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//And/not"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//Arguments">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Arguments/arg"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//Definitions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Definitions/def"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Trialple.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Trialple.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//DocumentRoot/executionControl"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//ExecutionControl">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//ExecutionControl/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//ExecutionControl/submoduledefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//ExecutionControl/submoduledef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//ExecutionControl/unitDefinition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//ExecutionControl/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//ExecutionControl/srcid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//ExecutionControl/version"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//IfType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//IfType/phase"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//IfType/options"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//IfType/submoduleref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//IfType/test"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//Module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Module/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Module/options"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Module/postevent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Module/revokemodule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Module/password"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Module/precedences"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Module/phaselist"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Module/checkmode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Module/errignorable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Module/interruptable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Module/mandatory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Module/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Module/reselect"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Module/revokeautonext"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Module/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Module/uniqueexec"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//Modules">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Modules/module"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Modules/srcid"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//Not">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Not/option"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Not/and"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//Option">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Option/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Option/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//OptList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//OptList/option"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//OptList/or"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//OptList/not"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//OptList/and"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//Or">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Or/option"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Or/and"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Or/not"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//Phase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Phase/options"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Phase/args"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phase/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phase/usage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Phase/if"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phase/autorepeat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phase/buffersync"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phase/checkuvers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phase/connect"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phase/continueOnOqErrors"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phase/elgfile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phase/ignorable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phase/logfile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phase/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phase/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phase/unlockonerror"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//Phaselist">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Phaselist/phase"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Phaselist/if"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Phaselist/submodule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Phaselist/submoduleref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Phaselist/srcid"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//Precedences">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Precedences/precedence"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//SubModule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//SubModule/options"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//SubModule/phaselist"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//SubModule/execparallel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//SubModule/password"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//SubmoduleDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//SubmoduleDef/defs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//SubmoduleDef/phaselist"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//SubmoduleDef/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//SubmoduleDef/password"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//SubmoduleDefs">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//SubmoduleDefs/submoduledef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//SubmoduleDefs/if"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//SubmoduleDefs/srcid"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//SubModuleRef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//SubModuleRef/options"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//SubModuleRef/defs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//SubModuleRef/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//SubModuleRef/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//SubModuleRef/refname"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//Unit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Unit/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//Unit/unitmodules"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Unit/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Unit/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//Unit/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//UnitDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//UnitDef/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//UnitDef/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//UnitDef/srcid"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//UnitModList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//UnitModList/unitmodule"/>
+    </genClasses>
+    <genClasses ecoreClass="Trialple.ecore#//UnitModule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Trialple.ecore#//UnitModule/options"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Trialple.ecore#//UnitModule/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
+	<xsd:element name="ExecutionControl" type="ExecutionControl"/>    <!-- Declared root element -->
+	<xsd:complexType name="ExecutionControl">
+			<xsd:sequence>							
+			<xsd:element  name="modules" type="Modules" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element  name="submoduledefs" type="SubmoduleDefs" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element  name="submoduledef" type="SubmoduleDef" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element  name="UnitDefinition" type="UnitDef" maxOccurs="unbounded" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name = "name" type = "xsd:string" use = "required"/>
+			<xsd:attribute name = "srcid" type = "xsd:string" use = "required"/>
+			<xsd:attribute name = "version" type = "xsd:string" use = "required"/>
+	</xsd:complexType>
+	<xsd:complexType name="Modules">
+			<xsd:sequence>
+			<xsd:element  name="module" type="Module" maxOccurs="unbounded" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name = "srcid" type = "xsd:string" use = "required"/>
+	</xsd:complexType>
+	<xsd:complexType name="Module">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="0" name="description" type="xsd:string"/>
+			<xsd:element name = "options" type = "OptList" />
+			<xsd:element maxOccurs="1" minOccurs="0" name="postevent" type="xsd:string"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="revokemodule" type="xsd:string"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="password" type="xsd:string"/>
+			<xsd:element maxOccurs="10" minOccurs="0" name="precedences" type="Precedences"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="phaselist" type="Phaselist"/>
+		</xsd:sequence>
+			<xsd:attribute  name="name" type="xsd:string" use= "required"/>
+			<xsd:attribute  name="type" type="ModuleType"/>
+			<xsd:attribute  name="mandatory" type="xsd:string" />
+			<xsd:attribute  name="checkmode" type="xsd:string" />
+			<xsd:attribute  name="uniqueexec" type="xsd:string" />
+			<xsd:attribute  name="interruptable" type="xsd:string" />
+			<xsd:attribute  name="errignorable" type="xsd:string" />
+			<xsd:attribute  name="reselect" type="xsd:string" />
+			<xsd:attribute  name="revokeautonext" type="xsd:string" />
+	</xsd:complexType>
+	<xsd:complexType name="Precedences">
+		<xsd:sequence>
+			<xsd:element name = "precedence" type ="xsd:string" maxOccurs="unbounded" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Phaselist">
+		<xsd:sequence>
+			<xsd:element name = "phase" type = "Phase" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element name = "if" type = "IfType" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element name = "submodule" type = "SubModule" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element name = "submoduleref" type = "SubModuleRef" maxOccurs="unbounded" minOccurs="0"/>
+		</xsd:sequence>
+			<xsd:attribute name = "srcid" type ="xsd:string"/>
+	</xsd:complexType>
+	<xsd:complexType name="Phase">
+		<xsd:sequence>
+			
+			<xsd:element name = "options" type = "OptList" />
+			<xsd:element name = "args" type ="Arguments"/>
+			<xsd:element name = "action" type ="xsd:string"/>
+			<xsd:element name = "usage" type ="xsd:string" maxOccurs ="5" minOccurs="0"/>
+			<xsd:element name = "if" type = "IfType" maxOccurs ="10" minOccurs="0" />
+			
+		</xsd:sequence>
+			<xsd:attribute name ="name" type = "xsd:string" use = "required"/>
+			<xsd:attribute name ="buffersync" type = "xsd:boolean" use = "required"/>
+			<xsd:attribute name ="autorepeat" type = "xsd:string" use = "required"/>
+			<xsd:attribute name ="logfile" type = "xsd:string" use = "required"/>
+			<xsd:attribute name ="connect" type = "xsd:string" use = "required"/>
+			<xsd:attribute name ="elgfile" type = "xsd:string" use = "required"/>
+			<xsd:attribute name ="password" type = "xsd:string" use = "required"/>
+			<xsd:attribute name ="continue_on_oq_errors" type = "xsd:boolean" use = "required"/>
+			<xsd:attribute name ="unlockonerror" type = "xsd:boolean" use = "required"/>
+			<xsd:attribute name ="checkuvers" type = "xsd:boolean" use = "required"/>
+			<xsd:attribute name ="ignorable" type = "xsd:boolean" use = "required"/>
+	</xsd:complexType>
+	<xsd:complexType name="Arguments">
+		<xsd:sequence>
+			<xsd:element name = "arg" type ="xsd:string" maxOccurs="unbounded" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OptList">
+	<xsd:sequence>
+			<xsd:element name="option" type="Option" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element name="or" type="Or" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element name="not" type="Not" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element name="and" type="And" maxOccurs="unbounded" minOccurs="0"/>
+	</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SubModule">
+			<xsd:sequence>
+			<xsd:element  name="options" type="OptList" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element  name="phaselist" type="Phaselist" maxOccurs="unbounded" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name ="password" type = "xsd:string" use = "required"/>
+			<xsd:attribute name ="execparallel" type = "xsd:boolean" use = "required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SubmoduleDefs">
+			<xsd:sequence>
+			<xsd:element  name="submoduledef" type="SubmoduleDef" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element  name="if" type="IfType" maxOccurs="unbounded" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name ="srcid" type = "xsd:string" use = "required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SubmoduleDef">
+			<xsd:sequence>
+			<xsd:element  name="defs" type="Definitions" maxOccurs="1" minOccurs="0"/>
+			<xsd:element  name="phaselist" type="Phaselist" maxOccurs="unbounded" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name ="name" type = "xsd:string" use = "required"/>
+			<xsd:attribute name ="password" type = "xsd:string" use = "required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SubModuleRef">
+			<xsd:sequence>
+			<xsd:element  name="options" type="OptList" maxOccurs="unbounded" minOccurs="0"/>
+			<xsd:element  name="defs" type="Definitions" maxOccurs="unbounded" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name ="name" type = "xsd:string" use = "required"/>
+			<xsd:attribute name ="password" type = "xsd:string" use = "required"/>
+			<xsd:attribute name ="refname" type = "xsd:string" use = "required"/>
+	</xsd:complexType>
+	 
+	<xsd:complexType name="Option">
+	<xsd:sequence>
+	</xsd:sequence>
+	<xsd:attribute name ="name" type = "xsd:string" use = "optional"/>
+	<xsd:attribute name ="value" type = "xsd:string" use = "optional"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="IfType">
+	<xsd:sequence>
+	<xsd:element name = "phase" type ="Phase" maxOccurs ="unbounded" minOccurs="0"/>
+	<xsd:element name = "options" type ="OptList" maxOccurs ="unbounded" minOccurs="0"/>
+	<xsd:element name = "submoduleref" type ="SubModuleRef" maxOccurs ="unbounded" minOccurs="0"/>
+	</xsd:sequence>
+	<xsd:attribute name ="test" type = "xsd:string" use = "required"/>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="ModuleType" >
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="prepare"/>
+      <xsd:enumeration value="upgrade"/>
+      <xsd:enumeration value="revoke"/>
+    </xsd:restriction>
+  </xsd:simpleType> 
+  <xsd:complexType name="Definitions">
+			<xsd:sequence>
+			<xsd:element name = "def" type ="xsd:string" maxOccurs="unbounded" minOccurs="0" />
+			</xsd:sequence>
+	</xsd:complexType>
+  
+  <xsd:complexType name="Or">
+	<xsd:sequence>
+        	<xsd:element name="option" type="Option" maxOccurs="10" minOccurs="0"/>
+        	<xsd:element name="and" type="And" maxOccurs="10" minOccurs="0"/>
+        	<xsd:element name="not" type="Not" maxOccurs="10" minOccurs="0"/>
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="Not">
+	<xsd:sequence>
+        	<xsd:element name="option" type="Option" maxOccurs="10" minOccurs="0"/>
+        	<xsd:element name="and" type="And" maxOccurs="10" minOccurs="0"/>
+     	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="And">
+	<xsd:sequence>
+        	<xsd:element name="option" type="Option" maxOccurs="10" minOccurs="0"/>
+        	<xsd:element name="or" type="Or" maxOccurs="10" minOccurs="0"/>
+        	<xsd:element name="not" type="Not" maxOccurs="10" minOccurs="0"/>
+      	</xsd:sequence>
+  </xsd:complexType>
+  <!--**** ROADMAP DEFINITIONS *** -->
+<xsd:complexType name="UnitDef">
+	<xsd:sequence>
+        	<xsd:element name="unit" type="Unit" maxOccurs="unbounded" minOccurs="0"/>
+    </xsd:sequence>
+      	<xsd:attribute name ="name" type = "xsd:string" use = "required"/>
+      	<xsd:attribute name ="srcid" type = "xsd:string" use = "required"/>
+</xsd:complexType>
+
+<xsd:complexType name="Unit">
+	<xsd:sequence>
+        	<xsd:element name="title" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+        	<xsd:element name="unitmodules" type="UnitModList" maxOccurs="1" minOccurs="0"/>
+    </xsd:sequence>
+      	<xsd:attribute name ="id" type = "xsd:string" use = "required"/>
+      	<xsd:attribute name ="name" type = "xsd:string" use = "required"/>
+      	<xsd:attribute name ="type" type = "ModuleType" use = "required"/>
+</xsd:complexType>
+
+<xsd:complexType name="UnitModList">
+	<xsd:sequence>
+        	<xsd:element name="unitmodule" type="UnitModule" maxOccurs="unbounded" minOccurs="0"/>
+    </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="UnitModule">
+	<xsd:sequence>
+       <xsd:element name = "options" type ="OptList" maxOccurs ="unbounded" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attribute name ="name" type = "xsd:string" use = "required"/>
+      	
+</xsd:complexType>
+  
+<!--  
+ 
+  
+  <xsd:complexType name="BooleanExp">
+	<xsd:choice>
+		<xsd:element name="and" type="And"/>
+		<xsd:element name="or" type="Or"/>
+		<xsd:element name="not" type="Not"/>
+	</xsd:choice>
+</xsd:complexType>
+--> 	
+</xsd:schema>
