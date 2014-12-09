@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
-import java.util.Iterator;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -25,12 +24,15 @@ import org.eclipse.ui.part.IPageSite;
 import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 import org.w3c.dom.Attr;
+import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.w3c.dom.Text;
+import org.w3c.dom.traversal.DocumentTraversal;
+import org.w3c.dom.traversal.NodeFilter;
+import org.w3c.dom.traversal.TreeWalker;
 import org.xml.sax.InputSource;
 import org.xml.sax.helpers.LocatorImpl;
 
@@ -41,13 +43,12 @@ import com.herbert.trialple.model.provider.PhaseListLabelProvider;
 import com.herbert.trialple.model.provider.XMLParser;
 import com.herbert.trialple.model.xml.tree.TreeParent;
 
-import static org.w3c.dom.Node.TEXT_NODE;
-
 public class OutlineView extends ContentOutlinePage implements
 		IContentOutlinePage {
-	private final static String CONTENT_FILE = "C:/Users/dmuasya/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
 	// private final static String CONTENT_FILE =
-	// "C:/Users/D063076/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
+	// "C:/Users/dmuasya/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
+
+	private final static String CONTENT_FILE = "C:/Users/c5215637/Desktop/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
 	private static String builder;
 	private TreeViewer tree;
 	private Document doc;
@@ -204,10 +205,12 @@ public class OutlineView extends ContentOutlinePage implements
 			doc = factory.newDocumentBuilder().parse(
 					new InputSource(new StringReader(xmlString)));
 			NodeList nodelist = doc.getChildNodes();
-			return addSubTree(root, nodelist.item(0));
-
+			return addSubTree(root, nodelist.item(0), null);
 		} catch (Exception e) {
+			System.out.print("Problem parsing the file.");
+			e.printStackTrace();
 		}
+
 		return null;
 	}
 
@@ -216,30 +219,29 @@ public class OutlineView extends ContentOutlinePage implements
 	 * @param root
 	 * @param node
 	 */
-	private TreeParent addSubTree(TreeParent root, Node node) {
-		String ChildName = null;
-		TreeParent child = null;
-
-		if (node.getNodeName().equals("modules")
-				|| node.getNodeName().equals("phaselist")) {
-			System.out.println("modules");
-			ChildName = node.getNodeName();
+	private TreeParent addSubTree(TreeParent root, Node node, String name) {
+		if (node.getNodeName().equals("phaselist")
+				|| node.getNodeName().equals("modules")) {
+			name = node.getNodeName();
 		}
-
-		NodeList childList = node.getChildNodes();
-		for (int x = 0, size = childList.getLength(); x < size; x++) {
-			if (childList.item(x).getNodeType() != Node.TEXT_NODE) {
-				System.out.println("others");
-				Attr attr = (Attr) childList.item(x).getAttributes()
-						.getNamedItem("name");
-				String attribute = attr.getValue();
-				ChildName = attribute;
-				System.out.println("ChildName" + ChildName);
+		TreeParent child = new TreeParent(name);
+		root.addChild(child);
+		if (node.hasChildNodes()) {
+			NodeList childList = node.getChildNodes();
+			int length = childList.getLength();
+			for (int i = 0; i < length; i++) {
+				if (childList.item(i).getNodeType() != Node.TEXT_NODE) {
+					if (childList.item(i).hasAttributes()) {
+						Element childEl = (Element) childList.item(i);
+						NamedNodeMap attrs = childEl.getAttributes();
+						Node attN = attrs.getNamedItem("name");
+						if (attN != null) {
+							name = childEl.getAttribute("name");
+						}
+					}
+					addSubTree(child, childList.item(i), name);
+				}
 			}
-
-			child = new TreeParent(ChildName);
-			root.addChild(child);
-			addSubTree(child, childList.item(x));
 		}
 		return child;
 	}
@@ -261,6 +263,19 @@ public class OutlineView extends ContentOutlinePage implements
 
 	public static String getContentFile() {
 		return CONTENT_FILE;
+	}
+
+	public class TagsFilter implements NodeFilter {
+
+		public short acceptNode(Node thisNode) {
+			if (thisNode.getNodeType() == Node.ELEMENT_NODE) {
+				Element e = (Element) thisNode;
+				if (e.getAttribute("description").equals("description")) {
+					return NodeFilter.FILTER_SKIP;
+				}
+			}
+			return NodeFilter.FILTER_ACCEPT;
+		}
 	}
 
 }

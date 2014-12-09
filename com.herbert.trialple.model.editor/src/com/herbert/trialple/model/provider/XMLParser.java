@@ -24,7 +24,7 @@ import org.xml.sax.XMLReader;
 
 /**
  * Performs DTD validation on supplied XML document
- * @author D057271 
+ * @author D063076 
  */
 public class XMLParser {
 

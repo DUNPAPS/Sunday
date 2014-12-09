@@ -25,7 +25,7 @@ public class PhaseListDefaultHandler extends DefaultHandler {
 	public void setDocumentLocator(Locator locator) {
 		this.locator = locator;
 	}
-
+	
 	public void startElement(String namespace, String localname, String qName,
 			Attributes attributes) throws SAXException {
 
