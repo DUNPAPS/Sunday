@@ -23,16 +23,12 @@ import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.part.IPageSite;
 import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
-import org.w3c.dom.Attr;
-import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.w3c.dom.traversal.DocumentTraversal;
 import org.w3c.dom.traversal.NodeFilter;
-import org.w3c.dom.traversal.TreeWalker;
 import org.xml.sax.InputSource;
 import org.xml.sax.helpers.LocatorImpl;
 
@@ -221,7 +217,9 @@ public class OutlineView extends ContentOutlinePage implements
 	 */
 	private TreeParent addSubTree(TreeParent root, Node node, String name) {
 		if (node.getNodeName().equals("phaselist")
-				|| node.getNodeName().equals("modules")) {
+				|| node.getNodeName().equals("modules")
+				||node.getNodeName().equals("submodule")
+				||node.getNodeName().equals("submoduleref")) {
 			name = node.getNodeName();
 		}
 		TreeParent child = new TreeParent(name);
@@ -230,16 +228,28 @@ public class OutlineView extends ContentOutlinePage implements
 			NodeList childList = node.getChildNodes();
 			int length = childList.getLength();
 			for (int i = 0; i < length; i++) {
-				if (childList.item(i).getNodeType() != Node.TEXT_NODE) {
-					if (childList.item(i).hasAttributes()) {
+				if (!(childList.item(i).getNodeName().equals("description")
+						||childList.item(i).getNodeName().equals("password")
+						||childList.item(i).getNodeName().equals("postevent")
+						||childList.item(i).getNodeName().equals("revokemodule")
+						||childList.item(i).getNodeName().equals("args")
+						||childList.item(i).getNodeName().equals("action")
+						||childList.item(i).getNodeName().equals("usage")
+						||childList.item(i).getNodeName().equals("options")
+						||childList.item(i).getNodeName().equals("defs")
+						||childList.item(i).getNodeName().equals("if")
+						||childList.item(i).getNodeName().equals("precedences"))) {
+					if (childList.item(i).getNodeType() != Node.TEXT_NODE) {
 						Element childEl = (Element) childList.item(i);
-						NamedNodeMap attrs = childEl.getAttributes();
-						Node attN = attrs.getNamedItem("name");
-						if (attN != null) {
-							name = childEl.getAttribute("name");
+						if (childEl.hasAttributes()) {
+							NamedNodeMap attrs = childEl.getAttributes();
+							Node attN = attrs.getNamedItem("name");
+							if (attN != null) {
+								name = childEl.getAttribute("name");
+							}
 						}
+						addSubTree(child, childList.item(i), name);
 					}
-					addSubTree(child, childList.item(i), name);
 				}
 			}
 		}
