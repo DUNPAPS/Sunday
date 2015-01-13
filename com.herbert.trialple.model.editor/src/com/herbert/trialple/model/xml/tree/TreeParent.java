@@ -8,7 +8,7 @@ public class TreeParent extends TreeChild {
 	@SuppressWarnings("rawtypes")
 	private ArrayList children;
 	private Position position;
-
+	public static final ArrayList<String> SUBMODES = new ArrayList<String>();
 	@SuppressWarnings("rawtypes")
 	public TreeParent(String name) {
 		super(name);

@@ -17,6 +17,7 @@ import org.eclipse.swt.widgets.Label;
 import Trialple.DocumentRoot;
 import Trialple.ExecutionControl;
 import Trialple.Module;
+import Trialple.ModuleList;
 import Trialple.Modules;
 import Trialple.Precedences;
 
@@ -99,17 +100,17 @@ public class ElementDetials extends FormPage {
 		loadResources.loadResouces(OutlineView.getContentFile());
 		DocumentRoot rootObject = (DocumentRoot) loadResources.getRootObject();
 		ExecutionControl executionControl = rootObject.getExecutionControl();
-		EList<Modules> modules = executionControl.getModules();
-		Modules modules2 = modules.get(0); // the first modules list object
-		EList<Module> module = modules2.getModule(); //List of modules
-		Module module2 = module.get(2); //module number 3 [0,1,2,...]
+		EList<ModuleList> modules = executionControl.getModules();
+		ModuleList moduleList = modules.get(0);
+		EList<Module> module3 = moduleList.getModule(); // the first modules list object
+		Module module2 = module3.get(2); //module number 3 [0,1,2,...]
 		text_name.setText(module2.getName());
 
 		text_description = new Text(grpModules, SWT.BORDER);
 		text_description.setFont(SWTResourceManager.getFont("Segoe UI", 9, SWT.NORMAL));
 		text_description.setBounds(173, 95, 390, 30);
 		managedForm.getToolkit().adapt(text_description, true, true);
-		text_description.setText(module2.getDescription());
+		text_description.setText("");
 		
 		Label lblName = new Label(grpModules, SWT.NONE);
 		lblName.setFont(SWTResourceManager.getFont("Segoe UI", 12, SWT.NORMAL));
@@ -182,7 +183,7 @@ public class ElementDetials extends FormPage {
 		EList<Precedences> precList = module2.getPrecedences();
 		Precedences prec1 = precList.get(0);
 		EList<String> pre = prec1.getPrecedence();
-		String [] value2 = {pre.get(0).toString(),pre.get(1).toString(),pre.get(2).toString(),pre.get(3).toString()};
+		String [] value2 = {};
 		list_Precedences.setItems(value2); 
 		
 		

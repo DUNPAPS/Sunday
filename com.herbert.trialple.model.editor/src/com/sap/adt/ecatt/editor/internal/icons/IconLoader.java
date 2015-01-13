@@ -7,7 +7,8 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 public class IconLoader extends AbstractUIPlugin {
 
-	public static final String ICON_ELEMENT = "element_obj.gif"; //$NON-NLS-1$
+	public static final String ICON_ELEMENT = "blue-document-tree.png"; //$NON-NLS-1$
+	public static final String ICON_SUBMODULEREF = "arrow-315-small.png";
 
 	// The shared instance.
 	private static IconLoader plugin;
@@ -31,6 +32,7 @@ public class IconLoader extends AbstractUIPlugin {
 	 */
 	protected void initializeImageRegistry(ImageRegistry reg) {
 		reg.put(ICON_ELEMENT, getImageDescriptor(ICON_ELEMENT));
+		reg.put(ICON_SUBMODULEREF, getImageDescriptor(ICON_SUBMODULEREF));
 	}
 
 	/**

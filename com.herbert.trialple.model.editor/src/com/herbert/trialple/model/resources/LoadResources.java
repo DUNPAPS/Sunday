@@ -38,7 +38,9 @@ public class LoadResources {
 		.put(Resource.Factory.Registry.DEFAULT_EXTENSION, new TrialpleResourceFactoryImpl());
 		
 		final URI platformResourceURI = URI.createFileURI(resources);
+		
 		Resource resource = resourceSet.getResource(platformResourceURI, true);
+		System.out.println(resource);
 		rootObject = getRootObject(resource);
 	}
 	
