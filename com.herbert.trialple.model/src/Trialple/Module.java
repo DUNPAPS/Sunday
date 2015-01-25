@@ -39,58 +39,21 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Module extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Phaselist</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Phaselist</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Phaselist</em>' containment reference.
-	 * @see #setPhaselist(Phaselist)
-	 * @see Trialple.TrialplePackage#getModule_Phaselist()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='phaselist' namespace='##targetNamespace'"
-	 * @generated
-	 */
-	Phaselist getPhaselist();
-
-	/**
-	 * Sets the value of the '{@link Trialple.Module#getPhaselist <em>Phaselist</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Phaselist</em>' containment reference.
-	 * @see #getPhaselist()
-	 * @generated
-	 */
-	void setPhaselist(Phaselist value);
-
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Description</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Description</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
+	 * @return the value of the '<em>Description</em>' attribute list.
 	 * @see Trialple.TrialplePackage#getModule_Description()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='description' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	String getDescription();
-
-	/**
-	 * Sets the value of the '{@link Trialple.Module#getDescription <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
-	 * @generated
-	 */
-	void setDescription(String value);
+	EList<String> getDescription();
 
 	/**
 	 * Returns the value of the '<em><b>Options</b></em>' containment reference.
@@ -123,7 +86,7 @@ public interface Module extends EObject {
 	 * Returns the value of the '<em><b>Postevent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Postevent</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Postevent</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -150,7 +113,7 @@ public interface Module extends EObject {
 	 * Returns the value of the '<em><b>Revokemodule</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Revokemodule</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Revokemodule</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -177,7 +140,7 @@ public interface Module extends EObject {
 	 * Returns the value of the '<em><b>Password</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Password</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Password</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -218,6 +181,33 @@ public interface Module extends EObject {
 	EList<Precedences> getPrecedences();
 
 	/**
+	 * Returns the value of the '<em><b>Phaselist</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Phaselist</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Phaselist</em>' containment reference.
+	 * @see #setPhaselist(Phaselist)
+	 * @see Trialple.TrialplePackage#getModule_Phaselist()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='phaselist' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	Phaselist getPhaselist();
+
+	/**
+	 * Sets the value of the '{@link Trialple.Module#getPhaselist <em>Phaselist</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Phaselist</em>' containment reference.
+	 * @see #getPhaselist()
+	 * @generated
+	 */
+	void setPhaselist(Phaselist value);
+
+	/**
 	 * Returns the value of the '<em><b>Checkmode</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -243,33 +233,6 @@ public interface Module extends EObject {
 	 * @generated
 	 */
 	void setCheckmode(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Revokeautonext</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Revokeautonext</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Revokeautonext</em>' attribute.
-	 * @see #setRevokeautonext(String)
-	 * @see Trialple.TrialplePackage#getModule_Revokeautonext()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='attribute' name='revokeautonext' namespace='##targetNamespace'"
-	 * @generated
-	 */
-	String getRevokeautonext();
-
-	/**
-	 * Sets the value of the '{@link Trialple.Module#getRevokeautonext <em>Revokeautonext</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Revokeautonext</em>' attribute.
-	 * @see #getRevokeautonext()
-	 * @generated
-	 */
-	void setRevokeautonext(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Errignorable</b></em>' attribute.
@@ -326,60 +289,6 @@ public interface Module extends EObject {
 	void setInterruptable(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Reselect</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Reselect</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reselect</em>' attribute.
-	 * @see #setReselect(String)
-	 * @see Trialple.TrialplePackage#getModule_Reselect()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='attribute' name='reselect' namespace='##targetNamespace'"
-	 * @generated
-	 */
-	String getReselect();
-
-	/**
-	 * Sets the value of the '{@link Trialple.Module#getReselect <em>Reselect</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reselect</em>' attribute.
-	 * @see #getReselect()
-	 * @generated
-	 */
-	void setReselect(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Uniqueexec</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Uniqueexec</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uniqueexec</em>' attribute.
-	 * @see #setUniqueexec(String)
-	 * @see Trialple.TrialplePackage#getModule_Uniqueexec()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='attribute' name='uniqueexec' namespace='##targetNamespace'"
-	 * @generated
-	 */
-	String getUniqueexec();
-
-	/**
-	 * Sets the value of the '{@link Trialple.Module#getUniqueexec <em>Uniqueexec</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Uniqueexec</em>' attribute.
-	 * @see #getUniqueexec()
-	 * @generated
-	 */
-	void setUniqueexec(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Mandatory</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -432,6 +341,60 @@ public interface Module extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Reselect</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Reselect</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reselect</em>' attribute.
+	 * @see #setReselect(String)
+	 * @see Trialple.TrialplePackage#getModule_Reselect()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='reselect' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	String getReselect();
+
+	/**
+	 * Sets the value of the '{@link Trialple.Module#getReselect <em>Reselect</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reselect</em>' attribute.
+	 * @see #getReselect()
+	 * @generated
+	 */
+	void setReselect(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Revokeautonext</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Revokeautonext</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Revokeautonext</em>' attribute.
+	 * @see #setRevokeautonext(String)
+	 * @see Trialple.TrialplePackage#getModule_Revokeautonext()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='revokeautonext' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	String getRevokeautonext();
+
+	/**
+	 * Sets the value of the '{@link Trialple.Module#getRevokeautonext <em>Revokeautonext</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Revokeautonext</em>' attribute.
+	 * @see #getRevokeautonext()
+	 * @generated
+	 */
+	void setRevokeautonext(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
@@ -489,5 +452,32 @@ public interface Module extends EObject {
 	 * @generated
 	 */
 	boolean isSetType();
+
+	/**
+	 * Returns the value of the '<em><b>Uniqueexec</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Uniqueexec</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Uniqueexec</em>' attribute.
+	 * @see #setUniqueexec(String)
+	 * @see Trialple.TrialplePackage#getModule_Uniqueexec()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='uniqueexec' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	String getUniqueexec();
+
+	/**
+	 * Sets the value of the '{@link Trialple.Module#getUniqueexec <em>Uniqueexec</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Uniqueexec</em>' attribute.
+	 * @see #getUniqueexec()
+	 * @generated
+	 */
+	void setUniqueexec(String value);
 
 } // Module

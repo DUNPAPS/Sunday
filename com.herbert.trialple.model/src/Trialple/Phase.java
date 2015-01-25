@@ -3,6 +3,7 @@
 package Trialple;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -37,6 +38,33 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Phase extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Options</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Options</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Options</em>' containment reference.
+	 * @see #setOptions(OptList)
+	 * @see Trialple.TrialplePackage#getPhase_Options()
+	 * @model containment="true" required="true"
+	 *        extendedMetaData="kind='element' name='options' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	OptList getOptions();
+
+	/**
+	 * Sets the value of the '{@link Trialple.Phase#getOptions <em>Options</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Options</em>' containment reference.
+	 * @see #getOptions()
+	 * @generated
+	 */
+	void setOptions(OptList value);
+
 	/**
 	 * Returns the value of the '<em><b>Args</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -96,7 +124,7 @@ public interface Phase extends EObject {
 	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Usage</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Usage</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -421,33 +449,6 @@ public interface Phase extends EObject {
 	 * @generated
 	 */
 	boolean isSetIgnorable();
-
-	/**
-	 * Returns the value of the '<em><b>Options</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Options</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Options</em>' containment reference.
-	 * @see #setOptions(OptList)
-	 * @see Trialple.TrialplePackage#getPhase_Options()
-	 * @model containment="true" required="true"
-	 *        extendedMetaData="kind='element' name='options' namespace='##targetNamespace'"
-	 * @generated
-	 */
-	OptList getOptions();
-
-	/**
-	 * Sets the value of the '{@link Trialple.Phase#getOptions <em>Options</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Options</em>' containment reference.
-	 * @see #getOptions()
-	 * @generated
-	 */
-	void setOptions(OptList value);
 
 	/**
 	 * Returns the value of the '<em><b>Logfile</b></em>' attribute.

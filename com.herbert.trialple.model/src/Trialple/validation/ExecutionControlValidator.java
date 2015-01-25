@@ -4,10 +4,8 @@
  */
 package Trialple.validation;
 
-import Trialple.Modules;
-import Trialple.SubmoduleDef;
-import Trialple.SubmoduleDefs;
-import Trialple.UnitDef;
+import Trialple.ModuleList;
+import Trialple.UnitDefinition;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -20,10 +18,8 @@ import org.eclipse.emf.common.util.EList;
 public interface ExecutionControlValidator {
 	boolean validate();
 
-	boolean validateModules(EList<Modules> value);
-	boolean validateSubmoduledefs(EList<SubmoduleDefs> value);
-	boolean validateSubmoduledef(EList<SubmoduleDef> value);
-	boolean validateUnitDefinition(EList<UnitDef> value);
+	boolean validateModules(EList<ModuleList> value);
+	boolean validateUnitDefinition(EList<UnitDefinition> value);
 	boolean validateName(String value);
 	boolean validateSrcid(String value);
 	boolean validateVersion(String value);

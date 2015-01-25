@@ -59,11 +59,14 @@ public class TrialpleFactoryImpl extends EFactoryImpl implements TrialpleFactory
 		switch (eClass.getClassifierID()) {
 			case TrialplePackage.AND: return createAnd();
 			case TrialplePackage.ARGUMENTS: return createArguments();
+			case TrialplePackage.ARGX_TYPE: return createArgxType();
+			case TrialplePackage.DEF: return createDef();
 			case TrialplePackage.DEFINITIONS: return createDefinitions();
 			case TrialplePackage.DOCUMENT_ROOT: return createDocumentRoot();
 			case TrialplePackage.EXECUTION_CONTROL: return createExecutionControl();
 			case TrialplePackage.IF_TYPE: return createIfType();
 			case TrialplePackage.MODULE: return createModule();
+			case TrialplePackage.MODULE_LIST: return createModuleList();
 			case TrialplePackage.MODULES: return createModules();
 			case TrialplePackage.NOT: return createNot();
 			case TrialplePackage.OPTION: return createOption();
@@ -77,9 +80,9 @@ public class TrialpleFactoryImpl extends EFactoryImpl implements TrialpleFactory
 			case TrialplePackage.SUBMODULE_DEFS: return createSubmoduleDefs();
 			case TrialplePackage.SUB_MODULE_REF: return createSubModuleRef();
 			case TrialplePackage.UNIT: return createUnit();
-			case TrialplePackage.UNIT_DEF: return createUnitDef();
-			case TrialplePackage.UNIT_MOD_LIST: return createUnitModList();
+			case TrialplePackage.UNIT_DEFINITION: return createUnitDefinition();
 			case TrialplePackage.UNIT_MODULE: return createUnitModule();
+			case TrialplePackage.UNIT_MODULE_LIST: return createUnitModuleList();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -144,6 +147,26 @@ public class TrialpleFactoryImpl extends EFactoryImpl implements TrialpleFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ArgxType createArgxType() {
+		ArgxTypeImpl argxType = new ArgxTypeImpl();
+		return argxType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Def createDef() {
+		DefImpl def = new DefImpl();
+		return def;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Definitions createDefinitions() {
 		DefinitionsImpl definitions = new DefinitionsImpl();
 		return definitions;
@@ -187,6 +210,16 @@ public class TrialpleFactoryImpl extends EFactoryImpl implements TrialpleFactory
 	public Module createModule() {
 		ModuleImpl module = new ModuleImpl();
 		return module;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModuleList createModuleList() {
+		ModuleListImpl moduleList = new ModuleListImpl();
+		return moduleList;
 	}
 
 	/**
@@ -324,19 +357,9 @@ public class TrialpleFactoryImpl extends EFactoryImpl implements TrialpleFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UnitDef createUnitDef() {
-		UnitDefImpl unitDef = new UnitDefImpl();
-		return unitDef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UnitModList createUnitModList() {
-		UnitModListImpl unitModList = new UnitModListImpl();
-		return unitModList;
+	public UnitDefinition createUnitDefinition() {
+		UnitDefinitionImpl unitDefinition = new UnitDefinitionImpl();
+		return unitDefinition;
 	}
 
 	/**
@@ -347,6 +370,16 @@ public class TrialpleFactoryImpl extends EFactoryImpl implements TrialpleFactory
 	public UnitModule createUnitModule() {
 		UnitModuleImpl unitModule = new UnitModuleImpl();
 		return unitModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnitModuleList createUnitModuleList() {
+		UnitModuleListImpl unitModuleList = new UnitModuleListImpl();
+		return unitModuleList;
 	}
 
 	/**

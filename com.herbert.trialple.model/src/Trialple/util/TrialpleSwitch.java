@@ -78,6 +78,18 @@ public class TrialpleSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case TrialplePackage.ARGX_TYPE: {
+				ArgxType argxType = (ArgxType)theEObject;
+				T result = caseArgxType(argxType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TrialplePackage.DEF: {
+				Def def = (Def)theEObject;
+				T result = caseDef(def);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case TrialplePackage.DEFINITIONS: {
 				Definitions definitions = (Definitions)theEObject;
 				T result = caseDefinitions(definitions);
@@ -105,6 +117,12 @@ public class TrialpleSwitch<T> extends Switch<T> {
 			case TrialplePackage.MODULE: {
 				Module module = (Module)theEObject;
 				T result = caseModule(module);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TrialplePackage.MODULE_LIST: {
+				ModuleList moduleList = (ModuleList)theEObject;
+				T result = caseModuleList(moduleList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -186,21 +204,21 @@ public class TrialpleSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case TrialplePackage.UNIT_DEF: {
-				UnitDef unitDef = (UnitDef)theEObject;
-				T result = caseUnitDef(unitDef);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case TrialplePackage.UNIT_MOD_LIST: {
-				UnitModList unitModList = (UnitModList)theEObject;
-				T result = caseUnitModList(unitModList);
+			case TrialplePackage.UNIT_DEFINITION: {
+				UnitDefinition unitDefinition = (UnitDefinition)theEObject;
+				T result = caseUnitDefinition(unitDefinition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case TrialplePackage.UNIT_MODULE: {
 				UnitModule unitModule = (UnitModule)theEObject;
 				T result = caseUnitModule(unitModule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TrialplePackage.UNIT_MODULE_LIST: {
+				UnitModuleList unitModuleList = (UnitModuleList)theEObject;
+				T result = caseUnitModuleList(unitModuleList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -235,6 +253,36 @@ public class TrialpleSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseArguments(Arguments object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Argx Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Argx Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArgxType(ArgxType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Def</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Def</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDef(Def object) {
 		return null;
 	}
 
@@ -310,6 +358,21 @@ public class TrialpleSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseModule(Module object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Module List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Module List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModuleList(ModuleList object) {
 		return null;
 	}
 
@@ -509,32 +572,17 @@ public class TrialpleSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Unit Def</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Unit Definition</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Unit Def</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Unit Definition</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseUnitDef(UnitDef object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Unit Mod List</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Unit Mod List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUnitModList(UnitModList object) {
+	public T caseUnitDefinition(UnitDefinition object) {
 		return null;
 	}
 
@@ -550,6 +598,21 @@ public class TrialpleSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseUnitModule(UnitModule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Unit Module List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Unit Module List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUnitModuleList(UnitModuleList object) {
 		return null;
 	}
 

@@ -2,18 +2,23 @@
  */
 package Trialple.impl;
 
+import Trialple.Def;
 import Trialple.Definitions;
 import Trialple.TrialplePackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,14 +35,14 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  */
 public class DefinitionsImpl extends MinimalEObjectImpl.Container implements Definitions {
 	/**
-	 * The cached value of the '{@link #getDef() <em>Def</em>}' attribute list.
+	 * The cached value of the '{@link #getDef() <em>Def</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDef()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> def;
+	protected EList<Def> def;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -63,11 +68,25 @@ public class DefinitionsImpl extends MinimalEObjectImpl.Container implements Def
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getDef() {
+	public EList<Def> getDef() {
 		if (def == null) {
-			def = new EDataTypeEList<String>(String.class, this, TrialplePackage.DEFINITIONS__DEF);
+			def = new EObjectContainmentEList<Def>(Def.class, this, TrialplePackage.DEFINITIONS__DEF);
 		}
 		return def;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case TrialplePackage.DEFINITIONS__DEF:
+				return ((InternalEList<?>)getDef()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -95,7 +114,7 @@ public class DefinitionsImpl extends MinimalEObjectImpl.Container implements Def
 		switch (featureID) {
 			case TrialplePackage.DEFINITIONS__DEF:
 				getDef().clear();
-				getDef().addAll((Collection<? extends String>)newValue);
+				getDef().addAll((Collection<? extends Def>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,22 +147,6 @@ public class DefinitionsImpl extends MinimalEObjectImpl.Container implements Def
 				return def != null && !def.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (def: ");
-		result.append(def);
-		result.append(')');
-		return result.toString();
 	}
 
 } //DefinitionsImpl

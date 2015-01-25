@@ -134,13 +134,22 @@ public interface TrialplePackage extends EPackage {
 	int ARGUMENTS__ARG = 0;
 
 	/**
+	 * The feature id for the '<em><b>Argx</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENTS__ARGX = 1;
+
+	/**
 	 * The number of structural features of the '<em>Arguments</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARGUMENTS_FEATURE_COUNT = 1;
+	int ARGUMENTS_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Arguments</em>' class.
@@ -152,6 +161,89 @@ public interface TrialplePackage extends EPackage {
 	int ARGUMENTS_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link Trialple.impl.ArgxTypeImpl <em>Argx Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.ArgxTypeImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getArgxType()
+	 * @generated
+	 */
+	int ARGX_TYPE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Argstring</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGX_TYPE__ARGSTRING = 0;
+
+	/**
+	 * The feature id for the '<em><b>Sep</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGX_TYPE__SEP = 1;
+
+	/**
+	 * The number of structural features of the '<em>Argx Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGX_TYPE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Argx Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGX_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link Trialple.impl.DefImpl <em>Def</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.DefImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getDef()
+	 * @generated
+	 */
+	int DEF = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEF__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Def</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEF_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Def</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEF_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link Trialple.impl.DefinitionsImpl <em>Definitions</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -159,10 +251,10 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getDefinitions()
 	 * @generated
 	 */
-	int DEFINITIONS = 2;
+	int DEFINITIONS = 4;
 
 	/**
-	 * The feature id for the '<em><b>Def</b></em>' attribute list.
+	 * The feature id for the '<em><b>Def</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -196,7 +288,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getDocumentRoot()
 	 * @generated
 	 */
-	int DOCUMENT_ROOT = 3;
+	int DOCUMENT_ROOT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
@@ -260,7 +352,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getExecutionControl()
 	 * @generated
 	 */
-	int EXECUTION_CONTROL = 4;
+	int EXECUTION_CONTROL = 6;
 
 	/**
 	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
@@ -272,31 +364,13 @@ public interface TrialplePackage extends EPackage {
 	int EXECUTION_CONTROL__MODULES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Submoduledefs</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_CONTROL__SUBMODULEDEFS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Submoduledef</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_CONTROL__SUBMODULEDEF = 2;
-
-	/**
 	 * The feature id for the '<em><b>Unit Definition</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_CONTROL__UNIT_DEFINITION = 3;
+	int EXECUTION_CONTROL__UNIT_DEFINITION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -305,7 +379,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_CONTROL__NAME = 4;
+	int EXECUTION_CONTROL__NAME = 2;
 
 	/**
 	 * The feature id for the '<em><b>Srcid</b></em>' attribute.
@@ -314,7 +388,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_CONTROL__SRCID = 5;
+	int EXECUTION_CONTROL__SRCID = 3;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -323,7 +397,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_CONTROL__VERSION = 6;
+	int EXECUTION_CONTROL__VERSION = 4;
 
 	/**
 	 * The number of structural features of the '<em>Execution Control</em>' class.
@@ -332,7 +406,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_CONTROL_FEATURE_COUNT = 7;
+	int EXECUTION_CONTROL_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Execution Control</em>' class.
@@ -351,7 +425,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getIfType()
 	 * @generated
 	 */
-	int IF_TYPE = 5;
+	int IF_TYPE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Phase</b></em>' containment reference list.
@@ -415,10 +489,10 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getModule()
 	 * @generated
 	 */
-	int MODULE = 6;
+	int MODULE = 8;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * The feature id for the '<em><b>Description</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -580,6 +654,70 @@ public interface TrialplePackage extends EPackage {
 	int MODULE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link Trialple.impl.ModuleListImpl <em>Module List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.ModuleListImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getModuleList()
+	 * @generated
+	 */
+	int MODULE_LIST = 9;
+
+	/**
+	 * The feature id for the '<em><b>Module</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_LIST__MODULE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_LIST__MODULES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Submoduledefs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_LIST__SUBMODULEDEFS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Submoduledef</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_LIST__SUBMODULEDEF = 3;
+
+	/**
+	 * The number of structural features of the '<em>Module List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_LIST_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Module List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_LIST_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link Trialple.impl.ModulesImpl <em>Modules</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -587,7 +725,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getModules()
 	 * @generated
 	 */
-	int MODULES = 7;
+	int MODULES = 10;
 
 	/**
 	 * The feature id for the '<em><b>Module</b></em>' containment reference list.
@@ -633,7 +771,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getNot()
 	 * @generated
 	 */
-	int NOT = 8;
+	int NOT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Option</b></em>' containment reference list.
@@ -679,7 +817,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getOption()
 	 * @generated
 	 */
-	int OPTION = 9;
+	int OPTION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -725,7 +863,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getOptList()
 	 * @generated
 	 */
-	int OPT_LIST = 10;
+	int OPT_LIST = 13;
 
 	/**
 	 * The feature id for the '<em><b>Option</b></em>' containment reference list.
@@ -789,7 +927,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getOr()
 	 * @generated
 	 */
-	int OR = 11;
+	int OR = 14;
 
 	/**
 	 * The feature id for the '<em><b>Option</b></em>' containment reference list.
@@ -844,7 +982,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getPhase()
 	 * @generated
 	 */
-	int PHASE = 12;
+	int PHASE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Options</b></em>' containment reference.
@@ -1016,7 +1154,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getPhaselist()
 	 * @generated
 	 */
-	int PHASELIST = 13;
+	int PHASELIST = 16;
 
 	/**
 	 * The feature id for the '<em><b>Phase</b></em>' containment reference list.
@@ -1089,7 +1227,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getPrecedences()
 	 * @generated
 	 */
-	int PRECEDENCES = 14;
+	int PRECEDENCES = 17;
 
 	/**
 	 * The feature id for the '<em><b>Precedence</b></em>' attribute list.
@@ -1126,7 +1264,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getSubModule()
 	 * @generated
 	 */
-	int SUB_MODULE = 15;
+	int SUB_MODULE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Options</b></em>' containment reference list.
@@ -1190,7 +1328,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getSubmoduleDef()
 	 * @generated
 	 */
-	int SUBMODULE_DEF = 16;
+	int SUBMODULE_DEF = 19;
 
 	/**
 	 * The feature id for the '<em><b>Defs</b></em>' containment reference.
@@ -1254,7 +1392,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getSubmoduleDefs()
 	 * @generated
 	 */
-	int SUBMODULE_DEFS = 17;
+	int SUBMODULE_DEFS = 20;
 
 	/**
 	 * The feature id for the '<em><b>Submoduledef</b></em>' containment reference list.
@@ -1309,7 +1447,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getSubModuleRef()
 	 * @generated
 	 */
-	int SUB_MODULE_REF = 18;
+	int SUB_MODULE_REF = 21;
 
 	/**
 	 * The feature id for the '<em><b>Options</b></em>' containment reference list.
@@ -1382,7 +1520,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getUnit()
 	 * @generated
 	 */
-	int UNIT = 19;
+	int UNIT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -1403,13 +1541,31 @@ public interface TrialplePackage extends EPackage {
 	int UNIT__UNITMODULES = 1;
 
 	/**
+	 * The feature id for the '<em><b>Revokecondition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__REVOKECONDITION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Downtime</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__DOWNTIME = 3;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT__ID = 2;
+	int UNIT__ID = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1418,7 +1574,16 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT__NAME = 3;
+	int UNIT__NAME = 5;
+
+	/**
+	 * The feature id for the '<em><b>Revoke</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__REVOKE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1427,7 +1592,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT__TYPE = 4;
+	int UNIT__TYPE = 7;
 
 	/**
 	 * The number of structural features of the '<em>Unit</em>' class.
@@ -1436,7 +1601,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_COUNT = 5;
+	int UNIT_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Unit</em>' class.
@@ -1448,14 +1613,14 @@ public interface TrialplePackage extends EPackage {
 	int UNIT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link Trialple.impl.UnitDefImpl <em>Unit Def</em>}' class.
+	 * The meta object id for the '{@link Trialple.impl.UnitDefinitionImpl <em>Unit Definition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Trialple.impl.UnitDefImpl
-	 * @see Trialple.impl.TrialplePackageImpl#getUnitDef()
+	 * @see Trialple.impl.UnitDefinitionImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getUnitDefinition()
 	 * @generated
 	 */
-	int UNIT_DEF = 20;
+	int UNIT_DEFINITION = 23;
 
 	/**
 	 * The feature id for the '<em><b>Unit</b></em>' containment reference list.
@@ -1464,7 +1629,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_DEF__UNIT = 0;
+	int UNIT_DEFINITION__UNIT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1473,7 +1638,7 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_DEF__NAME = 1;
+	int UNIT_DEFINITION__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Srcid</b></em>' attribute.
@@ -1482,62 +1647,25 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_DEF__SRCID = 2;
+	int UNIT_DEFINITION__SRCID = 2;
 
 	/**
-	 * The number of structural features of the '<em>Unit Def</em>' class.
+	 * The number of structural features of the '<em>Unit Definition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_DEF_FEATURE_COUNT = 3;
+	int UNIT_DEFINITION_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Unit Def</em>' class.
+	 * The number of operations of the '<em>Unit Definition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_DEF_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link Trialple.impl.UnitModListImpl <em>Unit Mod List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Trialple.impl.UnitModListImpl
-	 * @see Trialple.impl.TrialplePackageImpl#getUnitModList()
-	 * @generated
-	 */
-	int UNIT_MOD_LIST = 21;
-
-	/**
-	 * The feature id for the '<em><b>Unitmodule</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_MOD_LIST__UNITMODULE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Unit Mod List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_MOD_LIST_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Unit Mod List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_MOD_LIST_OPERATION_COUNT = 0;
+	int UNIT_DEFINITION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link Trialple.impl.UnitModuleImpl <em>Unit Module</em>}' class.
@@ -1547,7 +1675,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getUnitModule()
 	 * @generated
 	 */
-	int UNIT_MODULE = 22;
+	int UNIT_MODULE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Options</b></em>' containment reference list.
@@ -1586,6 +1714,43 @@ public interface TrialplePackage extends EPackage {
 	int UNIT_MODULE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link Trialple.impl.UnitModuleListImpl <em>Unit Module List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Trialple.impl.UnitModuleListImpl
+	 * @see Trialple.impl.TrialplePackageImpl#getUnitModuleList()
+	 * @generated
+	 */
+	int UNIT_MODULE_LIST = 25;
+
+	/**
+	 * The feature id for the '<em><b>Unitmodule</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_MODULE_LIST__UNITMODULE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Unit Module List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_MODULE_LIST_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Unit Module List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_MODULE_LIST_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link Trialple.ModuleType <em>Module Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1593,7 +1758,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getModuleType()
 	 * @generated
 	 */
-	int MODULE_TYPE = 23;
+	int MODULE_TYPE = 26;
 
 	/**
 	 * The meta object id for the '<em>Module Type Object</em>' data type.
@@ -1603,7 +1768,7 @@ public interface TrialplePackage extends EPackage {
 	 * @see Trialple.impl.TrialplePackageImpl#getModuleTypeObject()
 	 * @generated
 	 */
-	int MODULE_TYPE_OBJECT = 24;
+	int MODULE_TYPE_OBJECT = 27;
 
 
 	/**
@@ -1671,6 +1836,70 @@ public interface TrialplePackage extends EPackage {
 	EAttribute getArguments_Arg();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link Trialple.Arguments#getArgx <em>Argx</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Argx</em>'.
+	 * @see Trialple.Arguments#getArgx()
+	 * @see #getArguments()
+	 * @generated
+	 */
+	EReference getArguments_Argx();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.ArgxType <em>Argx Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Argx Type</em>'.
+	 * @see Trialple.ArgxType
+	 * @generated
+	 */
+	EClass getArgxType();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link Trialple.ArgxType#getArgstring <em>Argstring</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Argstring</em>'.
+	 * @see Trialple.ArgxType#getArgstring()
+	 * @see #getArgxType()
+	 * @generated
+	 */
+	EAttribute getArgxType_Argstring();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.ArgxType#getSep <em>Sep</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Sep</em>'.
+	 * @see Trialple.ArgxType#getSep()
+	 * @see #getArgxType()
+	 * @generated
+	 */
+	EAttribute getArgxType_Sep();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.Def <em>Def</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Def</em>'.
+	 * @see Trialple.Def
+	 * @generated
+	 */
+	EClass getDef();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Def#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see Trialple.Def#getName()
+	 * @see #getDef()
+	 * @generated
+	 */
+	EAttribute getDef_Name();
+
+	/**
 	 * Returns the meta object for class '{@link Trialple.Definitions <em>Definitions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1681,15 +1910,15 @@ public interface TrialplePackage extends EPackage {
 	EClass getDefinitions();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link Trialple.Definitions#getDef <em>Def</em>}'.
+	 * Returns the meta object for the containment reference list '{@link Trialple.Definitions#getDef <em>Def</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Def</em>'.
+	 * @return the meta object for the containment reference list '<em>Def</em>'.
 	 * @see Trialple.Definitions#getDef()
 	 * @see #getDefinitions()
 	 * @generated
 	 */
-	EAttribute getDefinitions_Def();
+	EReference getDefinitions_Def();
 
 	/**
 	 * Returns the meta object for class '{@link Trialple.DocumentRoot <em>Document Root</em>}'.
@@ -1765,28 +1994,6 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getExecutionControl_Modules();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link Trialple.ExecutionControl#getSubmoduledefs <em>Submoduledefs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Submoduledefs</em>'.
-	 * @see Trialple.ExecutionControl#getSubmoduledefs()
-	 * @see #getExecutionControl()
-	 * @generated
-	 */
-	EReference getExecutionControl_Submoduledefs();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link Trialple.ExecutionControl#getSubmoduledef <em>Submoduledef</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Submoduledef</em>'.
-	 * @see Trialple.ExecutionControl#getSubmoduledef()
-	 * @see #getExecutionControl()
-	 * @generated
-	 */
-	EReference getExecutionControl_Submoduledef();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link Trialple.ExecutionControl#getUnitDefinition <em>Unit Definition</em>}'.
@@ -1897,21 +2104,10 @@ public interface TrialplePackage extends EPackage {
 	EClass getModule();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link Trialple.Module#getPhaselist <em>Phaselist</em>}'.
+	 * Returns the meta object for the attribute list '{@link Trialple.Module#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Phaselist</em>'.
-	 * @see Trialple.Module#getPhaselist()
-	 * @see #getModule()
-	 * @generated
-	 */
-	EReference getModule_Phaselist();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Trialple.Module#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @return the meta object for the attribute list '<em>Description</em>'.
 	 * @see Trialple.Module#getDescription()
 	 * @see #getModule()
 	 * @generated
@@ -1974,6 +2170,17 @@ public interface TrialplePackage extends EPackage {
 	EReference getModule_Precedences();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link Trialple.Module#getPhaselist <em>Phaselist</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Phaselist</em>'.
+	 * @see Trialple.Module#getPhaselist()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EReference getModule_Phaselist();
+
+	/**
 	 * Returns the meta object for the attribute '{@link Trialple.Module#getCheckmode <em>Checkmode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1983,17 +2190,6 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getModule_Checkmode();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Trialple.Module#getRevokeautonext <em>Revokeautonext</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Revokeautonext</em>'.
-	 * @see Trialple.Module#getRevokeautonext()
-	 * @see #getModule()
-	 * @generated
-	 */
-	EAttribute getModule_Revokeautonext();
 
 	/**
 	 * Returns the meta object for the attribute '{@link Trialple.Module#getErrignorable <em>Errignorable</em>}'.
@@ -2018,28 +2214,6 @@ public interface TrialplePackage extends EPackage {
 	EAttribute getModule_Interruptable();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Trialple.Module#getReselect <em>Reselect</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reselect</em>'.
-	 * @see Trialple.Module#getReselect()
-	 * @see #getModule()
-	 * @generated
-	 */
-	EAttribute getModule_Reselect();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Trialple.Module#getUniqueexec <em>Uniqueexec</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Uniqueexec</em>'.
-	 * @see Trialple.Module#getUniqueexec()
-	 * @see #getModule()
-	 * @generated
-	 */
-	EAttribute getModule_Uniqueexec();
-
-	/**
 	 * Returns the meta object for the attribute '{@link Trialple.Module#getMandatory <em>Mandatory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2062,6 +2236,28 @@ public interface TrialplePackage extends EPackage {
 	EAttribute getModule_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Module#getReselect <em>Reselect</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reselect</em>'.
+	 * @see Trialple.Module#getReselect()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EAttribute getModule_Reselect();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Module#getRevokeautonext <em>Revokeautonext</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Revokeautonext</em>'.
+	 * @see Trialple.Module#getRevokeautonext()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EAttribute getModule_Revokeautonext();
+
+	/**
 	 * Returns the meta object for the attribute '{@link Trialple.Module#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2071,6 +2267,71 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getModule_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Module#getUniqueexec <em>Uniqueexec</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Uniqueexec</em>'.
+	 * @see Trialple.Module#getUniqueexec()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EAttribute getModule_Uniqueexec();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.ModuleList <em>Module List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Module List</em>'.
+	 * @see Trialple.ModuleList
+	 * @generated
+	 */
+	EClass getModuleList();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.ModuleList#getModule <em>Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Module</em>'.
+	 * @see Trialple.ModuleList#getModule()
+	 * @see #getModuleList()
+	 * @generated
+	 */
+	EReference getModuleList_Module();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.ModuleList#getModules <em>Modules</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Modules</em>'.
+	 * @see Trialple.ModuleList#getModules()
+	 * @see #getModuleList()
+	 * @generated
+	 */
+	EReference getModuleList_Modules();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.ModuleList#getSubmoduledefs <em>Submoduledefs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Submoduledefs</em>'.
+	 * @see Trialple.ModuleList#getSubmoduledefs()
+	 * @see #getModuleList()
+	 * @generated
+	 */
+	EReference getModuleList_Submoduledefs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.ModuleList#getSubmoduledef <em>Submoduledef</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Submoduledef</em>'.
+	 * @see Trialple.ModuleList#getSubmoduledef()
+	 * @see #getModuleList()
+	 * @generated
+	 */
+	EReference getModuleList_Submoduledef();
 
 	/**
 	 * Returns the meta object for class '{@link Trialple.Modules <em>Modules</em>}'.
@@ -2276,6 +2537,17 @@ public interface TrialplePackage extends EPackage {
 	EClass getPhase();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link Trialple.Phase#getOptions <em>Options</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Options</em>'.
+	 * @see Trialple.Phase#getOptions()
+	 * @see #getPhase()
+	 * @generated
+	 */
+	EReference getPhase_Options();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link Trialple.Phase#getArgs <em>Args</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2395,17 +2667,6 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPhase_Ignorable();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link Trialple.Phase#getOptions <em>Options</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Options</em>'.
-	 * @see Trialple.Phase#getOptions()
-	 * @see #getPhase()
-	 * @generated
-	 */
-	EReference getPhase_Options();
 
 	/**
 	 * Returns the meta object for the attribute '{@link Trialple.Phase#getLogfile <em>Logfile</em>}'.
@@ -2786,6 +3047,28 @@ public interface TrialplePackage extends EPackage {
 	EReference getUnit_Unitmodules();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link Trialple.Unit#getRevokecondition <em>Revokecondition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Revokecondition</em>'.
+	 * @see Trialple.Unit#getRevokecondition()
+	 * @see #getUnit()
+	 * @generated
+	 */
+	EReference getUnit_Revokecondition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Unit#getDowntime <em>Downtime</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Downtime</em>'.
+	 * @see Trialple.Unit#getDowntime()
+	 * @see #getUnit()
+	 * @generated
+	 */
+	EAttribute getUnit_Downtime();
+
+	/**
 	 * Returns the meta object for the attribute '{@link Trialple.Unit#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2808,6 +3091,17 @@ public interface TrialplePackage extends EPackage {
 	EAttribute getUnit_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Trialple.Unit#getRevoke <em>Revoke</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Revoke</em>'.
+	 * @see Trialple.Unit#getRevoke()
+	 * @see #getUnit()
+	 * @generated
+	 */
+	EAttribute getUnit_Revoke();
+
+	/**
 	 * Returns the meta object for the attribute '{@link Trialple.Unit#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2819,68 +3113,47 @@ public interface TrialplePackage extends EPackage {
 	EAttribute getUnit_Type();
 
 	/**
-	 * Returns the meta object for class '{@link Trialple.UnitDef <em>Unit Def</em>}'.
+	 * Returns the meta object for class '{@link Trialple.UnitDefinition <em>Unit Definition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Unit Def</em>'.
-	 * @see Trialple.UnitDef
+	 * @return the meta object for class '<em>Unit Definition</em>'.
+	 * @see Trialple.UnitDefinition
 	 * @generated
 	 */
-	EClass getUnitDef();
+	EClass getUnitDefinition();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link Trialple.UnitDef#getUnit <em>Unit</em>}'.
+	 * Returns the meta object for the containment reference list '{@link Trialple.UnitDefinition#getUnit <em>Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Unit</em>'.
-	 * @see Trialple.UnitDef#getUnit()
-	 * @see #getUnitDef()
+	 * @see Trialple.UnitDefinition#getUnit()
+	 * @see #getUnitDefinition()
 	 * @generated
 	 */
-	EReference getUnitDef_Unit();
+	EReference getUnitDefinition_Unit();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Trialple.UnitDef#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link Trialple.UnitDefinition#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see Trialple.UnitDef#getName()
-	 * @see #getUnitDef()
+	 * @see Trialple.UnitDefinition#getName()
+	 * @see #getUnitDefinition()
 	 * @generated
 	 */
-	EAttribute getUnitDef_Name();
+	EAttribute getUnitDefinition_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Trialple.UnitDef#getSrcid <em>Srcid</em>}'.
+	 * Returns the meta object for the attribute '{@link Trialple.UnitDefinition#getSrcid <em>Srcid</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Srcid</em>'.
-	 * @see Trialple.UnitDef#getSrcid()
-	 * @see #getUnitDef()
+	 * @see Trialple.UnitDefinition#getSrcid()
+	 * @see #getUnitDefinition()
 	 * @generated
 	 */
-	EAttribute getUnitDef_Srcid();
-
-	/**
-	 * Returns the meta object for class '{@link Trialple.UnitModList <em>Unit Mod List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Unit Mod List</em>'.
-	 * @see Trialple.UnitModList
-	 * @generated
-	 */
-	EClass getUnitModList();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link Trialple.UnitModList#getUnitmodule <em>Unitmodule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Unitmodule</em>'.
-	 * @see Trialple.UnitModList#getUnitmodule()
-	 * @see #getUnitModList()
-	 * @generated
-	 */
-	EReference getUnitModList_Unitmodule();
+	EAttribute getUnitDefinition_Srcid();
 
 	/**
 	 * Returns the meta object for class '{@link Trialple.UnitModule <em>Unit Module</em>}'.
@@ -2913,6 +3186,27 @@ public interface TrialplePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUnitModule_Name();
+
+	/**
+	 * Returns the meta object for class '{@link Trialple.UnitModuleList <em>Unit Module List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Unit Module List</em>'.
+	 * @see Trialple.UnitModuleList
+	 * @generated
+	 */
+	EClass getUnitModuleList();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Trialple.UnitModuleList#getUnitmodule <em>Unitmodule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Unitmodule</em>'.
+	 * @see Trialple.UnitModuleList#getUnitmodule()
+	 * @see #getUnitModuleList()
+	 * @generated
+	 */
+	EReference getUnitModuleList_Unitmodule();
 
 	/**
 	 * Returns the meta object for enum '{@link Trialple.ModuleType <em>Module Type</em>}'.
@@ -3012,6 +3306,58 @@ public interface TrialplePackage extends EPackage {
 		EAttribute ARGUMENTS__ARG = eINSTANCE.getArguments_Arg();
 
 		/**
+		 * The meta object literal for the '<em><b>Argx</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARGUMENTS__ARGX = eINSTANCE.getArguments_Argx();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.ArgxTypeImpl <em>Argx Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.ArgxTypeImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getArgxType()
+		 * @generated
+		 */
+		EClass ARGX_TYPE = eINSTANCE.getArgxType();
+
+		/**
+		 * The meta object literal for the '<em><b>Argstring</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARGX_TYPE__ARGSTRING = eINSTANCE.getArgxType_Argstring();
+
+		/**
+		 * The meta object literal for the '<em><b>Sep</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARGX_TYPE__SEP = eINSTANCE.getArgxType_Sep();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.DefImpl <em>Def</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.DefImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getDef()
+		 * @generated
+		 */
+		EClass DEF = eINSTANCE.getDef();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEF__NAME = eINSTANCE.getDef_Name();
+
+		/**
 		 * The meta object literal for the '{@link Trialple.impl.DefinitionsImpl <em>Definitions</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3022,12 +3368,12 @@ public interface TrialplePackage extends EPackage {
 		EClass DEFINITIONS = eINSTANCE.getDefinitions();
 
 		/**
-		 * The meta object literal for the '<em><b>Def</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Def</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DEFINITIONS__DEF = eINSTANCE.getDefinitions_Def();
+		EReference DEFINITIONS__DEF = eINSTANCE.getDefinitions_Def();
 
 		/**
 		 * The meta object literal for the '{@link Trialple.impl.DocumentRootImpl <em>Document Root</em>}' class.
@@ -3088,22 +3434,6 @@ public interface TrialplePackage extends EPackage {
 		 * @generated
 		 */
 		EReference EXECUTION_CONTROL__MODULES = eINSTANCE.getExecutionControl_Modules();
-
-		/**
-		 * The meta object literal for the '<em><b>Submoduledefs</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXECUTION_CONTROL__SUBMODULEDEFS = eINSTANCE.getExecutionControl_Submoduledefs();
-
-		/**
-		 * The meta object literal for the '<em><b>Submoduledef</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXECUTION_CONTROL__SUBMODULEDEF = eINSTANCE.getExecutionControl_Submoduledef();
 
 		/**
 		 * The meta object literal for the '<em><b>Unit Definition</b></em>' containment reference list feature.
@@ -3190,15 +3520,7 @@ public interface TrialplePackage extends EPackage {
 		EClass MODULE = eINSTANCE.getModule();
 
 		/**
-		 * The meta object literal for the '<em><b>Phaselist</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MODULE__PHASELIST = eINSTANCE.getModule_Phaselist();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3246,20 +3568,20 @@ public interface TrialplePackage extends EPackage {
 		EReference MODULE__PRECEDENCES = eINSTANCE.getModule_Precedences();
 
 		/**
+		 * The meta object literal for the '<em><b>Phaselist</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULE__PHASELIST = eINSTANCE.getModule_Phaselist();
+
+		/**
 		 * The meta object literal for the '<em><b>Checkmode</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute MODULE__CHECKMODE = eINSTANCE.getModule_Checkmode();
-
-		/**
-		 * The meta object literal for the '<em><b>Revokeautonext</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MODULE__REVOKEAUTONEXT = eINSTANCE.getModule_Revokeautonext();
 
 		/**
 		 * The meta object literal for the '<em><b>Errignorable</b></em>' attribute feature.
@@ -3278,22 +3600,6 @@ public interface TrialplePackage extends EPackage {
 		EAttribute MODULE__INTERRUPTABLE = eINSTANCE.getModule_Interruptable();
 
 		/**
-		 * The meta object literal for the '<em><b>Reselect</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MODULE__RESELECT = eINSTANCE.getModule_Reselect();
-
-		/**
-		 * The meta object literal for the '<em><b>Uniqueexec</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MODULE__UNIQUEEXEC = eINSTANCE.getModule_Uniqueexec();
-
-		/**
 		 * The meta object literal for the '<em><b>Mandatory</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3310,12 +3616,78 @@ public interface TrialplePackage extends EPackage {
 		EAttribute MODULE__NAME = eINSTANCE.getModule_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Reselect</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULE__RESELECT = eINSTANCE.getModule_Reselect();
+
+		/**
+		 * The meta object literal for the '<em><b>Revokeautonext</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULE__REVOKEAUTONEXT = eINSTANCE.getModule_Revokeautonext();
+
+		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute MODULE__TYPE = eINSTANCE.getModule_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Uniqueexec</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULE__UNIQUEEXEC = eINSTANCE.getModule_Uniqueexec();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.ModuleListImpl <em>Module List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.ModuleListImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getModuleList()
+		 * @generated
+		 */
+		EClass MODULE_LIST = eINSTANCE.getModuleList();
+
+		/**
+		 * The meta object literal for the '<em><b>Module</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULE_LIST__MODULE = eINSTANCE.getModuleList_Module();
+
+		/**
+		 * The meta object literal for the '<em><b>Modules</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULE_LIST__MODULES = eINSTANCE.getModuleList_Modules();
+
+		/**
+		 * The meta object literal for the '<em><b>Submoduledefs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULE_LIST__SUBMODULEDEFS = eINSTANCE.getModuleList_Submoduledefs();
+
+		/**
+		 * The meta object literal for the '<em><b>Submoduledef</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULE_LIST__SUBMODULEDEF = eINSTANCE.getModuleList_Submoduledef();
 
 		/**
 		 * The meta object literal for the '{@link Trialple.impl.ModulesImpl <em>Modules</em>}' class.
@@ -3482,6 +3854,14 @@ public interface TrialplePackage extends EPackage {
 		EClass PHASE = eINSTANCE.getPhase();
 
 		/**
+		 * The meta object literal for the '<em><b>Options</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PHASE__OPTIONS = eINSTANCE.getPhase_Options();
+
+		/**
 		 * The meta object literal for the '<em><b>Args</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3568,14 +3948,6 @@ public interface TrialplePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PHASE__IGNORABLE = eINSTANCE.getPhase_Ignorable();
-
-		/**
-		 * The meta object literal for the '<em><b>Options</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PHASE__OPTIONS = eINSTANCE.getPhase_Options();
 
 		/**
 		 * The meta object literal for the '<em><b>Logfile</b></em>' attribute feature.
@@ -3872,6 +4244,22 @@ public interface TrialplePackage extends EPackage {
 		EReference UNIT__UNITMODULES = eINSTANCE.getUnit_Unitmodules();
 
 		/**
+		 * The meta object literal for the '<em><b>Revokecondition</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT__REVOKECONDITION = eINSTANCE.getUnit_Revokecondition();
+
+		/**
+		 * The meta object literal for the '<em><b>Downtime</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT__DOWNTIME = eINSTANCE.getUnit_Downtime();
+
+		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3888,6 +4276,14 @@ public interface TrialplePackage extends EPackage {
 		EAttribute UNIT__NAME = eINSTANCE.getUnit_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Revoke</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT__REVOKE = eINSTANCE.getUnit_Revoke();
+
+		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3896,14 +4292,14 @@ public interface TrialplePackage extends EPackage {
 		EAttribute UNIT__TYPE = eINSTANCE.getUnit_Type();
 
 		/**
-		 * The meta object literal for the '{@link Trialple.impl.UnitDefImpl <em>Unit Def</em>}' class.
+		 * The meta object literal for the '{@link Trialple.impl.UnitDefinitionImpl <em>Unit Definition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see Trialple.impl.UnitDefImpl
-		 * @see Trialple.impl.TrialplePackageImpl#getUnitDef()
+		 * @see Trialple.impl.UnitDefinitionImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getUnitDefinition()
 		 * @generated
 		 */
-		EClass UNIT_DEF = eINSTANCE.getUnitDef();
+		EClass UNIT_DEFINITION = eINSTANCE.getUnitDefinition();
 
 		/**
 		 * The meta object literal for the '<em><b>Unit</b></em>' containment reference list feature.
@@ -3911,7 +4307,7 @@ public interface TrialplePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference UNIT_DEF__UNIT = eINSTANCE.getUnitDef_Unit();
+		EReference UNIT_DEFINITION__UNIT = eINSTANCE.getUnitDefinition_Unit();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3919,7 +4315,7 @@ public interface TrialplePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UNIT_DEF__NAME = eINSTANCE.getUnitDef_Name();
+		EAttribute UNIT_DEFINITION__NAME = eINSTANCE.getUnitDefinition_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Srcid</b></em>' attribute feature.
@@ -3927,25 +4323,7 @@ public interface TrialplePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UNIT_DEF__SRCID = eINSTANCE.getUnitDef_Srcid();
-
-		/**
-		 * The meta object literal for the '{@link Trialple.impl.UnitModListImpl <em>Unit Mod List</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Trialple.impl.UnitModListImpl
-		 * @see Trialple.impl.TrialplePackageImpl#getUnitModList()
-		 * @generated
-		 */
-		EClass UNIT_MOD_LIST = eINSTANCE.getUnitModList();
-
-		/**
-		 * The meta object literal for the '<em><b>Unitmodule</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference UNIT_MOD_LIST__UNITMODULE = eINSTANCE.getUnitModList_Unitmodule();
+		EAttribute UNIT_DEFINITION__SRCID = eINSTANCE.getUnitDefinition_Srcid();
 
 		/**
 		 * The meta object literal for the '{@link Trialple.impl.UnitModuleImpl <em>Unit Module</em>}' class.
@@ -3972,6 +4350,24 @@ public interface TrialplePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute UNIT_MODULE__NAME = eINSTANCE.getUnitModule_Name();
+
+		/**
+		 * The meta object literal for the '{@link Trialple.impl.UnitModuleListImpl <em>Unit Module List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Trialple.impl.UnitModuleListImpl
+		 * @see Trialple.impl.TrialplePackageImpl#getUnitModuleList()
+		 * @generated
+		 */
+		EClass UNIT_MODULE_LIST = eINSTANCE.getUnitModuleList();
+
+		/**
+		 * The meta object literal for the '<em><b>Unitmodule</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT_MODULE_LIST__UNITMODULE = eINSTANCE.getUnitModuleList_Unitmodule();
 
 		/**
 		 * The meta object literal for the '{@link Trialple.ModuleType <em>Module Type</em>}' enum.

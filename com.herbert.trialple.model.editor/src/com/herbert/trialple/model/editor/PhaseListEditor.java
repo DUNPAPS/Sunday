@@ -9,21 +9,22 @@ import com.herbert.trialple.model.outline.OutlineView;
 
 public class PhaseListEditor extends FormEditor {
 
-	public static final int ElementDetials = 0;
-	public static final int Variants_PAGE = 1;
+	public static final int ElementDetails = 0;
+	//public static final int Variants_PAGE = 1;
 
 	public PhaseListEditor() {
+		super();
 	}
 
 	void createPage0() {
-		ElementDetials elementDetials = new ElementDetials(this, "ID",
-				" Element Detials ");
+		ElementDetails elementDetails = new ElementDetails(this, "ID",
+				" Element Details ");
 		try {
-			addPage(ElementDetials, elementDetials);
+			addPage(ElementDetails, elementDetails);
 		} catch (PartInitException e) {
 			e.printStackTrace();
 		}
-		setPageText(ElementDetials, " Element Detials ");
+		setPageText(ElementDetails, " Element Details ");
 	}
 
 //	void createPage1() {
@@ -38,7 +39,7 @@ public class PhaseListEditor extends FormEditor {
 
 	@Override
 	public void setActivePage(int pageIndex) {
-		super.setActivePage(ElementDetials);
+		super.setActivePage(ElementDetails);
 	}
 
 	@Override

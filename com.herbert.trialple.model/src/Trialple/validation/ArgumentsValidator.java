@@ -4,6 +4,8 @@
  */
 package Trialple.validation;
 
+import Trialple.ArgxType;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -16,4 +18,5 @@ public interface ArgumentsValidator {
 	boolean validate();
 
 	boolean validateArg(EList<String> value);
+	boolean validateArgx(ArgxType value);
 }

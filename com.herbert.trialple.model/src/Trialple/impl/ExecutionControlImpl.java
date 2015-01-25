@@ -3,22 +3,23 @@
 package Trialple.impl;
 
 import Trialple.ExecutionControl;
-import Trialple.Modules;
-import Trialple.SubmoduleDef;
-import Trialple.SubmoduleDefs;
+import Trialple.ModuleList;
 import Trialple.TrialplePackage;
+import Trialple.UnitDefinition;
 
-import Trialple.UnitDef;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -30,8 +31,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link Trialple.impl.ExecutionControlImpl#getModules <em>Modules</em>}</li>
- *   <li>{@link Trialple.impl.ExecutionControlImpl#getSubmoduledefs <em>Submoduledefs</em>}</li>
- *   <li>{@link Trialple.impl.ExecutionControlImpl#getSubmoduledef <em>Submoduledef</em>}</li>
  *   <li>{@link Trialple.impl.ExecutionControlImpl#getUnitDefinition <em>Unit Definition</em>}</li>
  *   <li>{@link Trialple.impl.ExecutionControlImpl#getName <em>Name</em>}</li>
  *   <li>{@link Trialple.impl.ExecutionControlImpl#getSrcid <em>Srcid</em>}</li>
@@ -50,27 +49,7 @@ public class ExecutionControlImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Modules> modules;
-
-	/**
-	 * The cached value of the '{@link #getSubmoduledefs() <em>Submoduledefs</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubmoduledefs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SubmoduleDefs> submoduledefs;
-
-	/**
-	 * The cached value of the '{@link #getSubmoduledef() <em>Submoduledef</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubmoduledef()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SubmoduleDef> submoduledef;
+	protected EList<ModuleList> modules;
 
 	/**
 	 * The cached value of the '{@link #getUnitDefinition() <em>Unit Definition</em>}' containment reference list.
@@ -80,7 +59,7 @@ public class ExecutionControlImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<UnitDef> unitDefinition;
+	protected EList<UnitDefinition> unitDefinition;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -166,9 +145,9 @@ public class ExecutionControlImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Modules> getModules() {
+	public EList<ModuleList> getModules() {
 		if (modules == null) {
-			modules = new EObjectContainmentEList<Modules>(Modules.class, this, TrialplePackage.EXECUTION_CONTROL__MODULES);
+			modules = new EObjectContainmentEList<ModuleList>(ModuleList.class, this, TrialplePackage.EXECUTION_CONTROL__MODULES);
 		}
 		return modules;
 	}
@@ -178,33 +157,9 @@ public class ExecutionControlImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SubmoduleDefs> getSubmoduledefs() {
-		if (submoduledefs == null) {
-			submoduledefs = new EObjectContainmentEList<SubmoduleDefs>(SubmoduleDefs.class, this, TrialplePackage.EXECUTION_CONTROL__SUBMODULEDEFS);
-		}
-		return submoduledefs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<SubmoduleDef> getSubmoduledef() {
-		if (submoduledef == null) {
-			submoduledef = new EObjectContainmentEList<SubmoduleDef>(SubmoduleDef.class, this, TrialplePackage.EXECUTION_CONTROL__SUBMODULEDEF);
-		}
-		return submoduledef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<UnitDef> getUnitDefinition() {
+	public EList<UnitDefinition> getUnitDefinition() {
 		if (unitDefinition == null) {
-			unitDefinition = new EObjectContainmentEList<UnitDef>(UnitDef.class, this, TrialplePackage.EXECUTION_CONTROL__UNIT_DEFINITION);
+			unitDefinition = new EObjectContainmentEList<UnitDefinition>(UnitDefinition.class, this, TrialplePackage.EXECUTION_CONTROL__UNIT_DEFINITION);
 		}
 		return unitDefinition;
 	}
@@ -282,10 +237,6 @@ public class ExecutionControlImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case TrialplePackage.EXECUTION_CONTROL__MODULES:
 				return ((InternalEList<?>)getModules()).basicRemove(otherEnd, msgs);
-			case TrialplePackage.EXECUTION_CONTROL__SUBMODULEDEFS:
-				return ((InternalEList<?>)getSubmoduledefs()).basicRemove(otherEnd, msgs);
-			case TrialplePackage.EXECUTION_CONTROL__SUBMODULEDEF:
-				return ((InternalEList<?>)getSubmoduledef()).basicRemove(otherEnd, msgs);
 			case TrialplePackage.EXECUTION_CONTROL__UNIT_DEFINITION:
 				return ((InternalEList<?>)getUnitDefinition()).basicRemove(otherEnd, msgs);
 		}
@@ -302,10 +253,6 @@ public class ExecutionControlImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case TrialplePackage.EXECUTION_CONTROL__MODULES:
 				return getModules();
-			case TrialplePackage.EXECUTION_CONTROL__SUBMODULEDEFS:
-				return getSubmoduledefs();
-			case TrialplePackage.EXECUTION_CONTROL__SUBMODULEDEF:
-				return getSubmoduledef();
 			case TrialplePackage.EXECUTION_CONTROL__UNIT_DEFINITION:
 				return getUnitDefinition();
 			case TrialplePackage.EXECUTION_CONTROL__NAME:
@@ -329,19 +276,11 @@ public class ExecutionControlImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case TrialplePackage.EXECUTION_CONTROL__MODULES:
 				getModules().clear();
-				getModules().addAll((Collection<? extends Modules>)newValue);
-				return;
-			case TrialplePackage.EXECUTION_CONTROL__SUBMODULEDEFS:
-				getSubmoduledefs().clear();
-				getSubmoduledefs().addAll((Collection<? extends SubmoduleDefs>)newValue);
-				return;
-			case TrialplePackage.EXECUTION_CONTROL__SUBMODULEDEF:
-				getSubmoduledef().clear();
-				getSubmoduledef().addAll((Collection<? extends SubmoduleDef>)newValue);
+				getModules().addAll((Collection<? extends ModuleList>)newValue);
 				return;
 			case TrialplePackage.EXECUTION_CONTROL__UNIT_DEFINITION:
 				getUnitDefinition().clear();
-				getUnitDefinition().addAll((Collection<? extends UnitDef>)newValue);
+				getUnitDefinition().addAll((Collection<? extends UnitDefinition>)newValue);
 				return;
 			case TrialplePackage.EXECUTION_CONTROL__NAME:
 				setName((String)newValue);
@@ -366,12 +305,6 @@ public class ExecutionControlImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case TrialplePackage.EXECUTION_CONTROL__MODULES:
 				getModules().clear();
-				return;
-			case TrialplePackage.EXECUTION_CONTROL__SUBMODULEDEFS:
-				getSubmoduledefs().clear();
-				return;
-			case TrialplePackage.EXECUTION_CONTROL__SUBMODULEDEF:
-				getSubmoduledef().clear();
 				return;
 			case TrialplePackage.EXECUTION_CONTROL__UNIT_DEFINITION:
 				getUnitDefinition().clear();
@@ -399,10 +332,6 @@ public class ExecutionControlImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case TrialplePackage.EXECUTION_CONTROL__MODULES:
 				return modules != null && !modules.isEmpty();
-			case TrialplePackage.EXECUTION_CONTROL__SUBMODULEDEFS:
-				return submoduledefs != null && !submoduledefs.isEmpty();
-			case TrialplePackage.EXECUTION_CONTROL__SUBMODULEDEF:
-				return submoduledef != null && !submoduledef.isEmpty();
 			case TrialplePackage.EXECUTION_CONTROL__UNIT_DEFINITION:
 				return unitDefinition != null && !unitDefinition.isEmpty();
 			case TrialplePackage.EXECUTION_CONTROL__NAME:

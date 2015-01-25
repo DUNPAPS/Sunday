@@ -26,5 +26,26 @@
             name="Pleditor XML Wizard">
         </wizard>
     </extension>
+    <extension
+          point="org.eclipse.ui.views">
+       <view
+             class="com.herbert.trialple.model.views.OptionsView"
+             id="com.herbert.trialple.model.editor.views"
+             name="Options View"
+             icon="/icons/sample.gif"
+             restorable="true">
+       </view>
+    </extension>
+    <extension
+          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+       <propertyTabs
+             contributorId="com.herbert.trialple.model.editor.propertyTabs2">
+          <propertyTab
+                category="com.herbert.trialple.model.editor.propertyTab3"
+                id="com.herbert.trialple.model.editor.propertyTab3"
+                label="label">
+          </propertyTab>
+       </propertyTabs>
+    </extension>
     
 </plugin>

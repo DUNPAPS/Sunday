@@ -7,7 +7,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 public class IconLoader extends AbstractUIPlugin {
 
-	public static final String ICON_ELEMENT = "blue-document-tree.png"; //$NON-NLS-1$
+	public static final String ICON_ELEMENT = "application-tree.png"; //$NON-NLS-1$
 	public static final String ICON_SUBMODULEREF = "arrow-315-small.png";
 
 	// The shared instance.

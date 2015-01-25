@@ -4,6 +4,8 @@
  */
 package Trialple.validation;
 
+import Trialple.Def;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -15,5 +17,5 @@ import org.eclipse.emf.common.util.EList;
 public interface DefinitionsValidator {
 	boolean validate();
 
-	boolean validateDef(EList<String> value);
+	boolean validateDef(EList<Def> value);
 }

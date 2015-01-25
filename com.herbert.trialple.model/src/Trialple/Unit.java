@@ -14,8 +14,11 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link Trialple.Unit#getTitle <em>Title</em>}</li>
  *   <li>{@link Trialple.Unit#getUnitmodules <em>Unitmodules</em>}</li>
+ *   <li>{@link Trialple.Unit#getRevokecondition <em>Revokecondition</em>}</li>
+ *   <li>{@link Trialple.Unit#getDowntime <em>Downtime</em>}</li>
  *   <li>{@link Trialple.Unit#getId <em>Id</em>}</li>
  *   <li>{@link Trialple.Unit#getName <em>Name</em>}</li>
+ *   <li>{@link Trialple.Unit#getRevoke <em>Revoke</em>}</li>
  *   <li>{@link Trialple.Unit#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -61,13 +64,13 @@ public interface Unit extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Unitmodules</em>' containment reference.
-	 * @see #setUnitmodules(UnitModList)
+	 * @see #setUnitmodules(UnitModuleList)
 	 * @see Trialple.TrialplePackage#getUnit_Unitmodules()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='unitmodules' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	UnitModList getUnitmodules();
+	UnitModuleList getUnitmodules();
 
 	/**
 	 * Sets the value of the '{@link Trialple.Unit#getUnitmodules <em>Unitmodules</em>}' containment reference.
@@ -77,7 +80,61 @@ public interface Unit extends EObject {
 	 * @see #getUnitmodules()
 	 * @generated
 	 */
-	void setUnitmodules(UnitModList value);
+	void setUnitmodules(UnitModuleList value);
+
+	/**
+	 * Returns the value of the '<em><b>Revokecondition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Revokecondition</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Revokecondition</em>' containment reference.
+	 * @see #setRevokecondition(OptList)
+	 * @see Trialple.TrialplePackage#getUnit_Revokecondition()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='revokecondition' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	OptList getRevokecondition();
+
+	/**
+	 * Sets the value of the '{@link Trialple.Unit#getRevokecondition <em>Revokecondition</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Revokecondition</em>' containment reference.
+	 * @see #getRevokecondition()
+	 * @generated
+	 */
+	void setRevokecondition(OptList value);
+
+	/**
+	 * Returns the value of the '<em><b>Downtime</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Downtime</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Downtime</em>' attribute.
+	 * @see #setDowntime(String)
+	 * @see Trialple.TrialplePackage#getUnit_Downtime()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
+	 *        extendedMetaData="kind='attribute' name='downtime' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	String getDowntime();
+
+	/**
+	 * Sets the value of the '{@link Trialple.Unit#getDowntime <em>Downtime</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Downtime</em>' attribute.
+	 * @see #getDowntime()
+	 * @generated
+	 */
+	void setDowntime(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
@@ -132,6 +189,33 @@ public interface Unit extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Revoke</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Revoke</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Revoke</em>' attribute.
+	 * @see #setRevoke(String)
+	 * @see Trialple.TrialplePackage#getUnit_Revoke()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
+	 *        extendedMetaData="kind='attribute' name='revoke' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	String getRevoke();
+
+	/**
+	 * Sets the value of the '{@link Trialple.Unit#getRevoke <em>Revoke</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Revoke</em>' attribute.
+	 * @see #getRevoke()
+	 * @generated
+	 */
+	void setRevoke(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.

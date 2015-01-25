@@ -7,14 +7,20 @@ import Trialple.IfType;
 import Trialple.OptList;
 import Trialple.Phase;
 import Trialple.TrialplePackage;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -397,6 +403,49 @@ public class PhaseImpl extends MinimalEObjectImpl.Container implements Phase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public OptList getOptions() {
+		return options;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOptions(OptList newOptions, NotificationChain msgs) {
+		OptList oldOptions = options;
+		options = newOptions;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TrialplePackage.PHASE__OPTIONS, oldOptions, newOptions);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOptions(OptList newOptions) {
+		if (newOptions != options) {
+			NotificationChain msgs = null;
+			if (options != null)
+				msgs = ((InternalEObject)options).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TrialplePackage.PHASE__OPTIONS, null, msgs);
+			if (newOptions != null)
+				msgs = ((InternalEObject)newOptions).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TrialplePackage.PHASE__OPTIONS, null, msgs);
+			msgs = basicSetOptions(newOptions, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TrialplePackage.PHASE__OPTIONS, newOptions, newOptions));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Arguments getArgs() {
 		return args;
 	}
@@ -725,49 +774,6 @@ public class PhaseImpl extends MinimalEObjectImpl.Container implements Phase {
 	 */
 	public boolean isSetIgnorable() {
 		return ignorableESet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public OptList getOptions() {
-		return options;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetOptions(OptList newOptions, NotificationChain msgs) {
-		OptList oldOptions = options;
-		options = newOptions;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TrialplePackage.PHASE__OPTIONS, oldOptions, newOptions);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOptions(OptList newOptions) {
-		if (newOptions != options) {
-			NotificationChain msgs = null;
-			if (options != null)
-				msgs = ((InternalEObject)options).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TrialplePackage.PHASE__OPTIONS, null, msgs);
-			if (newOptions != null)
-				msgs = ((InternalEObject)newOptions).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TrialplePackage.PHASE__OPTIONS, null, msgs);
-			msgs = basicSetOptions(newOptions, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TrialplePackage.PHASE__OPTIONS, newOptions, newOptions));
 	}
 
 	/**

@@ -3,6 +3,7 @@
 package Trialple;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,8 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link Trialple.ExecutionControl#getModules <em>Modules</em>}</li>
- *   <li>{@link Trialple.ExecutionControl#getSubmoduledefs <em>Submoduledefs</em>}</li>
- *   <li>{@link Trialple.ExecutionControl#getSubmoduledef <em>Submoduledef</em>}</li>
  *   <li>{@link Trialple.ExecutionControl#getUnitDefinition <em>Unit Definition</em>}</li>
  *   <li>{@link Trialple.ExecutionControl#getName <em>Name</em>}</li>
  *   <li>{@link Trialple.ExecutionControl#getSrcid <em>Srcid</em>}</li>
@@ -30,58 +29,24 @@ import org.eclipse.emf.ecore.EObject;
 public interface ExecutionControl extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Modules</b></em>' containment reference list.
-	 * The list contents are of type {@link Trialple.Modules}.
+	 * The list contents are of type {@link Trialple.ModuleList}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Modules</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Modules</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modules</em>' containment reference list.
 	 * @see Trialple.TrialplePackage#getExecutionControl_Modules()
-	 * @model containment="true"
+	 * @model containment="true" upper="2"
 	 *        extendedMetaData="kind='element' name='modules' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	EList<Modules> getModules();
-
-	/**
-	 * Returns the value of the '<em><b>Submoduledefs</b></em>' containment reference list.
-	 * The list contents are of type {@link Trialple.SubmoduleDefs}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Submoduledefs</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Submoduledefs</em>' containment reference list.
-	 * @see Trialple.TrialplePackage#getExecutionControl_Submoduledefs()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='submoduledefs' namespace='##targetNamespace'"
-	 * @generated
-	 */
-	EList<SubmoduleDefs> getSubmoduledefs();
-
-	/**
-	 * Returns the value of the '<em><b>Submoduledef</b></em>' containment reference list.
-	 * The list contents are of type {@link Trialple.SubmoduleDef}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Submoduledef</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Submoduledef</em>' containment reference list.
-	 * @see Trialple.TrialplePackage#getExecutionControl_Submoduledef()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='submoduledef' namespace='##targetNamespace'"
-	 * @generated
-	 */
-	EList<SubmoduleDef> getSubmoduledef();
+	EList<ModuleList> getModules();
 
 	/**
 	 * Returns the value of the '<em><b>Unit Definition</b></em>' containment reference list.
-	 * The list contents are of type {@link Trialple.UnitDef}.
+	 * The list contents are of type {@link Trialple.UnitDefinition}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Unit Definition</em>' containment reference list isn't clear,
@@ -94,7 +59,7 @@ public interface ExecutionControl extends EObject {
 	 *        extendedMetaData="kind='element' name='UnitDefinition' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	EList<UnitDef> getUnitDefinition();
+	EList<UnitDefinition> getUnitDefinition();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

@@ -5,7 +5,8 @@
 package Trialple.validation;
 
 import Trialple.ModuleType;
-import Trialple.UnitModList;
+import Trialple.OptList;
+import Trialple.UnitModuleList;
 
 /**
  * A sample validator interface for {@link Trialple.Unit}.
@@ -17,8 +18,11 @@ public interface UnitValidator {
 	boolean validate();
 
 	boolean validateTitle(String value);
-	boolean validateUnitmodules(UnitModList value);
+	boolean validateUnitmodules(UnitModuleList value);
+	boolean validateRevokecondition(OptList value);
+	boolean validateDowntime(String value);
 	boolean validateId(String value);
 	boolean validateName(String value);
+	boolean validateRevoke(String value);
 	boolean validateType(ModuleType value);
 }

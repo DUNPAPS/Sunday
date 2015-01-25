@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link Trialple.Arguments#getArg <em>Arg</em>}</li>
+ *   <li>{@link Trialple.Arguments#getArgx <em>Argx</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,5 +40,32 @@ public interface Arguments extends EObject {
 	 * @generated
 	 */
 	EList<String> getArg();
+
+	/**
+	 * Returns the value of the '<em><b>Argx</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Argx</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Argx</em>' containment reference.
+	 * @see #setArgx(ArgxType)
+	 * @see Trialple.TrialplePackage#getArguments_Argx()
+	 * @model containment="true" required="true"
+	 *        extendedMetaData="kind='element' name='argx' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	ArgxType getArgx();
+
+	/**
+	 * Sets the value of the '{@link Trialple.Arguments#getArgx <em>Argx</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Argx</em>' containment reference.
+	 * @see #getArgx()
+	 * @generated
+	 */
+	void setArgx(ArgxType value);
 
 } // Arguments

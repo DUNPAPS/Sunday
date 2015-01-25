@@ -24,20 +24,20 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Definitions extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Def</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Def</b></em>' containment reference list.
+	 * The list contents are of type {@link Trialple.Def}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Def</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Def</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Def</em>' attribute list.
+	 * @return the value of the '<em>Def</em>' containment reference list.
 	 * @see Trialple.TrialplePackage#getDefinitions_Def()
-	 * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='def' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	EList<String> getDef();
+	EList<Def> getDef();
 
 } // Definitions

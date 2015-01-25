@@ -5,6 +5,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,6 +14,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -41,18 +43,21 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.helpers.LocatorImpl;
 
+import Trialple.Phase;
+
 import com.herbert.trialple.model.document.PhaselistDocument;
 import com.herbert.trialple.model.handler.PhaseListDefaultHandler;
 import com.herbert.trialple.model.provider.PhaseListContentProvider;
 import com.herbert.trialple.model.provider.PhaseListLabelProvider;
 import com.herbert.trialple.model.provider.XMLParser;
+import com.herbert.trialple.model.xml.tree.TreeChild;
 import com.herbert.trialple.model.xml.tree.TreeParent;
 
 public class OutlineView extends ContentOutlinePage implements
-		IContentOutlinePage {
+		IContentOutlinePage, IAdaptable {
 	// private final static String CONTENT_FILE =
 	// "C:/Users/D063076/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
-	private final static String CONTENT_FILE = "C:/Users/D063076/git/Sunday/com.herbert.trialple.model.editor/current_phaselist.xml";
+	private final static String CONTENT_FILE = "C:/Users/IBM_ADMIN/git/Sunday/com.herbert.trialple.model.editor/current_phaselist.xml";
 	// private final static String CONTENT_FILE =
 	// "C:/Users/c5215637/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
 	private static String builder;
@@ -61,7 +66,8 @@ public class OutlineView extends ContentOutlinePage implements
 	private PhaseListDefaultHandler phaseListDefaultHandler;
 	private FilteredTree fTree;
 	private Text text;
-
+	private TreeParent root;
+	
 	public OutlineView() {
 		super();
 	}
@@ -80,6 +86,7 @@ public class OutlineView extends ContentOutlinePage implements
 		}
 
 		else {
+			// connecting actions in the outline to the GUI
 			TreeParent element = (TreeParent) ((IStructuredSelection) selection)
 					.getFirstElement();
 			String nodeName = element.toString();
@@ -94,6 +101,7 @@ public class OutlineView extends ContentOutlinePage implements
 	 */
 	private void parseDocument(String nodeName) {
 		Document newDocument = null;
+		ArrayList<Phase> phlist = new ArrayList<Phase>();
 
 		final DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory
 				.newInstance();
@@ -234,7 +242,7 @@ public class OutlineView extends ContentOutlinePage implements
 	 * @return
 	 */
 	public TreeParent getInitialInput() {
-		TreeParent root = new TreeParent("");
+		 root = new TreeParent("");
 		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory
 					.newInstance();
@@ -242,12 +250,17 @@ public class OutlineView extends ContentOutlinePage implements
 			String xmlString = readFile(getContentFile());
 			doc = factory.newDocumentBuilder().parse(
 					new InputSource(new StringReader(xmlString)));
-			// System.out.println("Root element :" +
-			// doc.getDocumentElement().getNodeName()); ExecutionControl
 			NodeList nodelist = doc.getChildNodes();
 
-			return addSubTree(root, nodelist.item(0), null);
-
+			root = addSubTree(root, nodelist.item(0), null);
+			root.shift();
+			//fillList(root);
+			/*-- From STANDARD to modules*/
+			//refactorTreeParent(root);
+			
+			return root;
+			
+			
 		} catch (Exception e) {
 			System.out.print("Problem parsing the file.");
 			e.printStackTrace();
@@ -257,13 +270,16 @@ public class OutlineView extends ContentOutlinePage implements
 	}
 
 	private static final Set<String> WHITELIST = new HashSet<String>(
-			Arrays.asList(new String[] { "modules", "phaselist",
-					"submoduledef", "submoduledefs", "submodule", "phase",
-					"module", "submoduleref" }));
-
+			Arrays.asList(new String[] { "UnitDefinition",
+					"unit", "modules",  "submoduledefs",
+					"submodule", "phase", "module", "submoduleref",
+					"unitdefinitions" }));
+	/**
+	 * 
+	 */
 	private static final Set<String> NAMEABLE = new HashSet<String>(
-			Arrays.asList(new String[] { "modules", "phaselist",
-					 "submoduledefs" }));
+			Arrays.asList(new String[] { "modules", "submodule",
+					"submoduledefs" }));
 
 	// private final static String[] ignorable = new String[] { "description",
 	// "password", "args", "action", "postevent", "revokemodule",
@@ -272,7 +288,39 @@ public class OutlineView extends ContentOutlinePage implements
 	// private static boolean contains(String[] finder, String toFind) {
 	// return Arrays.asList(finder).contains(toFind);
 	// }
-
+/**
+ * Dealing with the roadmap modules
+ * @param root
+ */
+//	private void refactorTreeParent(TreeParent root) {
+//		TreeChild[] modl = root.getChildren();
+//		for(TreeChild tree:modl)
+//			if (tree.getName().equals("STANDARD")) {
+//				TreeChild[] stChildren = ((TreeParent) tree).getChildren();
+//				for(TreeChild sChild: stChildren){
+//					if(sChild.getName().equals("Extraction")){
+//						TreeChild[] mods = (TreeChild[]) ((TreeParent) sChild).getChildren();
+//						for(TreeChild mod:mods){
+//							if(mod.getName().equals("PREP_EXTRACT")){
+//							
+//							NodeList docmods = doc.getElementsByTagName("module");
+//							for(int s=0; s<docmods.getLength(); s++){
+//								Element element = (Element) docmods.item(s);
+//								String nm = element.getAttribute("name"); 
+//								
+//								if(mod.getName().equals(nm)){
+//									
+//									//System.out.println("these elements of the node: "+ element.getNodeName() + " " + element.getNodeValue());
+//									}
+//								}
+//							}
+//						}
+//						
+//					}
+//				}
+//			}
+//
+//	}
 	/**
 	 * 
 	 * @param root
@@ -282,40 +330,79 @@ public class OutlineView extends ContentOutlinePage implements
 		if (NAMEABLE.contains(node.getNodeName())) {
 			name = node.getNodeName();
 		}
-
 		TreeParent child = new TreeParent(name);
-
+	
+		//fillList(root);
 		if (WHITELIST.contains(node.getNodeName()))
 			root.addChild(child);
 		else
 			child = root;
-
+			
 		if (node.hasChildNodes()) {
-
-			NodeList childList = node.getChildNodes();
+			NodeList childList = node.getChildNodes(); //All children of root and child.
 			int length = childList.getLength();
 			for (int i = 0; i < length; i++) {
 
-				if (childList.item(i).getNodeType() == Node.ELEMENT_NODE) {
+				if (childList.item(i).getNodeType() == Node.ELEMENT_NODE) { //No text
 					Element childEl = (Element) childList.item(i);
+					
 					if (childEl.hasAttributes()) {
 						NamedNodeMap attrs = childEl.getAttributes();
 						Node attN = attrs.getNamedItem("name"); // elements with
-																// a name attr
 
-						if (attN != null) {
+						if ((attN != null)) {
 							name = attN.getNodeValue();
-							if (childList.item(i).getNodeName().equals("submoduleref")&&(!childList.item(i).getNodeName().equals("submoduledef"))) {
-							TreeParent.SUBMODES.add(name);
-							}
 						}
+						if (childEl.getNodeName().equals("submoduleref")) {
+							NamedNodeMap s_attrs = childEl.getAttributes();
+							Node s_attN = s_attrs.getNamedItem("name");
+							name = s_attN.getNodeValue();
+							TreeParent.SUBMODES.add(name);
+							
+						}
+						
 
 					}
+				
+					addSubTree(child, childList.item(i), name);  //All the children are added here
 
-					addSubTree(child, childList.item(i), name);
-				}
+					
+				 
+					if (childEl.getNodeName().equals("unitmodule")) {
+						
+//						NamedNodeMap u_names = childEl.getAttributes();
+//						Node unitNode = u_names.getNamedItem("name");
+//						name = unitNode.getNodeValue();
+						
+						//TreeParent unit = new TreeParent(name);
+						//root.removeChild(unit);
+						
+						//System.out.println("this should be removed:  "+unit);
+						
+						
+						NodeList modl = doc.getElementsByTagName("module");
+						if (modl.getLength() > 0) {
+							for (int m = 0; m < modl.getLength(); m++) {
+								Element el =  (Element) modl.item(m);
+								String nm = el.getAttribute("name"); // modules
+								
+								if (name.equals(nm)) {
+																
+								addSubTree(child, modl.item(m), nm); //Add the modules to unit modules
+								   
+									}
+
+								}
+							}
+						
+						
+						}
+					
+				   }
 			}
 		}
+		
+		
 		return child;
 	}
 
@@ -347,21 +434,21 @@ public class OutlineView extends ContentOutlinePage implements
 	public static String getContentFile() {
 		return CONTENT_FILE;
 	}
-	// TreeParent getChildDetails(Node node, String name){
-	// if(node.hasChildNodes()){
-	// NodeList ndList = node.getChildNodes();
-	// int length = ndList.getLength();
-	// for(int k=0; k<length; k++){
-	// if(ndList.item(k).getNodeType()==Node.ELEMENT_NODE){
-	// Element el = (Element) ndList.item(k);
-	// if(el.hasAttributes()){
-	// NamedNodeMap chilAtts = el.getAttributes();
-	// }
-	// }
-	//
-	// }
-	// }
-	// return null;
-	//
-	// }
+
+	@Override
+	public Object getAdapter(Class adapter) {
+
+		return null;
+	}
+	
+	
+//	if (childEl.getNodeName().equals("submoduleref")) {
+//		NamedNodeMap s_attrs = childEl.getAttributes();
+//		Node s_attN = s_attrs.getNamedItem("name");
+//		name = s_attN.getNodeValue();
+//		TreeParent.SUBMODES.add(name);
+//		//System.out.println(name);
+//
+//	}
+// 
 }

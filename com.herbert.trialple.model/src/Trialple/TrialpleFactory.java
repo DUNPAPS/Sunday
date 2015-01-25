@@ -40,6 +40,24 @@ public interface TrialpleFactory extends EFactory {
 	Arguments createArguments();
 
 	/**
+	 * Returns a new object of class '<em>Argx Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Argx Type</em>'.
+	 * @generated
+	 */
+	ArgxType createArgxType();
+
+	/**
+	 * Returns a new object of class '<em>Def</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Def</em>'.
+	 * @generated
+	 */
+	Def createDef();
+
+	/**
 	 * Returns a new object of class '<em>Definitions</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,6 +101,15 @@ public interface TrialpleFactory extends EFactory {
 	 * @generated
 	 */
 	Module createModule();
+
+	/**
+	 * Returns a new object of class '<em>Module List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Module List</em>'.
+	 * @generated
+	 */
+	ModuleList createModuleList();
 
 	/**
 	 * Returns a new object of class '<em>Modules</em>'.
@@ -202,22 +229,13 @@ public interface TrialpleFactory extends EFactory {
 	Unit createUnit();
 
 	/**
-	 * Returns a new object of class '<em>Unit Def</em>'.
+	 * Returns a new object of class '<em>Unit Definition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Unit Def</em>'.
+	 * @return a new object of class '<em>Unit Definition</em>'.
 	 * @generated
 	 */
-	UnitDef createUnitDef();
-
-	/**
-	 * Returns a new object of class '<em>Unit Mod List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Unit Mod List</em>'.
-	 * @generated
-	 */
-	UnitModList createUnitModList();
+	UnitDefinition createUnitDefinition();
 
 	/**
 	 * Returns a new object of class '<em>Unit Module</em>'.
@@ -227,6 +245,15 @@ public interface TrialpleFactory extends EFactory {
 	 * @generated
 	 */
 	UnitModule createUnitModule();
+
+	/**
+	 * Returns a new object of class '<em>Unit Module List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unit Module List</em>'.
+	 * @generated
+	 */
+	UnitModuleList createUnitModuleList();
 
 	/**
 	 * Returns the package supported by this factory.

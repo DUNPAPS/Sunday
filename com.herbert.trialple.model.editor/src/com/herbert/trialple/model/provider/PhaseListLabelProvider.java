@@ -13,7 +13,10 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
+import com.herbert.trialple.model.xml.tree.TreeChild;
 import com.herbert.trialple.model.xml.tree.TreeParent;
 import com.sap.adt.ecatt.editor.internal.icons.IconLoader;
 
@@ -37,21 +40,29 @@ public class PhaseListLabelProvider extends LabelProvider implements
 			return xmlPlugin.getDefault().getImageRegistry()
 					.get(IconLoader.ICON_ELEMENT);
 		}
-//	     if(((TreeParent) element).getName().toString().equals("submoduleref")){
-			Iterator<String> iterator = TreeParent.SUBMODES
-					.iterator();
+		
+		//if(((TreeChild)element).getName().toString().equals("submoduleref")){
+    	  
+	Iterator<String> iterator = TreeParent.SUBMODES.iterator();
 			while (iterator.hasNext()) {
-				String val = iterator.next().toString();
-				if (!val.equals("")) {
-					if (((TreeParent) element).getName().equals(val)) {
-						return xmlPlugin.getDefault().getImageRegistry()
+			String val = iterator.next().toString();
+			//if (!val.equals("")) {
+			if (((TreeParent) element).getName().equalsIgnoreCase(val)&&!((TreeParent) element).getName().equalsIgnoreCase("submoduledefs") ) {
+			 
+						
+				return xmlPlugin.getDefault().getImageRegistry()
 								.get(IconLoader.ICON_SUBMODULEREF);
-					}
+					//}
 				}
-			}
-	    // }
-
-		return null;
+			//}
+	    //}
+		//}
+			//}
+		}
+			//}
+			return null;
+			
+		
 	}
 
 	/**
@@ -59,16 +70,33 @@ public class PhaseListLabelProvider extends LabelProvider implements
 	 */
 	public String getText(Object element) {
 		if (element instanceof TreeParent) {
-			return element.toString();
-		} else {
-			return null;
+			return ((TreeParent) element).getName().toString();
+		
 		}
+		
+		else if(element instanceof TreeChild){
+			if(((TreeChild) element).getName()== null){
+				return ".."; // When the element name is empty no label is returned for display
+			}else{
+				return ((TreeChild) element).getChild().getName().toString();
+			}
+				
+			}
+		
+return null;
 	}
+	
+					
+
+
+
 
 	@Override
 	public Color getForeground(Object element) {
 		if (((TreeParent) element).getName().toString().equals("modules")) {
-			return Display.getCurrent().getSystemColor(SWT.COLOR_DARK_BLUE);
+			return Display.getCurrent().getSystemColor(SWT.COLOR_DARK_YELLOW);
+		}if(((TreeParent) element).getName().contentEquals("SUBMOD_MIG_CONFIG")){
+			return Display.getDefault().getSystemColor(SWT.COLOR_LINK_FOREGROUND);
 		}
 
 		return null;
@@ -76,7 +104,9 @@ public class PhaseListLabelProvider extends LabelProvider implements
 
 	@Override
 	public Color getBackground(Object element) {
-		// TODO Auto-generated method stub
+		if(((TreeParent)element).getName().toString().equals("modules")){
+			return Display.getCurrent().getSystemColor(SWT.COLOR_LIST_SELECTION_TEXT);
+		}
 		return null;
 	}
 
@@ -97,5 +127,6 @@ public class PhaseListLabelProvider extends LabelProvider implements
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 
 }

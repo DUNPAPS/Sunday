@@ -4,11 +4,14 @@ package Trialple.impl;
 
 import Trialple.And;
 import Trialple.Arguments;
+import Trialple.ArgxType;
+import Trialple.Def;
 import Trialple.Definitions;
 import Trialple.DocumentRoot;
 import Trialple.ExecutionControl;
 import Trialple.IfType;
 import Trialple.Module;
+import Trialple.ModuleList;
 import Trialple.ModuleType;
 import Trialple.Modules;
 import Trialple.Not;
@@ -25,16 +28,19 @@ import Trialple.SubmoduleDefs;
 import Trialple.TrialpleFactory;
 import Trialple.TrialplePackage;
 import Trialple.Unit;
-import Trialple.UnitDef;
-import Trialple.UnitModList;
+import Trialple.UnitDefinition;
 import Trialple.UnitModule;
+import Trialple.UnitModuleList;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
@@ -57,6 +63,20 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * @generated
 	 */
 	private EClass argumentsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass argxTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass defEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -92,6 +112,13 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * @generated
 	 */
 	private EClass moduleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moduleListEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -189,14 +216,7 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass unitDefEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass unitModListEClass = null;
+	private EClass unitDefinitionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -204,6 +224,13 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * @generated
 	 */
 	private EClass unitModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unitModuleListEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -342,6 +369,60 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getArguments_Argx() {
+		return (EReference)argumentsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArgxType() {
+		return argxTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArgxType_Argstring() {
+		return (EAttribute)argxTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArgxType_Sep() {
+		return (EAttribute)argxTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDef() {
+		return defEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDef_Name() {
+		return (EAttribute)defEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDefinitions() {
 		return definitionsEClass;
 	}
@@ -351,8 +432,8 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDefinitions_Def() {
-		return (EAttribute)definitionsEClass.getEStructuralFeatures().get(0);
+	public EReference getDefinitions_Def() {
+		return (EReference)definitionsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -423,7 +504,7 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExecutionControl_Submoduledefs() {
+	public EReference getExecutionControl_UnitDefinition() {
 		return (EReference)executionControlEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -432,26 +513,8 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExecutionControl_Submoduledef() {
-		return (EReference)executionControlEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExecutionControl_UnitDefinition() {
-		return (EReference)executionControlEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getExecutionControl_Name() {
-		return (EAttribute)executionControlEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)executionControlEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -460,7 +523,7 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * @generated
 	 */
 	public EAttribute getExecutionControl_Srcid() {
-		return (EAttribute)executionControlEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)executionControlEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -469,7 +532,7 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * @generated
 	 */
 	public EAttribute getExecutionControl_Version() {
-		return (EAttribute)executionControlEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)executionControlEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -531,15 +594,6 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getModule_Phaselist() {
-		return (EReference)moduleEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getModule_Description() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(0);
 	}
@@ -594,8 +648,8 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_Checkmode() {
-		return (EAttribute)moduleEClass.getEStructuralFeatures().get(7);
+	public EReference getModule_Phaselist() {
+		return (EReference)moduleEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -603,8 +657,8 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_Revokeautonext() {
-		return (EAttribute)moduleEClass.getEStructuralFeatures().get(13);
+	public EAttribute getModule_Checkmode() {
+		return (EAttribute)moduleEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -630,24 +684,6 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_Reselect() {
-		return (EAttribute)moduleEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getModule_Uniqueexec() {
-		return (EAttribute)moduleEClass.getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getModule_Mandatory() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(10);
 	}
@@ -666,8 +702,80 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getModule_Reselect() {
+		return (EAttribute)moduleEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModule_Revokeautonext() {
+		return (EAttribute)moduleEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getModule_Type() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModule_Uniqueexec() {
+		return (EAttribute)moduleEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getModuleList() {
+		return moduleListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModuleList_Module() {
+		return (EReference)moduleListEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModuleList_Modules() {
+		return (EReference)moduleListEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModuleList_Submoduledefs() {
+		return (EReference)moduleListEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModuleList_Submoduledef() {
+		return (EReference)moduleListEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -846,6 +954,15 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPhase_Options() {
+		return (EReference)phaseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getPhase_Args() {
 		return (EReference)phaseEClass.getEStructuralFeatures().get(1);
 	}
@@ -938,15 +1055,6 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 */
 	public EAttribute getPhase_Ignorable() {
 		return (EAttribute)phaseEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPhase_Options() {
-		return (EReference)phaseEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1269,8 +1377,8 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUnit_Id() {
-		return (EAttribute)unitEClass.getEStructuralFeatures().get(2);
+	public EReference getUnit_Revokecondition() {
+		return (EReference)unitEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1278,7 +1386,7 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUnit_Name() {
+	public EAttribute getUnit_Downtime() {
 		return (EAttribute)unitEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1287,7 +1395,7 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUnit_Type() {
+	public EAttribute getUnit_Id() {
 		return (EAttribute)unitEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1296,8 +1404,8 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getUnitDef() {
-		return unitDefEClass;
+	public EAttribute getUnit_Name() {
+		return (EAttribute)unitEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1305,8 +1413,8 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUnitDef_Unit() {
-		return (EReference)unitDefEClass.getEStructuralFeatures().get(0);
+	public EAttribute getUnit_Revoke() {
+		return (EAttribute)unitEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1314,8 +1422,8 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUnitDef_Name() {
-		return (EAttribute)unitDefEClass.getEStructuralFeatures().get(1);
+	public EAttribute getUnit_Type() {
+		return (EAttribute)unitEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1323,8 +1431,8 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUnitDef_Srcid() {
-		return (EAttribute)unitDefEClass.getEStructuralFeatures().get(2);
+	public EClass getUnitDefinition() {
+		return unitDefinitionEClass;
 	}
 
 	/**
@@ -1332,8 +1440,8 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getUnitModList() {
-		return unitModListEClass;
+	public EReference getUnitDefinition_Unit() {
+		return (EReference)unitDefinitionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1341,8 +1449,17 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUnitModList_Unitmodule() {
-		return (EReference)unitModListEClass.getEStructuralFeatures().get(0);
+	public EAttribute getUnitDefinition_Name() {
+		return (EAttribute)unitDefinitionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUnitDefinition_Srcid() {
+		return (EAttribute)unitDefinitionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1370,6 +1487,24 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 	 */
 	public EAttribute getUnitModule_Name() {
 		return (EAttribute)unitModuleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUnitModuleList() {
+		return unitModuleListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUnitModuleList_Unitmodule() {
+		return (EReference)unitModuleListEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1425,9 +1560,17 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 
 		argumentsEClass = createEClass(ARGUMENTS);
 		createEAttribute(argumentsEClass, ARGUMENTS__ARG);
+		createEReference(argumentsEClass, ARGUMENTS__ARGX);
+
+		argxTypeEClass = createEClass(ARGX_TYPE);
+		createEAttribute(argxTypeEClass, ARGX_TYPE__ARGSTRING);
+		createEAttribute(argxTypeEClass, ARGX_TYPE__SEP);
+
+		defEClass = createEClass(DEF);
+		createEAttribute(defEClass, DEF__NAME);
 
 		definitionsEClass = createEClass(DEFINITIONS);
-		createEAttribute(definitionsEClass, DEFINITIONS__DEF);
+		createEReference(definitionsEClass, DEFINITIONS__DEF);
 
 		documentRootEClass = createEClass(DOCUMENT_ROOT);
 		createEAttribute(documentRootEClass, DOCUMENT_ROOT__MIXED);
@@ -1437,8 +1580,6 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 
 		executionControlEClass = createEClass(EXECUTION_CONTROL);
 		createEReference(executionControlEClass, EXECUTION_CONTROL__MODULES);
-		createEReference(executionControlEClass, EXECUTION_CONTROL__SUBMODULEDEFS);
-		createEReference(executionControlEClass, EXECUTION_CONTROL__SUBMODULEDEF);
 		createEReference(executionControlEClass, EXECUTION_CONTROL__UNIT_DEFINITION);
 		createEAttribute(executionControlEClass, EXECUTION_CONTROL__NAME);
 		createEAttribute(executionControlEClass, EXECUTION_CONTROL__SRCID);
@@ -1467,6 +1608,12 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 		createEAttribute(moduleEClass, MODULE__REVOKEAUTONEXT);
 		createEAttribute(moduleEClass, MODULE__TYPE);
 		createEAttribute(moduleEClass, MODULE__UNIQUEEXEC);
+
+		moduleListEClass = createEClass(MODULE_LIST);
+		createEReference(moduleListEClass, MODULE_LIST__MODULE);
+		createEReference(moduleListEClass, MODULE_LIST__MODULES);
+		createEReference(moduleListEClass, MODULE_LIST__SUBMODULEDEFS);
+		createEReference(moduleListEClass, MODULE_LIST__SUBMODULEDEF);
 
 		modulesEClass = createEClass(MODULES);
 		createEReference(modulesEClass, MODULES__MODULE);
@@ -1546,21 +1693,24 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 		unitEClass = createEClass(UNIT);
 		createEAttribute(unitEClass, UNIT__TITLE);
 		createEReference(unitEClass, UNIT__UNITMODULES);
+		createEReference(unitEClass, UNIT__REVOKECONDITION);
+		createEAttribute(unitEClass, UNIT__DOWNTIME);
 		createEAttribute(unitEClass, UNIT__ID);
 		createEAttribute(unitEClass, UNIT__NAME);
+		createEAttribute(unitEClass, UNIT__REVOKE);
 		createEAttribute(unitEClass, UNIT__TYPE);
 
-		unitDefEClass = createEClass(UNIT_DEF);
-		createEReference(unitDefEClass, UNIT_DEF__UNIT);
-		createEAttribute(unitDefEClass, UNIT_DEF__NAME);
-		createEAttribute(unitDefEClass, UNIT_DEF__SRCID);
-
-		unitModListEClass = createEClass(UNIT_MOD_LIST);
-		createEReference(unitModListEClass, UNIT_MOD_LIST__UNITMODULE);
+		unitDefinitionEClass = createEClass(UNIT_DEFINITION);
+		createEReference(unitDefinitionEClass, UNIT_DEFINITION__UNIT);
+		createEAttribute(unitDefinitionEClass, UNIT_DEFINITION__NAME);
+		createEAttribute(unitDefinitionEClass, UNIT_DEFINITION__SRCID);
 
 		unitModuleEClass = createEClass(UNIT_MODULE);
 		createEReference(unitModuleEClass, UNIT_MODULE__OPTIONS);
 		createEAttribute(unitModuleEClass, UNIT_MODULE__NAME);
+
+		unitModuleListEClass = createEClass(UNIT_MODULE_LIST);
+		createEReference(unitModuleListEClass, UNIT_MODULE_LIST__UNITMODULE);
 
 		// Create enums
 		moduleTypeEEnum = createEEnum(MODULE_TYPE);
@@ -1609,9 +1759,17 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 
 		initEClass(argumentsEClass, Arguments.class, "Arguments", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArguments_Arg(), theXMLTypePackage.getString(), "arg", null, 0, -1, Arguments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArguments_Argx(), this.getArgxType(), null, "argx", null, 1, 1, Arguments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(argxTypeEClass, ArgxType.class, "ArgxType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getArgxType_Argstring(), theXMLTypePackage.getString(), "argstring", null, 0, -1, ArgxType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArgxType_Sep(), theXMLTypePackage.getString(), "sep", null, 0, 1, ArgxType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(defEClass, Def.class, "Def", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDef_Name(), theXMLTypePackage.getString(), "name", null, 0, 1, Def.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(definitionsEClass, Definitions.class, "Definitions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDefinitions_Def(), theXMLTypePackage.getString(), "def", null, 0, -1, Definitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDefinitions_Def(), this.getDef(), null, "def", null, 0, -1, Definitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(documentRootEClass, DocumentRoot.class, "DocumentRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDocumentRoot_Mixed(), ecorePackage.getEFeatureMapEntry(), "mixed", null, 0, -1, null, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1620,10 +1778,8 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 		initEReference(getDocumentRoot_ExecutionControl(), this.getExecutionControl(), null, "executionControl", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(executionControlEClass, ExecutionControl.class, "ExecutionControl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExecutionControl_Modules(), this.getModules(), null, "modules", null, 0, -1, ExecutionControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExecutionControl_Submoduledefs(), this.getSubmoduleDefs(), null, "submoduledefs", null, 0, -1, ExecutionControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExecutionControl_Submoduledef(), this.getSubmoduleDef(), null, "submoduledef", null, 0, -1, ExecutionControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExecutionControl_UnitDefinition(), this.getUnitDef(), null, "unitDefinition", null, 0, -1, ExecutionControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutionControl_Modules(), this.getModuleList(), null, "modules", null, 0, 2, ExecutionControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutionControl_UnitDefinition(), this.getUnitDefinition(), null, "unitDefinition", null, 0, -1, ExecutionControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExecutionControl_Name(), theXMLTypePackage.getString(), "name", null, 1, 1, ExecutionControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExecutionControl_Srcid(), theXMLTypePackage.getString(), "srcid", null, 1, 1, ExecutionControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExecutionControl_Version(), theXMLTypePackage.getString(), "version", null, 1, 1, ExecutionControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1635,7 +1791,7 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 		initEAttribute(getIfType_Test(), theXMLTypePackage.getString(), "test", null, 1, 1, IfType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(moduleEClass, Module.class, "Module", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getModule_Description(), theXMLTypePackage.getString(), "description", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModule_Description(), theXMLTypePackage.getString(), "description", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModule_Options(), this.getOptList(), null, "options", null, 1, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_Postevent(), theXMLTypePackage.getString(), "postevent", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_Revokemodule(), theXMLTypePackage.getString(), "revokemodule", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1651,6 +1807,12 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 		initEAttribute(getModule_Revokeautonext(), theXMLTypePackage.getString(), "revokeautonext", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_Type(), this.getModuleType(), "type", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_Uniqueexec(), theXMLTypePackage.getString(), "uniqueexec", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(moduleListEClass, ModuleList.class, "ModuleList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getModuleList_Module(), this.getModule(), null, "module", null, 0, -1, ModuleList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModuleList_Modules(), this.getModules(), null, "modules", null, 0, -1, ModuleList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModuleList_Submoduledefs(), this.getSubmoduleDefs(), null, "submoduledefs", null, 0, -1, ModuleList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModuleList_Submoduledef(), this.getSubmoduleDef(), null, "submoduledef", null, 0, -1, ModuleList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(modulesEClass, Modules.class, "Modules", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModules_Module(), this.getModule(), null, "module", null, 0, -1, Modules.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1729,22 +1891,25 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 
 		initEClass(unitEClass, Unit.class, "Unit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUnit_Title(), theXMLTypePackage.getString(), "title", null, 0, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUnit_Unitmodules(), this.getUnitModList(), null, "unitmodules", null, 0, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnit_Unitmodules(), this.getUnitModuleList(), null, "unitmodules", null, 0, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnit_Revokecondition(), this.getOptList(), null, "revokecondition", null, 0, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnit_Downtime(), theXMLTypePackage.getString(), "downtime", null, 1, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnit_Id(), theXMLTypePackage.getString(), "id", null, 1, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnit_Name(), theXMLTypePackage.getString(), "name", null, 1, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnit_Revoke(), theXMLTypePackage.getString(), "revoke", null, 1, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnit_Type(), this.getModuleType(), "type", null, 1, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(unitDefEClass, UnitDef.class, "UnitDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUnitDef_Unit(), this.getUnit(), null, "unit", null, 0, -1, UnitDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUnitDef_Name(), theXMLTypePackage.getString(), "name", null, 1, 1, UnitDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUnitDef_Srcid(), theXMLTypePackage.getString(), "srcid", null, 1, 1, UnitDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(unitModListEClass, UnitModList.class, "UnitModList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUnitModList_Unitmodule(), this.getUnitModule(), null, "unitmodule", null, 0, -1, UnitModList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(unitDefinitionEClass, UnitDefinition.class, "UnitDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUnitDefinition_Unit(), this.getUnit(), null, "unit", null, 0, -1, UnitDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnitDefinition_Name(), theXMLTypePackage.getString(), "name", null, 1, 1, UnitDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnitDefinition_Srcid(), theXMLTypePackage.getString(), "srcid", null, 1, 1, UnitDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(unitModuleEClass, UnitModule.class, "UnitModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUnitModule_Options(), this.getOptList(), null, "options", null, 0, -1, UnitModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnitModule_Name(), theXMLTypePackage.getString(), "name", null, 1, 1, UnitModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(unitModuleListEClass, UnitModuleList.class, "UnitModuleList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUnitModuleList_Unitmodule(), this.getUnitModule(), null, "unitmodule", null, 0, -1, UnitModuleList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(moduleTypeEEnum, ModuleType.class, "ModuleType");
@@ -1824,6 +1989,52 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 			 "namespace", "##targetNamespace"
 		   });	
 		addAnnotation
+		  (getArguments_Argx(), 
+		   source, 
+		   new String[] {
+			 "kind", "element",
+			 "name", "argx",
+			 "namespace", "##targetNamespace"
+		   });	
+		addAnnotation
+		  (argxTypeEClass, 
+		   source, 
+		   new String[] {
+			 "name", "argxType",
+			 "kind", "elementOnly"
+		   });	
+		addAnnotation
+		  (getArgxType_Argstring(), 
+		   source, 
+		   new String[] {
+			 "kind", "element",
+			 "name", "argstring",
+			 "namespace", "##targetNamespace"
+		   });	
+		addAnnotation
+		  (getArgxType_Sep(), 
+		   source, 
+		   new String[] {
+			 "kind", "attribute",
+			 "name", "sep",
+			 "namespace", "##targetNamespace"
+		   });	
+		addAnnotation
+		  (defEClass, 
+		   source, 
+		   new String[] {
+			 "name", "Def",
+			 "kind", "empty"
+		   });	
+		addAnnotation
+		  (getDef_Name(), 
+		   source, 
+		   new String[] {
+			 "kind", "attribute",
+			 "name", "name",
+			 "namespace", "##targetNamespace"
+		   });	
+		addAnnotation
 		  (definitionsEClass, 
 		   source, 
 		   new String[] {
@@ -1887,22 +2098,6 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 		   new String[] {
 			 "kind", "element",
 			 "name", "modules",
-			 "namespace", "##targetNamespace"
-		   });	
-		addAnnotation
-		  (getExecutionControl_Submoduledefs(), 
-		   source, 
-		   new String[] {
-			 "kind", "element",
-			 "name", "submoduledefs",
-			 "namespace", "##targetNamespace"
-		   });	
-		addAnnotation
-		  (getExecutionControl_Submoduledef(), 
-		   source, 
-		   new String[] {
-			 "kind", "element",
-			 "name", "submoduledef",
 			 "namespace", "##targetNamespace"
 		   });	
 		addAnnotation
@@ -2109,6 +2304,45 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 		   new String[] {
 			 "kind", "attribute",
 			 "name", "uniqueexec",
+			 "namespace", "##targetNamespace"
+		   });	
+		addAnnotation
+		  (moduleListEClass, 
+		   source, 
+		   new String[] {
+			 "name", "ModuleList",
+			 "kind", "elementOnly"
+		   });	
+		addAnnotation
+		  (getModuleList_Module(), 
+		   source, 
+		   new String[] {
+			 "kind", "element",
+			 "name", "module",
+			 "namespace", "##targetNamespace"
+		   });	
+		addAnnotation
+		  (getModuleList_Modules(), 
+		   source, 
+		   new String[] {
+			 "kind", "element",
+			 "name", "modules",
+			 "namespace", "##targetNamespace"
+		   });	
+		addAnnotation
+		  (getModuleList_Submoduledefs(), 
+		   source, 
+		   new String[] {
+			 "kind", "element",
+			 "name", "submoduledefs",
+			 "namespace", "##targetNamespace"
+		   });	
+		addAnnotation
+		  (getModuleList_Submoduledef(), 
+		   source, 
+		   new String[] {
+			 "kind", "element",
+			 "name", "submoduledef",
 			 "namespace", "##targetNamespace"
 		   });	
 		addAnnotation
@@ -2640,6 +2874,22 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 			 "namespace", "##targetNamespace"
 		   });	
 		addAnnotation
+		  (getUnit_Revokecondition(), 
+		   source, 
+		   new String[] {
+			 "kind", "element",
+			 "name", "revokecondition",
+			 "namespace", "##targetNamespace"
+		   });	
+		addAnnotation
+		  (getUnit_Downtime(), 
+		   source, 
+		   new String[] {
+			 "kind", "attribute",
+			 "name", "downtime",
+			 "namespace", "##targetNamespace"
+		   });	
+		addAnnotation
 		  (getUnit_Id(), 
 		   source, 
 		   new String[] {
@@ -2656,6 +2906,14 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 			 "namespace", "##targetNamespace"
 		   });	
 		addAnnotation
+		  (getUnit_Revoke(), 
+		   source, 
+		   new String[] {
+			 "kind", "attribute",
+			 "name", "revoke",
+			 "namespace", "##targetNamespace"
+		   });	
+		addAnnotation
 		  (getUnit_Type(), 
 		   source, 
 		   new String[] {
@@ -2664,14 +2922,14 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 			 "namespace", "##targetNamespace"
 		   });	
 		addAnnotation
-		  (unitDefEClass, 
+		  (unitDefinitionEClass, 
 		   source, 
 		   new String[] {
-			 "name", "UnitDef",
+			 "name", "UnitDefinition",
 			 "kind", "elementOnly"
 		   });	
 		addAnnotation
-		  (getUnitDef_Unit(), 
+		  (getUnitDefinition_Unit(), 
 		   source, 
 		   new String[] {
 			 "kind", "element",
@@ -2679,7 +2937,7 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 			 "namespace", "##targetNamespace"
 		   });	
 		addAnnotation
-		  (getUnitDef_Name(), 
+		  (getUnitDefinition_Name(), 
 		   source, 
 		   new String[] {
 			 "kind", "attribute",
@@ -2687,26 +2945,11 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 			 "namespace", "##targetNamespace"
 		   });	
 		addAnnotation
-		  (getUnitDef_Srcid(), 
+		  (getUnitDefinition_Srcid(), 
 		   source, 
 		   new String[] {
 			 "kind", "attribute",
 			 "name", "srcid",
-			 "namespace", "##targetNamespace"
-		   });	
-		addAnnotation
-		  (unitModListEClass, 
-		   source, 
-		   new String[] {
-			 "name", "UnitModList",
-			 "kind", "elementOnly"
-		   });	
-		addAnnotation
-		  (getUnitModList_Unitmodule(), 
-		   source, 
-		   new String[] {
-			 "kind", "element",
-			 "name", "unitmodule",
 			 "namespace", "##targetNamespace"
 		   });	
 		addAnnotation
@@ -2730,6 +2973,21 @@ public class TrialplePackageImpl extends EPackageImpl implements TrialplePackage
 		   new String[] {
 			 "kind", "attribute",
 			 "name", "name",
+			 "namespace", "##targetNamespace"
+		   });	
+		addAnnotation
+		  (unitModuleListEClass, 
+		   source, 
+		   new String[] {
+			 "name", "UnitModuleList",
+			 "kind", "elementOnly"
+		   });	
+		addAnnotation
+		  (getUnitModuleList_Unitmodule(), 
+		   source, 
+		   new String[] {
+			 "kind", "element",
+			 "name", "unitmodule",
 			 "namespace", "##targetNamespace"
 		   });
 	}
