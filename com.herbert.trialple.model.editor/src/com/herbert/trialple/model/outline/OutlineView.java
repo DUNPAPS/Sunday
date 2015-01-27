@@ -29,12 +29,14 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.Tree;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.dialogs.FilteredTree;
 import org.eclipse.ui.dialogs.PatternFilter;
 import org.eclipse.ui.part.IPageSite;
 import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
+import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
@@ -57,7 +59,7 @@ public class OutlineView extends ContentOutlinePage implements
 		IContentOutlinePage, IAdaptable {
 	// private final static String CONTENT_FILE =
 	// "C:/Users/D063076/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
-	private final static String CONTENT_FILE = "C:/Users/IBM_ADMIN/git/Sunday/com.herbert.trialple.model.editor/current_phaselist.xml";
+	private final static String CONTENT_FILE = "C:/Users/D063076/git/Sunday/com.herbert.trialple.model.editor/current_phaselist.xml";
 	// private final static String CONTENT_FILE =
 	// "C:/Users/c5215637/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
 	private static String builder;
@@ -67,6 +69,7 @@ public class OutlineView extends ContentOutlinePage implements
 	private FilteredTree fTree;
 	private Text text;
 	private TreeParent root;
+	private TreeChild newNode;
 	
 	public OutlineView() {
 		super();
@@ -163,10 +166,13 @@ public class OutlineView extends ContentOutlinePage implements
 		PatternFilter patFilter = new PatternFilter();
 		fTree = new FilteredTree(parent, SWT.MULTI | SWT.V_SCROLL, patFilter,
 				false);
+		
 
-		tree = fTree.getViewer();
+		tree = fTree.getViewer( );
+		
 		tree.setContentProvider(new PhaseListContentProvider());
 		tree.setLabelProvider(new PhaseListLabelProvider());
+		tree.setUseHashlookup(true);
 		tree.setInput(getInitialInput());
 		tree.refresh();
 		this.tree.addSelectionChangedListener(this);
@@ -256,7 +262,7 @@ public class OutlineView extends ContentOutlinePage implements
 			root.shift();
 			//fillList(root);
 			/*-- From STANDARD to modules*/
-			//refactorTreeParent(root);
+			refactorTreeParent(root , (TreeParent) newNode);
 			
 			return root;
 			
@@ -272,13 +278,13 @@ public class OutlineView extends ContentOutlinePage implements
 	private static final Set<String> WHITELIST = new HashSet<String>(
 			Arrays.asList(new String[] { "UnitDefinition",
 					"unit", "modules",  "submoduledefs",
-					"submodule", "phase", "module", "submoduleref",
+					"submodule", "phase", "module", "submoduleref","submoduledef",
 					"unitdefinitions" }));
 	/**
 	 * 
 	 */
 	private static final Set<String> NAMEABLE = new HashSet<String>(
-			Arrays.asList(new String[] { "modules", "submodule",
+			Arrays.asList(new String[] { "modules", "submodule", 
 					"submoduledefs" }));
 
 	// private final static String[] ignorable = new String[] { "description",
@@ -292,35 +298,7 @@ public class OutlineView extends ContentOutlinePage implements
  * Dealing with the roadmap modules
  * @param root
  */
-//	private void refactorTreeParent(TreeParent root) {
-//		TreeChild[] modl = root.getChildren();
-//		for(TreeChild tree:modl)
-//			if (tree.getName().equals("STANDARD")) {
-//				TreeChild[] stChildren = ((TreeParent) tree).getChildren();
-//				for(TreeChild sChild: stChildren){
-//					if(sChild.getName().equals("Extraction")){
-//						TreeChild[] mods = (TreeChild[]) ((TreeParent) sChild).getChildren();
-//						for(TreeChild mod:mods){
-//							if(mod.getName().equals("PREP_EXTRACT")){
-//							
-//							NodeList docmods = doc.getElementsByTagName("module");
-//							for(int s=0; s<docmods.getLength(); s++){
-//								Element element = (Element) docmods.item(s);
-//								String nm = element.getAttribute("name"); 
-//								
-//								if(mod.getName().equals(nm)){
-//									
-//									//System.out.println("these elements of the node: "+ element.getNodeName() + " " + element.getNodeValue());
-//									}
-//								}
-//							}
-//						}
-//						
-//					}
-//				}
-//			}
-//
-//	}
+//	
 	/**
 	 * 
 	 * @param root
@@ -331,6 +309,7 @@ public class OutlineView extends ContentOutlinePage implements
 			name = node.getNodeName();
 		}
 		TreeParent child = new TreeParent(name);
+		
 	
 		//fillList(root);
 		if (WHITELIST.contains(node.getNodeName()))
@@ -358,53 +337,61 @@ public class OutlineView extends ContentOutlinePage implements
 							Node s_attN = s_attrs.getNamedItem("name");
 							name = s_attN.getNodeValue();
 							TreeParent.SUBMODES.add(name);
+							NodeList subdefs = doc.getElementsByTagName("submoduledef");
+							for(int subs=0; subs<subdefs.getLength(); subs++){
+							Element elp = (Element) subdefs.item(subs);
+							String defname = elp.getAttribute("name");
+							if(name.equals(defname)){
+							  //take this out if!
+							 addSubTree(child, subdefs.item(subs), defname); 
+							}
+						  }
 							
 						}
-						
-
 					}
 				
-					addSubTree(child, childList.item(i), name);  //All the children are added here
-
-					
-				 
+					Element el = null;
 					if (childEl.getNodeName().equals("unitmodule")) {
-						
-//						NamedNodeMap u_names = childEl.getAttributes();
-//						Node unitNode = u_names.getNamedItem("name");
-//						name = unitNode.getNodeValue();
-						
-						//TreeParent unit = new TreeParent(name);
-						//root.removeChild(unit);
-						
-						//System.out.println("this should be removed:  "+unit);
-						
-						
 						NodeList modl = doc.getElementsByTagName("module");
+						
 						if (modl.getLength() > 0) {
 							for (int m = 0; m < modl.getLength(); m++) {
-								Element el =  (Element) modl.item(m);
+								el =  (Element) modl.item(m);
 								String nm = el.getAttribute("name"); // modules
 								
 								if (name.equals(nm)) {
 																
-								addSubTree(child, modl.item(m), nm); //Add the modules to unit modules
+								addSubTree(child, modl.item(m), nm); //Add the modules and their phases to unit modules
 								   
 									}
 
 								}
 							}
 						
-						
+						}if(childEl.getNodeName().equals("submoduledefs")){
+							NodeList subdefs = doc.getElementsByTagName("submoduledefs");
+							for(int smd = 0; smd<subdefs.getLength(); smd++){
+								el = (Element) subdefs.item(smd);
+								String id = el.getAttribute("srcid");
+								
+								 
+								//addSubTree(child, subdefs.item(smd), id);
+							}
+						//Do not add the submodulerefs to the subtree!	
+						}else if(!childEl.getNodeName().equals("submoduleref")){
+							
+							addSubTree(child, childList.item(i), name);
 						}
 					
+
 				   }
 			}
 		}
-		
+		 
 		
 		return child;
 	}
+	
 
 	/**
 	 * 
@@ -440,15 +427,59 @@ public class OutlineView extends ContentOutlinePage implements
 
 		return null;
 	}
+	/**
+	 * Creates a new Node  which will hold all [Submodule Definitons]
+	 * @param root
+	 * @param newNode
+	 */
+	private TreeParent refactorTreeParent(TreeParent root ,TreeParent newNode) {
+		newNode = new TreeParent("Submodule Definitions");
+		TreeParent another = new TreeParent("A new submoddef");
+		
+		TreeParent another2 = new TreeParent("A new submoddef B");
 	
+		TreeParent another3 = new TreeParent("A new submoddef C");
+		TreeParent anothe4 = new TreeParent("A new submoddef D");
+		another2.addChild(another3);
+		another3.addChild(anothe4);
+		
+		newNode.addChild(another.addChild(another2).addChild(another3).addChild(anothe4));
+		root.addChild((TreeParent)newNode);
+		
+		return newNode; 
+		 
+	}
 	
-//	if (childEl.getNodeName().equals("submoduleref")) {
-//		NamedNodeMap s_attrs = childEl.getAttributes();
-//		Node s_attN = s_attrs.getNamedItem("name");
-//		name = s_attN.getNodeValue();
-//		TreeParent.SUBMODES.add(name);
-//		//System.out.println(name);
-//
-//	}
-// 
+//	
+	void createSubmouleDefs(TreeParent submodes){
+		submodes = new TreeParent ("SubmoduleDefs");
+		TreeChild[] chdn = submodes.getChildren();
+		root.addChild(new TreeChild("submodes"));
+	}
+	
 }
+//All the children are added here
+//if(childEl.getNodeName().equals("submoduledef")){
+//	NodeList subdefs = doc.getElementsByTagName("submoduledef");
+//	for(int subs=0; subs<subdefs.getLength(); subs++){
+//	Element elp = (Element) subdefs.item(subs);
+//	String defname = elp.getAttribute("name");
+//	if(name.equals(defname)){
+//		
+//	// System.out.println("ref name is: "+ name + " phase name is: "+ defname);
+//	//	System.out.println(el);
+//	// addSubTree(child, subdefs.item(subs), defname); 
+//	}
+//  }
+//	
+//}//end submodules
+
+//if (childEl.getNodeName().equals("submoduleref")) {
+//	NamedNodeMap s_attrs = childEl.getAttributes();
+//	Node s_attN = s_attrs.getNamedItem("name");
+//	name = s_attN.getNodeValue();
+//	TreeParent.SUBMODES.add(name);
+//	//System.out.println(name);
+//
+//}
+//
