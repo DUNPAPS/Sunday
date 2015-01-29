@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: View
+Bundle-SymbolicName: com.herbert.trialple.view;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.herbert.trialple.view.Activator
+Bundle-Vendor: HERBERT
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.herbert.trialple.model;bundle-version="0.1.0",
+ com.herbert.trialple.model.editor;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
