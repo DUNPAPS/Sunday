@@ -50,6 +50,7 @@ public class TreeMenuManager extends MenuManager implements IMenuListener {
 			viewer.collapseToLevel(
 					((TreeSelection) viewer.getSelection()).getPaths()[0],
 					TreeViewer.ALL_LEVELS);
+			//Throws exceptions when inner levels are collapsed!
 		}
 	}
 

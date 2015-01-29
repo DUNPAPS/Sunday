@@ -61,6 +61,4 @@ public class TreeChild implements IAdaptable{
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	
 }

@@ -50,8 +50,8 @@ public class PhaseListLabelProvider extends LabelProvider implements
 			if (((TreeParent) element).getName().equalsIgnoreCase(val)&&!((TreeParent) element).getName().equalsIgnoreCase("submoduledefs") ) {
 			 
 						
-				return xmlPlugin.getDefault().getImageRegistry()
-								.get(IconLoader.ICON_SUBMODULEREF);
+				//return xmlPlugin.getDefault().getImageRegistry()
+					//			.get(IconLoader.ICON_SUBMODULEREF);
 					//}
 				}
 			//}
@@ -83,14 +83,8 @@ public class PhaseListLabelProvider extends LabelProvider implements
 				
 			}
 		
-return null;
+		return null;
 	}
-	
-					
-
-
-
-
 	@Override
 	public Color getForeground(Object element) {
 		if (((TreeParent) element).getName().toString().equals("modules")) {

@@ -7,9 +7,12 @@ import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -43,8 +46,9 @@ public class OptionsView extends ViewPart {
 	protected Text text;
 	protected Document doc;
 	protected PhaseListLabelProvider labelProvider;
-
-	protected ArrayList<TreeParent> roots = new ArrayList<TreeParent>();
+	protected TreeMap<String, String> opMap;  
+	Map<String, List<String>> hm = new HashMap<String, List<String>>();
+	List<TreeParent> roots = new ArrayList<TreeParent>();
 	
 
 	// protected
@@ -95,7 +99,6 @@ public class OptionsView extends ViewPart {
 		// text.setFocus();
 
 	}
-
 	public TreeParent getInitialInput() {
 		TreeParent root = new TreeParent("options");
 		try {
@@ -106,80 +109,85 @@ public class OptionsView extends ViewPart {
 			String xmlString = readFile(getContentFile());
 			doc = factory.newDocumentBuilder().parse(
 					new InputSource(new StringReader(xmlString)));
-			Element pseudo = doc.createElement("Options");
-			doc.appendChild(pseudo);
 			NodeList nodelist = doc.getChildNodes();
-		
-		
-
-			addSubTree(root, nodelist.item(0), null, null);
+			root= addSubTree(root, nodelist.item(0), "options", null);
 			 			
 			return root;
 
-		} catch (Exception e) {
+		} catch (Exception e) 
+		{
 			System.out.print("Problem parsing the file.");
 			e.printStackTrace();
 		}
 		return null;
 	}
-
 	private static final Set<String> WHITELIST = new HashSet<String>(
-			Arrays.asList(new String[] { "option" }));
+			Arrays.asList(new String[] { "option" , "or", "and", "not" }));
 
 	private static final Set<String> NAMEABLE = new HashSet<String>(
-			Arrays.asList(new String[] { "options", "or", "and", "not" }));
+			Arrays.asList(new String[] {  "or", "and", "not" }));
 
 	private TreeParent addSubTree(TreeParent root, Node node, String name,String value) {
-		if (NAMEABLE.contains(node.getNodeName())) {
+		
+		
+		if (NAMEABLE.contains(node.getNodeName())) 
+		{
 			name = node.getNodeName(); 
 		}
 		
 		TreeParent child = new TreeParent(name);
 		
-		if (WHITELIST.contains(node.getNodeName())) {
+		if (WHITELIST.contains(node.getNodeName())) 
+		{
 			root.addChild(child);
-			
-			
-//			getRoot(name).addChild(new TreeParent(value));
-			//System.out.println(new TreeParent(value));
+
 		} else {
 			child = root;
-		}  
+			}  
 
-		if (node.hasChildNodes()) {
+		if (node.hasChildNodes()) 
+		{
 			NodeList childList = node.getChildNodes();
 			int length = childList.getLength();
-			for (int j = 0; j < length; j++) {
-				if (childList.item(j).getNodeType() == Node.ELEMENT_NODE) {
+			for (int j = 0; j < length; j++) 
+			{
+				if (childList.item(j).getNodeType() == Node.ELEMENT_NODE) 
+				{
 					Element childEl = (Element) childList.item(j);
-					if (childEl.hasAttributes()) {
+					
+					if (childEl.hasAttributes()) 
+					{
+						if(childEl.getNodeName().equals("option"))
+						{
 						NamedNodeMap attrs = childEl.getAttributes();
 						Node attN = attrs.getNamedItem("name");
 						Node attV = attrs.getNamedItem("value");
-						
- 						if (attN != null) {
+						opMap = new TreeMap<String, String>();
+ 						if (attN != null && attV !=null) 
+ 							{
  							name = attN.getNodeValue();
- 							roots.add(child);
- 						}
-
-						if (attV != null) {
-							value = attV.getNodeValue();
-							
-						}else{
-							value = "";
+ 							value = attV.getNodeValue();
+ 							opMap.put(name, value);
+ 							Set<String> keys = opMap.keySet();
+ 							for(String key:keys){
+ 								
+ 							 //System.out.println(key+ "  : "+     opMap.get(name));
+ 							}
+ 							
+ 							}
+						
 						}
 					}
-					
 					addSubTree(child, childList.item(j), name, value);
-					
-					//child.addChild(new TreeParent(value));
+				 
 				}
+				
 			}
 
 		}
 		return child;
 	}
-
+	
 	/**
 	 * 
 	 * @param file
@@ -187,13 +195,15 @@ public class OptionsView extends ViewPart {
 	 * @throws IOException
 	 */
 	@SuppressWarnings("resource")
-	public static String readFile(String file) throws IOException {
+	public static String readFile(String file) throws IOException 
+	{
 		String line = null;
 		StringBuilder stringBuilder = new StringBuilder();
 		String ls = System.getProperty("line.separator");
 
 		BufferedReader reader = new BufferedReader(new FileReader(file));
-		while ((line = reader.readLine()) != null) {
+		while ((line = reader.readLine()) != null) 
+		{
 			stringBuilder.append(line);
 			stringBuilder.append(ls);
 		}
@@ -201,13 +211,17 @@ public class OptionsView extends ViewPart {
 		return stringBuilder.toString();
 	}
 
-	public static String getContentFile() {
+	public static String getContentFile() 
+	{
 		return CONTENT_FILE;
 	}
 
-	public TreeParent getRoot(String k) {
-		for (TreeParent p : roots) {
-			if (p.getName().equals(k)) {
+	public TreeParent getRoot(String k) 
+	{
+		for (TreeParent p : roots) 
+		{
+			if (p.getName().equals(k)) 
+			{
 				return p;
 			}
 		}
