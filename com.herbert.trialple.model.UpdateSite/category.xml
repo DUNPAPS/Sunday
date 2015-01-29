@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/com.herbert.trialple.model.UpdateSite_1.0.0.qualifier.jar" id="com.herbert.trialple.model.UpdateSite" version="1.0.0.qualifier">
-      <category name="com.herbert.trialple.model.UpdateSite"/>
-   </feature>
-   <category-def name="com.herbert.trialple.model.UpdateSite" label="com.herbert.trialple.model.UpdateSite"/>
-</site>

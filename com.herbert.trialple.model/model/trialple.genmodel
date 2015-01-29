@@ -5,7 +5,8 @@
     importerID="org.eclipse.xsd.ecore.importer" complianceLevel="7.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>trialple.xsd</foreignModel>
-  <genPackages prefix="Trialple" resource="XML" disposableProviderFactory="true" ecorePackage="Trialple.ecore#/">
+  <genPackages prefix="Trialple" resource="XML" disposableProviderFactory="true" testsPackageSuffix="com.herbert.trialple.tests"
+      ecorePackage="Trialple.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Trialple.ecore#//ModuleType">
       <genEnumLiterals ecoreEnumLiteral="Trialple.ecore#//ModuleType/prepare"/>
       <genEnumLiterals ecoreEnumLiteral="Trialple.ecore#//ModuleType/upgrade"/>
