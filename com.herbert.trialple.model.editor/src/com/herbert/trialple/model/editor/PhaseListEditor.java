@@ -9,8 +9,6 @@ import com.herbert.trialple.model.outline.OutlineView;
 
 public class PhaseListEditor extends FormEditor {
 
-	public static final int ElementDetails = 0;
-	//public static final int Variants_PAGE = 1;
 
 	public PhaseListEditor() {
 		super();
@@ -20,26 +18,15 @@ public class PhaseListEditor extends FormEditor {
 		ElementDetails elementDetails = new ElementDetails(this, "ID",
 				" Element Details ");
 		try {
-			addPage(ElementDetails, elementDetails);
+			addPage(0, elementDetails);
 		} catch (PartInitException e) {
 			e.printStackTrace();
 		}
-		setPageText(ElementDetails, " Element Details ");
+		setPageText(0, " Phaselist Editor ");
 	}
-
-//	void createPage1() {
-//		Variants variants = new Variants(this, "ID", " Variants ");
-//		try {
-//			addPage(Variants_PAGE, variants);
-//		} catch (PartInitException e) {
-//			e.printStackTrace();
-//		}
-//		setPageText(Variants_PAGE, " Variants ");
-//	}
-
 	@Override
 	public void setActivePage(int pageIndex) {
-		super.setActivePage(ElementDetails);
+		super.setActivePage(pageIndex);
 	}
 
 	@Override
@@ -55,7 +42,6 @@ public class PhaseListEditor extends FormEditor {
 	@Override
 	protected void addPages() {
 		createPage0();
-		//createPage1();
 	}
 
 	@Override
