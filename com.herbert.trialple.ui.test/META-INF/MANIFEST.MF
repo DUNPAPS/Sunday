@@ -8,8 +8,9 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ com.herbert.trialple.model;visibility:=reexport,
  org.junit;visibility:=reexport,
- com.herbert.trialple.model;bundle-version="0.1.0";visibility:=reexport
+ org.eclipse.ui.forms,
+ org.eclipse.equinox.registry,
+ org.eclipse.ui.ide;bundle-version="3.10.1"
 Bundle-ActivationPolicy: lazy
-Export-Package: Trialple.phaselist.model.tests

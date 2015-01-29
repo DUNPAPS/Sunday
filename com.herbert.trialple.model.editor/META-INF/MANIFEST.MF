@@ -25,3 +25,5 @@ Import-Package: Trialple,
  org.eclipse.ui.forms,
  org.eclipse.ui.forms.editor,
  org.eclipse.ui.forms.widgets
+Export-Package: com.herbert.trialple.model.provider,
+ com.herbert.trialple.model.xml.tree
