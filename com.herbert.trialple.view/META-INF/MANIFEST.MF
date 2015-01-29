@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: View
-Bundle-SymbolicName: com.herbert.trialple.model.view;singleton:=true
+Bundle-SymbolicName: com.herbert.trialple.model.editor.view;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: com.herbert.trialple.view.Activator
 Bundle-Vendor: HERBERT
