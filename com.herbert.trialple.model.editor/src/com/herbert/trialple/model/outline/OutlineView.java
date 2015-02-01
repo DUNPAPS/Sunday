@@ -59,7 +59,7 @@ public class OutlineView extends ContentOutlinePage implements
 		IContentOutlinePage, IAdaptable {
 	// private final static String CONTENT_FILE =
 	// "C:/Users/D063076/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
-	private final static String CONTENT_FILE = "C:/Users/D063076/git/Sunday/com.herbert.trialple.model.editor/current_phaselist.xml";
+	private final static String CONTENT_FILE = "C:/Users/IBM_ADMIN/git/Sunday/com.herbert.trialple.model.editor/current_phaselist.xml";
 	// private final static String CONTENT_FILE =
 	// "C:/Users/c5215637/git/Sunday/com.herbert.trialple.model.editor/printout.xml";
 	private static String builder;
