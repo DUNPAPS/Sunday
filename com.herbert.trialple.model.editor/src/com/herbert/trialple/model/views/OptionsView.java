@@ -1,6 +1,7 @@
 package com.herbert.trialple.model.views;
 
 import java.io.BufferedReader;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
@@ -34,9 +35,8 @@ import org.xml.sax.InputSource;
 
 import com.herbert.trialple.model.provider.PhaseListContentProvider;
 import com.herbert.trialple.model.provider.PhaseListLabelProvider;
-import com.herbert.trialple.model.xml.tree.OptionsMap;
 import com.herbert.trialple.model.xml.tree.TreeChild;
-import com.herbert.trialple.model.xml.tree.TreeParent;
+import com.herbert.trialple.model.xml.tree.ModuleTree;
 
 public class OptionsView extends ViewPart {
 	private final static String CONTENT_FILE = "C:/Users/D063076/git/Sunday/com.herbert.trialple.model.editor/current_phaselist.xml";
@@ -48,7 +48,7 @@ public class OptionsView extends ViewPart {
 	protected PhaseListLabelProvider labelProvider;
 	protected TreeMap<String, String> opMap;  
 	Map<String, List<String>> hm = new HashMap<String, List<String>>();
-	List<TreeParent> roots = new ArrayList<TreeParent>();
+	List<ModuleTree> roots = new ArrayList<ModuleTree>();
 	
 
 	// protected
@@ -99,8 +99,8 @@ public class OptionsView extends ViewPart {
 		// text.setFocus();
 
 	}
-	public TreeParent getInitialInput() {
-		TreeParent root = new TreeParent("options");
+	public ModuleTree getInitialInput() {
+		ModuleTree root = new ModuleTree("options");
 		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory
 					.newInstance();
@@ -127,7 +127,7 @@ public class OptionsView extends ViewPart {
 	private static final Set<String> NAMEABLE = new HashSet<String>(
 			Arrays.asList(new String[] {  "or", "and", "not" }));
 
-	private TreeParent addSubTree(TreeParent root, Node node, String name,String value) {
+	private ModuleTree addSubTree(ModuleTree root, Node node, String name,String value) {
 		
 		
 		if (NAMEABLE.contains(node.getNodeName())) 
@@ -135,7 +135,7 @@ public class OptionsView extends ViewPart {
 			name = node.getNodeName(); 
 		}
 		
-		TreeParent child = new TreeParent(name);
+		ModuleTree child = new ModuleTree(name);
 		
 		if (WHITELIST.contains(node.getNodeName())) 
 		{
@@ -216,9 +216,9 @@ public class OptionsView extends ViewPart {
 		return CONTENT_FILE;
 	}
 
-	public TreeParent getRoot(String k) 
+	public ModuleTree getRoot(String k) 
 	{
-		for (TreeParent p : roots) 
+		for (ModuleTree p : roots) 
 		{
 			if (p.getName().equals(k)) 
 			{

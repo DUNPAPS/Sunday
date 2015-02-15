@@ -5,16 +5,11 @@ import java.util.ArrayList;
 import org.eclipse.core.runtime.IAdaptable;
 
 
-public class TreeChild implements IAdaptable{
+public class TreeChild{
 	private String name;
-	private TreeParent parent;
-	private TreeChild child;
-	private Object data;
-	/**
-	 * 
-	 * @param name
-	 */
 
+	private TreeChild child;
+ 
 	public TreeChild(String name) {
 		this.name = name;
 	}
@@ -23,13 +18,6 @@ public class TreeChild implements IAdaptable{
 		return name;
 	}
 
-	public void setParent(TreeParent parent) {
-		this.parent = parent;
-	}
-
-	public TreeParent getParent() {
-		return parent;
-	}
 	public void setChild(TreeChild child){
 		child = this.child;
 	}
@@ -45,18 +33,6 @@ public class TreeChild implements IAdaptable{
 //		return null;
 //		 
 //	}
-
-	@Override
-	public Object getAdapter(Class adapter) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public Object getData(){
-		return data;
-	}
-	protected void setData(Object data){
-		this.data = data;
-	}
 
 	public void setName(String name) {
 		this.name = name;

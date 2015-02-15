@@ -4,7 +4,7 @@ package com.herbert.trialple.model.provider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 
-import com.herbert.trialple.model.xml.tree.TreeParent;
+import com.herbert.trialple.model.xml.tree.ModuleTree;
 
 
 public class PhaseListContentProvider implements ITreeContentProvider {
@@ -28,8 +28,8 @@ public class PhaseListContentProvider implements ITreeContentProvider {
 
 	@Override
 	public Object[] getChildren(Object parentElement) {
-			if (parentElement instanceof TreeParent) {
-				return ((TreeParent) parentElement).getChildren();
+			if (parentElement instanceof ModuleTree) {
+				return ((ModuleTree) parentElement).getChildren();
 			}
 			return new Object[0];
 	}
@@ -46,8 +46,8 @@ public class PhaseListContentProvider implements ITreeContentProvider {
 	 *         cannot be computed
 	 */
 	public Object getParent(Object element) {
-		if (element instanceof TreeParent) {
-			return ((TreeParent) element).getParent();
+		if (element instanceof ModuleTree) {
+			return ((ModuleTree) element).getParent();
 		}
 		return null; 
 	}
@@ -62,8 +62,8 @@ public class PhaseListContentProvider implements ITreeContentProvider {
 	 *         children
 	 */
 	public boolean hasChildren(Object element) {
-		if (element instanceof TreeParent) {
-			return ((TreeParent) element).hasChildren();
+		if (element instanceof ModuleTree) {
+			return ((ModuleTree) element).hasChildren();
 		} else {
 			return false;
 		}
@@ -81,7 +81,7 @@ public class PhaseListContentProvider implements ITreeContentProvider {
 	 */
 	@Override
 	public Object[] getElements(Object inputElement) {
-		if (inputElement instanceof TreeParent) {
+		if (inputElement instanceof ModuleTree) {
 			return getChildren(inputElement);
 		} else {
 			return null;

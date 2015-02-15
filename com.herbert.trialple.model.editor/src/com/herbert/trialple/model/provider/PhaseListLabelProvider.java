@@ -17,7 +17,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import com.herbert.trialple.model.xml.tree.TreeChild;
-import com.herbert.trialple.model.xml.tree.TreeParent;
+import com.herbert.trialple.model.xml.tree.ModuleTree;
 import com.sap.adt.ecatt.editor.internal.icons.IconLoader;
 
 /**
@@ -26,8 +26,7 @@ import com.sap.adt.ecatt.editor.internal.icons.IconLoader;
  * @author D063076
  *
  */
-public class PhaseListLabelProvider extends LabelProvider implements
-		ITableLabelProvider, ITableFontProvider, IColorProvider {
+public class PhaseListLabelProvider extends LabelProvider{
 	FontRegistry registry = new FontRegistry();
 
 	/**
@@ -36,30 +35,12 @@ public class PhaseListLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(Object element) {
 		IconLoader xmlPlugin = new IconLoader();
-		if (((TreeParent) element).getName().toString().equals("modules")) {
-			return xmlPlugin.getDefault().getImageRegistry()
-					.get(IconLoader.ICON_ELEMENT);
-		}
+//		if ( element instanceof TreeChild) {
+//			return xmlPlugin.getDefault().getImageRegistry()
+//					.get(IconLoader.ICON_ELEMENT
+//							);
+//		}
 		
-		//if(((TreeChild)element).getName().toString().equals("submoduleref")){
-    	  
-	Iterator<String> iterator = TreeParent.SUBMODES.iterator();
-			while (iterator.hasNext()) {
-			String val = iterator.next().toString();
-			//if (!val.equals("")) {
-			if (((TreeParent) element).getName().equalsIgnoreCase(val)&&!((TreeParent) element).getName().equalsIgnoreCase("submoduledefs") ) {
-			 
-						
-				//return xmlPlugin.getDefault().getImageRegistry()
-					//			.get(IconLoader.ICON_SUBMODULEREF);
-					//}
-				}
-			//}
-	    //}
-		//}
-			//}
-		}
-			//}
 			return null;
 			
 		
@@ -69,58 +50,15 @@ public class PhaseListLabelProvider extends LabelProvider implements
 	 * @see ILabelProvider#getText(Object)
 	 */
 	public String getText(Object element) {
-		if (element instanceof TreeParent) {
-			return ((TreeParent) element).getName().toString();
+		if (element instanceof TreeChild) {
+			return ((TreeChild) element).getName();
 		
 		}
-		
-		else if(element instanceof TreeChild){
-			if(((TreeChild) element).getName()== null){
-				return ".."; // When the element name is empty no label is returned for display
-			}else{
-				return ((TreeChild) element).getChild().getName().toString();
-			}
-				
-			}
+		 
 		
 		return null;
 	}
-	@Override
-	public Color getForeground(Object element) {
-		if (((TreeParent) element).getName().toString().equals("modules")) {
-			return Display.getCurrent().getSystemColor(SWT.COLOR_DARK_YELLOW);
-		}if(((TreeParent) element).getName().contentEquals("SUBMOD_MIG_CONFIG")){
-			return Display.getDefault().getSystemColor(SWT.COLOR_LINK_FOREGROUND);
-		}
 
-		return null;
-	}
-
-	@Override
-	public Color getBackground(Object element) {
-		if(((TreeParent)element).getName().toString().equals("modules")){
-			return Display.getCurrent().getSystemColor(SWT.COLOR_LIST_SELECTION_TEXT);
-		}
-		return null;
-	}
-
-	@Override
-	public Image getColumnImage(Object element, int columnIndex) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getColumnText(Object element, int columnIndex) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Font getFont(Object element, int columnIndex) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 
 }
